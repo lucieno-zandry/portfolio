@@ -50,7 +50,7 @@ const projects: Project[] = [
             laravel,
         ],
         links: {
-            github: `${GITHUB_BASE_URL}/budgetmanager-frontend2.0`,
+            github: `${GITHUB_BASE_URL}/moneytoring`,
             web: 'https://budgetmanager.000.pe'
         }
     },
