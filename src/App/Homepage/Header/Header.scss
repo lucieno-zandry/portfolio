@@ -1,0 +1,26 @@
+.header{
+
+    h1{
+        font-weight: bold;
+        line-height: 1;
+    }
+
+    img{
+        width: 100%;
+        aspect-ratio: 1;
+        object-fit: contain;
+        object-position: center;
+    }
+
+    .download-cv-button{
+        font-weight: bold;
+    }
+}
+
+@media screen and (max-width: $screen-sm) {
+    .header{
+        img{
+            width: 211px;
+        }
+    }
+}

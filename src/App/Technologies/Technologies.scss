@@ -1,0 +1,25 @@
+.technologies-container-1{
+    @include set-background-wave("./App/Technologies/wave.svg");
+}
+
+.technologies-container-2{
+    @include set-background-wave("./App/Technologies/wave-light.svg");
+}
+
+.technologies-container-3{
+    @include set-background-wave("./App/Technologies/wave-dark.svg");
+}
+
+@media screen and (max-width: $screen-md){
+    .technologies-container-1{
+        padding: 5rem 0;
+    }
+
+    .technologies-container-2{
+        padding-bottom: 5rem;
+    }
+
+    .technologies-container-3{
+        padding-bottom: 5rem;
+    }
+}

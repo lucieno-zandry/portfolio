@@ -1,0 +1,12 @@
+.section-title {
+    font-weight: bold;
+
+    &::after {
+      display: block;
+      content: '';
+      height: .15rem;
+      background-color: $primary;
+      width: 100%;
+      margin-top: .6rem;
+    }
+  }

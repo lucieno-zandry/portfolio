@@ -1,0 +1,9 @@
+export const home = '#home';
+export const about = '#about';
+export const work = '#work';
+export const technologies = "#technologies";
+export const technologies2 = "#technologies2";
+export const technologies3 = "#technologies3";
+export const contact = "#contact";
+export const github = 'https://github.com/masterofnan2';
+export const scrollContainer = "#scroll-container";

@@ -1,0 +1,30 @@
+// Configs
+@import "./assets/sass/variables.scss";
+@import "./assets/sass/functions.scss";
+@import "./assets/sass/mixins.scss";
+
+// Externals
+@import "./assets/bootstrap/scss/bootstrap.scss";
+@import "./assets/fontawesome/css/all.min.css";
+
+// Partials
+@import "./partials/Stack/Stack.scss";
+@import "./partials/AppNavbar/AppNavbar.scss";
+@import "./partials/AppNavLink/AppNavLink.scss";
+@import "./partials/Section/Section.scss";
+@import "./partials/SectionTitle/SectionTitle.scss";
+@import "./partials/ProjectItem/ProjectItem.scss";
+@import "./partials/TechnologyItem/TechnologyItem.scss";
+@import "./partials/AnchorScroll/AnchorScroll.scss";
+@import "./partials/Projects/Projects.scss";
+@import "./partials/ProjectModal/ProjectModal.scss";
+
+
+// Components
+@import "./App/Technologies/Technologies.scss";
+@import "./App/App.scss";
+@import "./App/Homepage/Homepage.scss";
+@import "./App/Homepage/Header/Header.scss";
+@import "./App/About/About.scss";
+@import "./App/Works/Works.scss";
+@import "./App/Contact/Contact.scss";

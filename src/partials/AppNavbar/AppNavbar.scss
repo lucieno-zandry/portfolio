@@ -1,0 +1,16 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: calc(100% - 6rem);
+  border-bottom: 0.1rem solid rgba($primary, 0.1);
+  height: 4rem;
+  z-index: 1000;
+}
+
+.navbar {
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+#app-navbar-collapse{
+  transition: background-color .3s ease-in-out, color .3s ease-in-out, height .3s ease-in-out;
+}

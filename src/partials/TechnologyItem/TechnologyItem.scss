@@ -1,0 +1,15 @@
+.technology-item {
+  img {
+    object-fit: contain;
+    object-position: center;
+    width: 5rem;
+    aspect-ratio: 1;
+  }
+
+  h4 {
+    font-size: 1rem;
+    font-weight: normal;
+    text-align: center;
+    text-transform: capitalize;
+  }
+}

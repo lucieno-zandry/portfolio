@@ -1,0 +1,12 @@
+.projects {
+  width: 100%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+@media screen and (min-width: $screen-md) {
+  .projects {
+    justify-content: center;
+    scroll-snap-type: none;
+  }
+}
