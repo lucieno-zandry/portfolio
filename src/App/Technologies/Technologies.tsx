@@ -40,8 +40,7 @@ const Technologies = React.memo(() => {
         <Section
             id={linkId(technologies)}
             className="col-12"
-            selfProps={{ className: "technologies-container-1" }}
-            intersectionObserverOptions={{ threshold: .3, rootMargin: '5%' }}>
+            selfProps={{ className: "technologies-container-1" }}>
             <SectionTitle variant="dark">Technologies</SectionTitle>
             <h3 className="mb-5 mx-5 mt-2 text-dark">Frontend</h3>
             <TechnologiesItems technologies={frontTechnologies} />
@@ -54,8 +53,7 @@ const Technologies = React.memo(() => {
         <Section
             id={linkId(technologies3)}
             className="col-12"
-            selfProps={{ className: "technologies-container-3" }}
-            intersectionObserverOptions={{rootMargin: '10%', threshold: .3}}>
+            selfProps={{ className: "technologies-container-3" }}>
             <SectionTitle variant="dark">Technologies</SectionTitle>
             <h3 className="mb-5 mx-5 mt-2">Server and Others</h3>
             <TechnologiesItems technologies={serverTechnologies} />

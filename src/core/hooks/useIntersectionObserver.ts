@@ -1,37 +1,48 @@
 import React from "react";
+import debounce from "../helpers/debounce";
 
-const defaultOptions: IntersectionObserverInit = {
-  threshold: 1,
-};
+const ratio = 0.6;
 
-const useIntersectionObserver = <T extends HTMLElement>(
-  options: IntersectionObserverInit = defaultOptions
-) => {
+export default function <T extends Element>() {
+  const ref = React.createRef<T>();
   const [isIntersecting, setIsIntersecting] = React.useState(false);
-  const ref: React.LegacyRef<T> = React.createRef();
 
-  const callback: IntersectionObserverCallback = React.useCallback((entries) => {
+  const callback = React.useCallback((entries: IntersectionObserverEntry[]) => {
     entries.forEach((entry) => {
-      const threshold = options.threshold as number;
-
-      setIsIntersecting(
-        entry.isIntersecting && entry.intersectionRatio >= threshold
-      );
+      if (entry.isIntersecting) {
+        setIsIntersecting(true);
+      } else {
+        setIsIntersecting(false);
+      }
     });
-  }, [options.threshold]);
+  }, []);
+
+  const observe = React.useCallback((element: Element) => {
+    const y = Math.round(window.innerHeight * ratio);
+
+    const observer = new IntersectionObserver(callback, {
+      rootMargin: `-${window.innerHeight - y - 1}px 0px -${y}px 0px`,
+    });
+
+    observer.observe(element);
+  }, []);
+
+  let windowH = React.useMemo(() => window.innerHeight, []);
 
   React.useEffect(() => {
     if (!ref.current) return;
 
-    const observer = new IntersectionObserver(callback, options);
-    observer.observe(ref.current);
+    observe(ref.current);
+    window.addEventListener(
+      "resize",
+      debounce(() => {
+        if (window.innerHeight !== windowH) {
+          observe(ref.current!);
+          windowH = window.innerHeight;
+        }
+      }, 500)
+    );
+  }, [ref]);
 
-    return () => {
-      if (ref.current) observer.unobserve(ref.current);
-    };
-  }, [options, callback]);
-
-  return { ref, isIntersecting };
-};
-
-export default useIntersectionObserver;
+  return { isIntersecting, ref };
+}

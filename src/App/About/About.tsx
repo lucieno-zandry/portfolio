@@ -23,8 +23,7 @@ const About = () => {
     return <Section
         className="about d-flex flex-column gap-3 "
         selfProps={{ className: 'bg-primary about-container justify-content-center' }}
-        id={linkId(about)}
-        intersectionObserverOptions={{ threshold: window.screen.width < 576 ? .3 : .8, rootMargin: '5%' }}>
+        id={linkId(about)}>
         <SectionTitle variant="dark">About</SectionTitle>
         <p >
             A passionate full-stack web developer with a strong foundation in both frontend and backend technologies. <br />

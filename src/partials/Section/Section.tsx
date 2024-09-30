@@ -5,15 +5,8 @@ import { themes } from "../../App/App";
 import theme from "../../core/helpers/theme";
 import { HTMLMotionProps, motion, Variants } from 'framer-motion';
 
-
 interface SectionProps extends HTMLMotionProps<'div'> {
     selfProps?: React.HTMLAttributes<HTMLDivElement>,
-    intersectionObserverOptions?: IntersectionObserverInit,
-}
-
-const defaultIntersectionObserverOptions: IntersectionObserverInit = {
-    threshold: .8,
-    rootMargin: '10%',
 }
 
 const variants: Variants = {
@@ -32,11 +25,11 @@ const variants: Variants = {
 }
 
 const Section = React.memo((props: SectionProps) => {
-    const { id, selfProps = {}, intersectionObserverOptions, ...divProps } = props;
+    const { id, selfProps = {}, ...divProps } = props;
     const { active, setActive } = useNavbar();
     const { className = '', ...rest } = selfProps;
 
-    const { ref, isIntersecting } = useIntersectionObserver<HTMLDivElement>(intersectionObserverOptions || defaultIntersectionObserverOptions);
+    const { ref, isIntersecting } = useIntersectionObserver<HTMLDivElement>();
 
     React.useEffect(() => {
         if (!id) return;
