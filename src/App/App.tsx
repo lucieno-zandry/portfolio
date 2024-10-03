@@ -33,7 +33,6 @@ const App = React.memo(() => {
 
     React.useEffect(() => {
         if (hash && hash !== home && !timeout) {
-            console.log('hehe boay');
             timeout = setTimeout(() => {
                 manualScroll(hash);
                 timeout = null;

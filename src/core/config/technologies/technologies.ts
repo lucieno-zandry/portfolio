@@ -15,6 +15,7 @@ import phpLogo from "./logos/backend/php.png";
 import laravelLogo from "./logos/backend/laravel.png";
 import mysqlLogo from "./logos/backend/mysql.png";
 import ratchetWsLogo from "./logos/backend/ratchetWs.png";
+import expressLogo from "./logos/backend/express.png";
 
 // server
 import dockerLogo from "./logos/server/docker.png";
@@ -116,4 +117,9 @@ export const ssh = {
 export const ubuntu = {
   name: "ubuntu",
   logo: ubuntuLogo,
+};
+
+export const express = {
+  name: "express.js",
+  logo: expressLogo,
 };

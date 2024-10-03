@@ -1,14 +1,34 @@
 import React from "react";
 import ProjectItem from "../ProjectItem/ProjectItem";
 import maboo from "./options/images/maboo.png";
-import portfolio from "./options/images/portfolio.jpeg";
+import moneytoring from "./options/images/moneytoring.jpeg";
 import { motion } from 'framer-motion';
 import budgetmanager from "./options/images/budgetmanager.jpeg";
-import { axios, bootstrap, css, framerMotion, html, laravel, mysql, php, react, redux, scss, typescript } from "../../core/config/technologies/technologies";
+import { axios, bootstrap, css, express, framerMotion, html, laravel, mysql, php, react, redux, scss, typescript } from "../../core/config/technologies/technologies";
 import { Project } from "../../core/config/types/variables";
 import { GITHUB_BASE_URL } from "../../core/config/constants/constants";
 
 const projects: Project[] = [
+    {
+        title: "Moneytoring",
+        description: "A new, more mature version of the previous budgetmanager app",
+        image: moneytoring,
+        technologies: [
+            html,
+            css,
+            react,
+            framerMotion,
+            scss,
+            bootstrap,
+            typescript,
+            express,
+            mysql
+        ],
+        links: {
+            github: `${GITHUB_BASE_URL}/moneytoring`,
+            web: 'https://moneytoring.rf.gd'
+        }
+    },
     {
         title: "Maboo",
         description: "E-commerce app dedicated for recent parents",
@@ -52,25 +72,6 @@ const projects: Project[] = [
         links: {
             github: `${GITHUB_BASE_URL}/moneytoring`,
             web: 'https://budgetmanager.000.pe'
-        }
-    },
-    {
-        title: "Portfolio",
-        description: "About myself and parts of my most recent achievements",
-        image: portfolio,
-        technologies: [
-            html,
-            css,
-            react,
-            framerMotion,
-            redux,
-            scss,
-            bootstrap,
-            typescript,
-        ],
-        links: {
-            github: `${GITHUB_BASE_URL}/portfolio`,
-            web: 'https://lucienozandry.rf.gd'
         }
     },
 ]
