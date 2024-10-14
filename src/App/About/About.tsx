@@ -25,7 +25,7 @@ const About = () => {
         className="about d-flex flex-column gap-3"
         selfProps={{ className: 'bg-primary about-container justify-content-center' }}
         id={linkId(about)}>
-        <SectionTitle variant="dark"><Translate value="about" /></SectionTitle>
+        <SectionTitle variant="dark"><Translate value="About" /></SectionTitle>
         <p >
             <Translate value="about_1" /> <br />
             <Translate value="about_2" /> <br />
