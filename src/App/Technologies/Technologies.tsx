@@ -5,6 +5,7 @@ import linkId from "../../core/helpers/linkId";
 import { technologies, technologies2, technologies3 } from "../../core/config/links/pages";
 import TechnologiesItems from "../../partials/TechnologiesItems/TechnologiesItems";
 import { axios, bootstrap, css, docker, framerMotion, git, github, html, javascript, laravel, mysql, php, ratchetWebsocket, react, redux, scss, ssh, typescript, ubuntu } from "../../core/config/technologies/technologies";
+import { Translate } from "react-i18nify";
 
 
 const frontTechnologies = [
@@ -55,7 +56,7 @@ const Technologies = React.memo(() => {
             className="col-12"
             selfProps={{ className: "technologies-container-3" }}>
             <SectionTitle variant="dark">Technologies</SectionTitle>
-            <h3 className="mb-5 mx-5 mt-2">Server and Others</h3>
+            <h3 className="mb-5 mx-5 mt-2"><Translate value="technology"/></h3>
             <TechnologiesItems technologies={serverTechnologies} />
         </Section>
     </>

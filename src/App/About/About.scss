@@ -1,5 +1,7 @@
 .about-container {
   @include set-background-wave("./App/About/wave.svg");
+  padding-top: 5rem;
+  padding-bottom: 10rem;
 
   p {
     margin-left: 3rem;

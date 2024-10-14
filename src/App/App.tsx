@@ -10,6 +10,7 @@ import linkId from "../core/helpers/linkId";
 import { about, contact, home, scrollContainer, technologies, technologies2, technologies3, work } from "../core/config/links/pages";
 import { useLocation } from "react-router-dom";
 import manualScroll from "../core/helpers/manualScroll";
+import { setLocale } from "react-i18nify";
 
 export type SectionProps = {
     theme?: string[],
@@ -38,6 +39,8 @@ const App = React.memo(() => {
                 timeout = null;
             }, delay);
         }
+
+        setLocale('en');
     }, []);
 
     return <AppContextProvider>
