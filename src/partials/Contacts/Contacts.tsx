@@ -10,7 +10,7 @@ const contacts = [
     },
     {
         name: 'email',
-        info: 'josulandrie0@gmail.com',
+        info: 'lucienozandry4@gmail.com',
         icon: 'envelope',
     },
     {
@@ -20,7 +20,7 @@ const contacts = [
     },
     {
         name: 'github',
-        info: 'Masterofnan2',
+        info: 'lucieno-zandry',
         icon: 'github'
     },
 ]
