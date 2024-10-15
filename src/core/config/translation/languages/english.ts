@@ -28,5 +28,6 @@ export default {
     project_1: "A new, more mature version of the previous budgetmanager app",
     project_2: "E-commerce app dedicated for recent parents",
     project_3: "A solution for managing personnal expenses",
+    my_resume: "My resume"
   },
 };

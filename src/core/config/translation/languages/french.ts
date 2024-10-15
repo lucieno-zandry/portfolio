@@ -23,12 +23,13 @@ export default {
     About: "À propos",
     contact: "Coordonnées",
     hello: "Bonjour, je suis Lucieno,",
-    contact_me: "Contactez-moi",
+    contact_me: "Me contacter",
     technology: "Serveur et autres",
     works: "Travaux récents et projets",
     project_1:
       "Une nouvelle version, plus mature, de l'ancienne application de gestion de budget",
     project_2: "Application e-commerce dédiée aux jeunes parents",
     project_3: "Une solution pour gérer les dépenses personnelles",
+    my_resume: "Mon CV"
   },
 };

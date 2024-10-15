@@ -26,15 +26,8 @@ const About = () => {
         selfProps={{ className: 'bg-primary about-container justify-content-center' }}
         id={linkId(about)}>
         <SectionTitle variant="dark"><Translate value="About" /></SectionTitle>
-        <p >
-            <Translate value="about_1" /> <br />
-            <Translate value="about_2" /> <br />
-            <Translate value="about_3" /> <strong><Translate value="programming" /></strong> <Translate value="about_4" /><br />
-            <Translate value="about_5" /> <strong><Translate value="about_6" /></strong> <Translate value="about_7" /> <br />
-            <Translate value="about_8" /></p>
 
         <p>
-            <Translate value="about_9" /> <br />
             <Translate value="about_10" /><br />
         </p>
         <div className="d-flex justify-content-around flex-wrap stacks">

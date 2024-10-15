@@ -54,23 +54,23 @@ const AppNavbar = React.memo(() => {
   return <>
     <Navbar
       expand="sm"
-      className={`app-navbar ${navtype} px-md-5 px-3 w-100`}>
-      <AnchorScroll href={home} className={`navbar-brand m-0 col-sm-4 col-lg-3 col-xxl-4 ${theme !== 'dark' ? 'text-dark' : 'text-light'}`}>Lucieno Zandry</AnchorScroll>
+      className={`app-navbar ${navtype} px-md-5 px-3 w-100 gap-0 gap-sm-3`}>
+      <AnchorScroll href={home} className={`navbar-brand m-0  ${theme !== 'dark' ? 'text-dark' : 'text-light'}`}>Lucieno Zandry</AnchorScroll>
       <Navbar.Toggle
         aria-controls="app-navbar-collapse"
         id={navbarTogglerId}
         onBlur={handleToggle} />
       <Navbar.Collapse
         id="app-navbar-collapse"
-        className={`justify-content-between ${theme === 'light' ? 'bg-secondary' : 'bg-dark'} rounded mt-4 mt-sm-0 pe-3 py-3 py-sm-0`}>
+        className={`justify-content-between ${theme === 'light' ? 'bg-secondary' : 'bg-dark'} rounded mt-2 mt-sm-0 pe-3 py-3 py-sm-0`}>
         <AppNavLinks />
         <Modal.Toggle
           show={show}
           onClick={() => setShow(true)}
-          variant="outline-secondary"
+          variant={theme === "light" ? "outline-dark" : "outline-secondary"}
           size="sm"
           className="ms-3 me-sm-0">
-          {LANGUAGES[language]} <Icon variant="chevron-down" />
+          <Icon variant="language" /> <span className="d-sm-none d-md-inline">{LANGUAGES[language]}</span> <Icon variant="chevron-down" />
         </Modal.Toggle>
       </Navbar.Collapse>
     </Navbar>
@@ -88,8 +88,8 @@ const AppNavbar = React.memo(() => {
           onBlur={handleInputChange}
           onChange={handleInputChange}
           value={language}
-          className="col-12 col-sm-6"
-          name="language"/>
+          className="col-12"
+          name="language" />
       </Modal.Body>
       <Modal.Footer>
         <Button
