@@ -8,12 +8,14 @@
         </p>
     </div>
 </div>
-<div class="vertical-section w-100 h-lg-100 overflow-hidden d-flex justify-content-center gap-2 flex-wrap flex-lg-nowrap relative">
+<div
+    class="vertical-section w-100 h-lg-100 overflow-hidden d-flex justify-content-center gap-2 flex-wrap flex-lg-nowrap relative">
     <div class="sample-container col-12 col-lg-5 align-self-center bg-dark p-3">
         <img src="../../assets/projects/moneytoring.jpeg" alt="Homepage of moneytoring" class="project-image col-12">
         <div class="btn-group mx-auto col-10 col-lg-6 mt-3">
-            <a class="btn btn-outline-primary">View Code <i class="fa-brands fa-github"></i></a>
-            <a class="btn btn-primary"><i class="fa fa-globe"></i></a>
+            <a class="btn btn-outline-primary" href="https://github.com/lucieno-zandry/moneytoring">View Code <i
+                    class="fa-brands fa-github"></i></a>
+            <a class="btn btn-primary" href="https://moneytoring.rf.gd"><i class="fa fa-globe"></i></a>
         </div>
     </div>
     <div class="col-12 col-lg-5">
@@ -52,7 +54,8 @@
     </div>
 </div>
 <hr>
-<div class="vertical-section w-100 h-lg-100 overflow-hidden d-flex justify-content-center gap-2 flex-wrapreverse flex-lg-nowrap">
+<div
+    class="vertical-section w-100 h-lg-100 overflow-hidden d-flex justify-content-center gap-2 flex-wrapreverse flex-lg-nowrap">
     <div class="col-12 col-lg-5">
         <div class="large-child px-3">
             <h3 class="display-5 display-lg-4 display-xl-3 mb-2">Maboo</h3>
@@ -101,7 +104,8 @@
     </div>
 </div>
 <hr>
-<div class="vertical-section w-100 h-lg-100 overflow-hidden d-flex justify-content-center gap-2 flex-wrap flex-lg-nowrap">
+<div
+    class="vertical-section w-100 h-lg-100 overflow-hidden d-flex justify-content-center gap-2 flex-wrap flex-lg-nowrap">
     <div class="sample-container col-12 col-lg-5 align-self-center bg-dark p-3">
         <img src="../../assets/projects/tudo.png" alt="Homepage of maboo" class="project-image col-12">
         <a class="btn btn-outline-primary mt-3 mx-auto d-block col-6 mx-auto" href="https://tudo.fr">Visit website <i
@@ -145,7 +149,8 @@
     </div>
 </div>
 <hr>
-<div class="vertical-section w-100 h-lg-100 overflow-hidden d-flex justify-content-center gap-2 flex-wrapreverse flex-lg-nowrap">
+<div
+    class="vertical-section w-100 h-lg-100 overflow-hidden d-flex justify-content-center gap-2 flex-wrapreverse flex-lg-nowrap">
     <div class="col-12 col-lg-5">
         <div class="large-child px-3">
             <h3 class="display-6 display-lg-4 display-xl-3 mb-2">Budgetmanager</h3>
@@ -186,8 +191,11 @@
     </div>
     <div class="sample-container col-12 col-lg-5 align-self-center bg-dark p-3">
         <img src="../../assets/projects/budgetmanager.png" alt="Homepage of maboo" class="project-image col-12">
-        <a class="btn btn-outline-primary mt-3 mx-auto d-block col-6 mx-auto" href="https://maboo.mg">View Demo <i
-                class="fa fa-globe"></i></a>
+        <div class="btn-group mx-auto col-10 col-lg-6 mt-3">
+            <a class="btn btn-outline-primary" href="https://github.com/masterofnan2/budgetmanager">View Code <i
+                    class="fa-brands fa-github"></i></a>
+            <a class="btn btn-primary" href="https://budgetmanager.000.pe/auth/login"><i class="fa fa-globe"></i></a>
+        </div>
     </div>
 </div>
 <hr>
