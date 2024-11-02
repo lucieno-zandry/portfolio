@@ -1,3 +1,5 @@
+<?php $gridBlocks = 17 ?>
+
 <div class="h-50 w-100 h-75 d-flex flex-column justify-content-center align-items-center text-center">
   <h2 class="display-5 display-lg-2 mb-2">
     My Technologies
@@ -14,63 +16,17 @@
 
 <div class="grid-container">
   <div class="grid">
-    <div class="gridLayer">
-      <div class="gridBlock"></div>
-    </div>
-    <div class="gridLayer">
-      <div class="gridBlock"></div>
-    </div>
-    <div class="gridLayer">
-      <div class="gridBlock"></div>
-    </div>
-    <div class="gridLayer centerPiece">
-      <div class="gridBlock centerBlock"></div>
-    </div>
-    <div class="gridLayer">
-      <div class="gridBlock"></div>
-    </div>
-    <div class="gridLayer">
-      <div class="gridBlock"></div>
-    </div>
-    <div class="gridLayer">
-      <div class="gridBlock"></div>
-    </div>
-    <div class="gridLayer">
-      <div class="gridBlock"></div>
-    </div>
-    <div class="gridLayer">
-      <div class="gridBlock"></div>
-    </div>
-    <div class="gridLayer">
-      <div class="gridBlock"></div>
-    </div>
-    <div class="gridLayer">
-      <div class="gridBlock"></div>
-    </div>
-    <div class="gridLayer">
-      <div class="gridBlock"></div>
-    </div>
-    <div class="gridLayer">
-      <div class="gridBlock"></div>
-    </div>
-    <div class="gridLayer">
-      <div class="gridBlock"></div>
-    </div>
-    <div class="gridLayer">
-      <div class="gridBlock"></div>
-    </div>
-    <div class="gridLayer">
-      <div class="gridBlock"></div>
-    </div>
-    <div class="gridLayer">
-      <div class="gridBlock"></div>
-    </div>
-    <div class="gridLayer">
-      <div class="gridBlock"></div>
-    </div>
-    <div class="gridLayer">
-      <div class="gridBlock"></div>
-    </div>
+    <?php for ($i = 0; $i < $gridBlocks; $i++): ?>
+      <?php if ($i === 3): ?>
+        <div class="gridLayer centerPiece">
+          <div class="gridBlock centerBlock"></div>
+        </div>
+      <?php else: ?>
+        <div class="gridLayer">
+          <div class="gridBlock"></div>
+        </div>
+      <?php endif ?>
+    <?php endfor ?>
   </div>
 </div>
 

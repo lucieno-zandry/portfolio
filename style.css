@@ -116,6 +116,9 @@ body * {
   .col-lg-6 {
     width: 50% !important;
   }
+  .col-lg-8 {
+    width: 66.6666666667% !important;
+  }
   .col-lg-9 {
     width: 75% !important;
   }
@@ -131,6 +134,10 @@ body * {
 
 .h-75 {
   height: 75vh;
+}
+
+.minh-75 {
+  min-height: 75vh;
 }
 
 .w-100 {
@@ -226,6 +233,10 @@ body * {
   margin-bottom: 0.5rem;
 }
 
+.ms-1 {
+  margin-left: 0.5rem;
+}
+
 .gap-2 {
   gap: 2rem;
 }
@@ -266,6 +277,10 @@ body * {
   margin-bottom: 1.5rem;
 }
 
+.me-3 {
+  margin-right: 1.5rem;
+}
+
 .mt-4 {
   margin-top: 2rem;
 }
@@ -291,9 +306,16 @@ body * {
     margin-left: 0rem !important;
     margin-right: 0rem !important;
   }
+  .p-lg-5 {
+    padding: 2.5rem !important;
+  }
   .px-lg-5 {
     padding-left: 2.5rem !important;
     padding-right: 2.5rem !important;
+  }
+  .mx-lg-auto {
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 }
 .mx-auto {
@@ -641,7 +663,7 @@ body {
 
 @media only screen and (max-width: 580px) {
   .gridLayer:nth-child(1) .gridBlock {
-    top: 11.111vw;
+    top: 7vw;
     left: 23.889vw;
     width: 15vw;
     height: 15vw;
@@ -656,8 +678,8 @@ body {
 
 @media only screen and (max-width: 580px) {
   .gridLayer:nth-child(2) .gridBlock {
-    top: 0;
-    left: 43.333vw;
+    top: -2vw;
+    left: 47.333vw;
     width: 26.389vw;
     height: 26.389vw;
   }
@@ -673,8 +695,8 @@ body {
   .gridLayer:nth-child(3) .gridBlock {
     top: 30.278vw;
     left: 0;
-    width: 26.389vw;
-    height: 26.389vw;
+    width: 19vw;
+    height: 19vw;
   }
 }
 .gridLayer:nth-child(4) .gridBlock {
@@ -684,6 +706,7 @@ body {
   height: 30vw;
   animation: none;
   background-size: cover;
+  background-position: center;
 }
 
 @media only screen and (max-width: 580px) {
@@ -692,6 +715,7 @@ body {
     left: 30.278vw;
     width: 39.444vw;
     height: 39.444vw;
+    background-position: 57%;
   }
 }
 .gridLayer:nth-child(5) {
@@ -707,8 +731,8 @@ body {
 
 @media only screen and (max-width: 580px) {
   .gridLayer:nth-child(5) .gridBlock {
-    top: 23.889vw;
-    left: 73.889vw;
+    top: 14.889vw;
+    left: 79.889vw;
     width: 15.278vw;
     height: 15.278vw;
   }
@@ -738,10 +762,10 @@ body {
 
 @media only screen and (max-width: 580px) {
   .gridLayer:nth-child(6) .gridBlock {
-    top: 43.889vw;
-    left: 73.889vw;
-    width: 26.389vw;
-    height: 26.389vw;
+    top: 37.889vw;
+    left: 75.889vw;
+    width: 11vw;
+    height: 11vw;
   }
 }
 .gridLayer:nth-child(7) .gridBlock {
@@ -753,7 +777,7 @@ body {
 
 @media only screen and (max-width: 580px) {
   .gridLayer:nth-child(7) .gridBlock {
-    display: none;
+    top: 54.5vw;
   }
 }
 .gridLayer:nth-child(8) .gridBlock {
@@ -766,7 +790,7 @@ body {
 
 @media only screen and (max-width: 580px) {
   .gridLayer:nth-child(8) .gridBlock {
-    display: none;
+    left: 46.5vw;
   }
 }
 .gridLayer:nth-child(9) .gridBlock {
@@ -798,10 +822,10 @@ body {
 
 @media only screen and (max-width: 580px) {
   .gridLayer:nth-child(10) .gridBlock {
-    top: 7.5vw;
-    left: 9vw;
-    width: 20vw;
-    height: 20vw;
+    top: 3.5vw;
+    left: 3vw;
+    width: 12vw;
+    height: 12vw;
   }
 }
 .gridLayer:nth-child(11) .gridBlock {
@@ -813,10 +837,10 @@ body {
 
 @media only screen and (max-width: 580px) {
   .gridLayer:nth-child(11) .gridBlock {
-    top: 33.333vw;
-    left: 66.667vw;
-    width: 20vw;
-    height: 20vw;
+    top: 55.333vw;
+    left: 76.667vw;
+    width: 13vw;
+    height: 13vw;
   }
 }
 .gridLayer:nth-child(12) .gridBlock {
@@ -828,10 +852,10 @@ body {
 
 @media only screen and (max-width: 580px) {
   .gridLayer:nth-child(12) .gridBlock {
-    top: 80vw;
-    left: 23.889vw;
-    width: 20vw;
-    height: 20vw;
+    top: 93vw;
+    left: 37.889vw;
+    width: 12vw;
+    height: 12vw;
   }
 }
 /* For additional smaller grid blocks around the main center block */
@@ -844,7 +868,7 @@ body {
 
 @media only screen and (max-width: 580px) {
   .gridLayer:nth-child(13) .gridBlock {
-    top: 33.333vw;
+    top: 63.333vw;
     left: 6.667vw;
     width: 10vw;
     height: 10vw;
@@ -874,10 +898,8 @@ body {
 
 @media only screen and (max-width: 580px) {
   .gridLayer:nth-child(15) .gridBlock {
-    top: 65vw;
-    left: 80vw;
-    width: 10vw;
-    height: 10vw;
+    top: 77vw;
+    left: 82vw;
   }
 }
 .gridLayer:nth-child(16) .gridBlock {
@@ -889,10 +911,10 @@ body {
 
 @media only screen and (max-width: 580px) {
   .gridLayer:nth-child(16) .gridBlock {
-    top: 90vw;
-    left: 6.667vw;
-    width: 15vw;
-    height: 15vw;
+    top: 99vw;
+    left: 20.667vw;
+    width: 9vw;
+    height: 9vw;
   }
 }
 .gridLayer:nth-child(17) .gridBlock {
@@ -904,10 +926,10 @@ body {
 
 @media only screen and (max-width: 580px) {
   .gridLayer:nth-child(17) .gridBlock {
-    top: 96vw;
-    left: 75vw;
-    width: 20vw;
-    height: 20vw;
+    top: 99vw;
+    left: 65vw;
+    width: 14vw;
+    height: 14vw;
   }
 }
 .gridLayer:nth-child(18) .gridBlock {
@@ -919,10 +941,10 @@ body {
 
 @media only screen and (max-width: 580px) {
   .gridLayer:nth-child(18) .gridBlock {
-    top: 30.278vw;
-    left: 6.667vw;
-    width: 20vw;
-    height: 20vw;
+    top: 85.278vw;
+    left: 1.667vw;
+    width: 10vw;
+    height: 10vw;
   }
 }
 .gridLayer:nth-child(19) .gridBlock {
@@ -987,14 +1009,20 @@ text {
 
 .contact-card {
   top: 10%;
-  bottom: 10%;
   left: 10%;
   right: 10%;
   color: rgba(255, 255, 255, 0.8);
   z-index: 10;
   background-color: #1f181a;
+  overflow: visible;
 }
 
+@media screen and (max-width: 768px) {
+  .contact-card {
+    left: 0;
+    right: 0;
+  }
+}
 .contact-card h2 {
   color: #fff;
   font-weight: normal;
