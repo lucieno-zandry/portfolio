@@ -1,0 +1,97 @@
+@use "../../libs/sass/variables";
+
+@mixin set-background($src, $position: center) {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: $position;
+  background-image: url($src);
+}
+
+#panel-1 {
+  .bg-image {
+    @include set-background("../../assets/Mac.jpg", top);
+  }
+
+  .gradient {
+    background: linear-gradient(
+      to bottom,
+      rgba(variables.$color-dark, 0.6),
+      variables.$color-dark
+    );
+  }
+}
+
+#panel-2 {
+  .bg-image {
+    @include set-background("../../assets/Shapes.jpg", top);
+  }
+
+  .gradient {
+    background: rgba(variables.$color-dark, 0.8);
+  }
+}
+
+#panel-3 {
+  .bg-image {
+    @include set-background("../../assets/code.jpg", top);
+  }
+
+  .gradient {
+    background: rgba(variables.$color-dark, 0.9);
+  }
+}
+
+#panel-4 {
+  .bg-image {
+    @include set-background("../../assets/seo.jpg");
+  }
+
+  .gradient {
+    background: linear-gradient(
+      to bottom,
+      rgba(variables.$color-dark, 0.7),
+      variables.$color-dark
+    );
+  }
+}
+
+#panel-5 {
+  .bg-image {
+    @include set-background("../../assets/keyboard.jpg", top);
+  }
+
+  .gradient {
+    background: linear-gradient(
+      to bottom right,
+      rgba(variables.$color-dark, 0.8),
+      variables.$color-dark
+    );
+  }
+}
+
+#masthead {
+  display: none;
+}
+
+#masthead a {
+  padding: 1rem 2rem;
+}
+
+#panels #panels-container {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 0;
+  overflow: hidden;
+  background-color: #ddd;
+}
+
+#panels #panels-container .panel {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}

@@ -1,0 +1,8 @@
+@use "variables";
+
+.btn-group {
+  border-radius: variables.$border-radius;
+  display: flex;
+  align-items: stretch;
+  text-decoration: none;
+}

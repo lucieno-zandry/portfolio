@@ -1,0 +1,23 @@
+$color-light: rgba(#fff, 0.8) !default;
+$color-dark: #1f181a !default;
+$color-primary: #d8def5 !default;
+$color-warning: #ddee22 !default;
+$color-danger: #ff5533 !default;
+
+$border-radius: 0.5rem !default;
+
+$xs: 320px !default;
+$sm: 425px !default;
+$md: 768px !default;
+$lg: 1024px !default;
+$xl: 1440px !default;
+$xxl: 2560px !default;
+
+$breakpoints: (
+  "xs": $xs,
+  "sm": $sm,
+  "md": $md,
+  "lg": $lg,
+  "xl": $xl,
+  "xxl": $xxl,
+) !default;

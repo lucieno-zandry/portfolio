@@ -1,0 +1,73 @@
+@use "variables";
+@use "sass:list";
+
+$breakpoint: list.nth(variables.$breakpoints, 1);
+$value: list.nth($breakpoint, 2);
+
+.btn {
+  padding: 1rem 2rem;
+  background-color: transparent;
+  border: none;
+  font-weight: normal;
+  color: variables.$color-light;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+  @media screen and (max-width: $value) {
+    .btn {
+      padding: 0.5rem 1rem;
+    }
+  }
+
+  &.btn-primary {
+    background-color: variables.$color-primary;
+    color: variables.$color-dark;
+  }
+
+  &.btn-dark {
+    background-color: variables.$color-dark;
+    color: variables.$color-light;
+  }
+
+  &.btn-light {
+    background-color: variables.$color-light;
+    color: variables.$color-dark;
+  }
+
+  &.btn-outline-primary {
+    background-color: transparent;
+    color: variables.$color-primary;
+    border: 1px solid variables.$color-primary;
+
+    &:hover {
+      color: variables.$color-dark;
+      border: 1px solid variables.$color-dark;
+      background-color: variables.$color-primary;
+    }
+  }
+
+  &.btn-outline-dark {
+    background-color: transparent;
+    color: variables.$color-dark;
+    border: 1px solid variables.$color-dark;
+
+    &:hover {
+      color: variables.$color-light;
+      border: 1px solid variables.$color-light;
+      background-color: variables.$color-dark;
+    }
+  }
+
+  &.btn-outline-light {
+    background-color: transparent;
+    color: variables.$color-light;
+    border: 1px solid variables.$color-light;
+
+    &:hover {
+      color: variables.$color-dark;
+      border: 1px solid variables.$color-light;
+      background-color: variables.$color-light;
+    }
+  }
+}

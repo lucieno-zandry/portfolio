@@ -1,4 +1,3 @@
 /node_modules
-/libs
-*.scss
-*.map
+/libs/fontawesome
+/libs/gsap

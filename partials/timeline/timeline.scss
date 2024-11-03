@@ -1,0 +1,46 @@
+@use "../../libs/sass/variables";
+
+.timeline-container {
+  background: variables.$color-dark;
+  color: variables.$color-light;
+  width: 95vw;
+  margin: 0 auto;
+  padding-bottom: 5rem;
+}
+
+#svg-stage {
+  overflow: visible;
+}
+
+.ball {
+  fill: white;
+  visibility: hidden;
+}
+
+.line {
+  fill: none;
+  stroke: white;
+  stroke-width: 2px;
+}
+
+text {
+  text-overflow: ellipsis;
+  fill: white;
+  font-size: 6px;
+  visibility: hidden;
+}
+
+.title {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 8px;
+}
+
+.compagny-name,
+.role-list {
+  fill: rgba(variables.$color-light, 0.7);
+}
+
+.role-list{
+  font-size: 4px;
+}

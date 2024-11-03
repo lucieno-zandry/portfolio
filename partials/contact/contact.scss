@@ -1,0 +1,45 @@
+@use "../../libs/sass/variables";
+
+.contact-card {
+  top: 10%;
+  left: 10%;
+  right: 10%;
+  color: variables.$color-light;
+  z-index: 10;
+  background-color: variables.$color-dark;
+  overflow: visible;
+
+  @media screen and (max-width: variables.$md) {
+    left: 0;
+    right: 0;
+  }
+
+  h2 {
+    color: #fff;
+    font-weight: normal;
+  }
+
+  li,
+  li > a {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  li {
+    list-style: none;
+    border-bottom: 1px dashed variables.$color-light;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+  }
+
+  i {
+    color: variables.$color-primary;
+  }
+}

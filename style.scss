@@ -1,0 +1,16 @@
+// dev
+// @import "./libs/fontawesome/css/all.min.css";
+
+@use "sass:meta";
+
+@include meta.load-css("./libs/sass/sass.scss");
+@include meta.load-css("./partials/app.scss");
+
+@include meta.load-css("./partials/header/header.scss");
+@include meta.load-css("./partials/horizontal_slide/horizontal_slide.scss");
+@include meta.load-css("./partials/image_layer/image_layer.scss");
+@include meta.load-css("./partials/timeline/timeline.scss");
+@include meta.load-css("./partials/contact/contact.scss");
+@include meta.load-css(
+  "./partials/image_description_scroll/image_description_scroll.scss"
+);

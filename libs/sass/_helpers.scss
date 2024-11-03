@@ -1,0 +1,88 @@
+@use "mixins";
+@use "variables";
+
+@include mixins.col();
+@include mixins.size();
+@include mixins.flex();
+@include mixins.display();
+@include mixins.position();
+@include mixins.spacing();
+@include mixins.titles();
+
+.bg-primary {
+  background-color: variables.$color-primary;
+}
+
+.bg-light {
+  background-color: variables.$color-light;
+}
+
+.bg-dark {
+  background-color: variables.$color-dark;
+}
+
+.full-screen {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.muted {
+  opacity: 0.7;
+}
+
+.text-light {
+  color: variables.$color-light;
+}
+
+.text-dark {
+  color: variables.$color-dark;
+}
+
+.text-primary {
+  color: variables.$color-primary;
+}
+
+.text-danger {
+  color: variables.$color-danger;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.rounded-circle {
+  border-radius: 50%;
+}
+
+.rounded {
+  border-radius: variables.$border-radius;
+}
+
+.border-none {
+  border: none;
+}
+
+.container {
+  width: 80%;
+  max-width: 1200px;
+  display: block;
+  margin: 0 auto;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.d-block {
+  display: block;
+}
+
+hr {
+  display: block;
+  width: 80%;
+  margin: 3rem auto;
+  height: 1px;
+  background-color: rgba(variables.$color-dark, 0.6);
+}
