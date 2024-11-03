@@ -1,7 +1,7 @@
 name: Deploy Frontend on Push
 on:
   push:
-    branches: [ Frontend ]
+    branches: [ Frontend2 ]
   workflow_dispatch:
 jobs:
   build:
