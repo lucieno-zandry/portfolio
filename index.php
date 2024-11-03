@@ -18,11 +18,6 @@
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- gsap -->
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
-
     <!-- custom styles -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -36,11 +31,22 @@
     <?php include './partials/image_layer/image_layer.php' ?>
     <?php include './partials/contact/contact.php' ?>
 
-    <!-- components script -->
-    <script src="./libs/gsap/ScrollTrigger.min.js"></script>
+
+    <!-- --------------------------scripts---------------------------- -->
+    <!-- gsap -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/MotionPathPlugin.min.js"
+        integrity="sha512-lhK7xTsFM6DPXOtQQyPe+NmpoFEheKDHjM/5QzpFRiE1KySgtBfEzYz4XowvB+CAWcBLBGWinhh41uNaOtrSZA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- gsap - dev -->
+    <!-- <script src="./libs/gsap/ScrollTrigger.min.js"></script>
     <script src="./libs/gsap/ScrollToPlugin.min.js"></script>
     <script src="./libs/gsap/gsap.min.js"></script>
-    <script src="./libs/gsap/MotionPathPlugin.min.js"></script>
+    <script src="./libs/gsap/MotionPathPlugin.min.js"></script> -->
+
     <script>
         console.clear();
         gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
