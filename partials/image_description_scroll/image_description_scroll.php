@@ -192,7 +192,7 @@
     <div class="sample-container col-12 col-lg-5 align-self-center bg-dark p-3">
         <img src="../../assets/projects/budgetmanager.png" alt="Homepage of maboo" class="project-image col-12">
         <div class="btn-group mx-auto col-10 col-lg-6 mt-3">
-            <a class="btn btn-outline-primary" href="https://github.com/masterofnan2/budgetmanager">View Code <i
+            <a class="btn btn-outline-primary" href="https://github.com/lucieno-zandry/budgetmanager-api">View Code <i
                     class="fa-brands fa-github"></i></a>
             <a class="btn btn-primary" href="https://budgetmanager.gt.tc/auth/login"><i class="fa fa-globe"></i></a>
         </div>
