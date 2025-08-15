@@ -107,7 +107,7 @@
 <div
     class="vertical-section w-100 h-lg-100 overflow-hidden d-flex justify-content-center gap-2 flex-wrap flex-lg-nowrap">
     <div class="sample-container col-12 col-lg-5 align-self-center bg-dark p-3">
-        <img src="../../assets/projects/tudo.png" alt="Homepage of maboo" class="project-image col-12">
+        <img src="../../assets/projects/tudo.png" alt="Homepage of Tudo" class="project-image col-12">
         <a class="btn btn-outline-primary mt-3 mx-auto d-block col-6 mx-auto" href="https://tudo.fr">Visit website <i
                 class="fa fa-globe"></i></a>
     </div>
@@ -194,7 +194,7 @@
         <div class="btn-group mx-auto col-10 col-lg-6 mt-3">
             <a class="btn btn-outline-primary" href="https://github.com/masterofnan2/budgetmanager">View Code <i
                     class="fa-brands fa-github"></i></a>
-            <a class="btn btn-primary" href="https://budgetmanager.000.pe/auth/login"><i class="fa fa-globe"></i></a>
+            <a class="btn btn-primary" href="https://budgetmanager.gt.tc/auth/login"><i class="fa fa-globe"></i></a>
         </div>
     </div>
 </div>
