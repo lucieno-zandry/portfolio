@@ -15,7 +15,7 @@
         <div class="btn-group mx-auto col-10 col-lg-6 mt-3">
             <a class="btn btn-outline-primary" href="https://github.com/lucieno-zandry/moneytoring">View Code <i
                     class="fa-brands fa-github"></i></a>
-            <a class="btn btn-primary" href="https://moneytoring.rf.gd"><i class="fa fa-globe"></i></a>
+            <a class="btn btn-primary" href="https://moneytoring.xo.je"><i class="fa fa-globe"></i></a>
         </div>
     </div>
     <div class="col-12 col-lg-5">
