@@ -9,13 +9,56 @@
     </div>
 </div>
 <div
+    class="vertical-section w-100 h-lg-100 overflow-hidden d-flex justify-content-center gap-2 flex-wrapreverse flex-lg-nowrap">
+    <div class="col-12 col-lg-5">
+        <div class="large-child px-3">
+            <h3 class="display-5 display-lg-4 display-xl-3 mb-2">Bulma Solution</h3>
+            <p>
+                GROUP VII ORIGIN wanted to share with us how they see the future of recruiting with AI. <br>
+                Thus, they developed 'Bulma', which is an application that makes recruiting easier by automating tasks
+                like filtering candidates CVs or generating adapted tests.
+            </p>
+            <h6 class="display-7 muted mt-4 mb-1">What's my Role?</h6>
+            <p>
+                I was responsible for the design integration.
+            </p>
+            <h6 class="display-7 mt-4 mb-1 muted">Did I face challenges?</h6>
+            <p>
+                Nope, this one was easy, at least, technically! The hard part was how to see what the clients see. <br>
+                Communication is another pillar you have to master when you are a programmer.
+            </p>
+            <h6 class="display-7 mt-4 mb-1 muted">What did I learn?</h6>
+            <p>
+                This was definitely more of a soft skill improvement to be honest. <br>
+                Sure, there were some issues here and there, but they were minor so i don't even remember what they were
+                about.
+            </p>
+            <h6 class="display-7 mt-4 mb-1 muted">Technologies involved</h6>
+            <p>
+                ReactJs, TypeScript, Laravel, MySQL, Sass, Bootstrap, Zustand, Axios and Framer-motion.
+            </p>
+            <h6 class="display-7 mt-4 mb-1 muted text-danger">Note!</h6>
+            <p>
+                The project is ongoing, which means certain aspect of the website such as the <strong>responsive
+                    design</strong> are not done yet.
+            </p>
+        </div>
+    </div>
+    <div class="sample-container col-12 col-lg-5 align-self-center bg-dark p-3">
+        <img src="../../assets/projects/bulma-solution.png" alt="Bulma solution's website" class="project-image col-12">
+        <a class="btn btn-outline-primary mt-3 mx-auto d-block col-6 mx-auto" href="https://bulma-solution.com" target="_blank">View demo <i
+                class="fa fa-globe"></i></a>
+    </div>
+</div>
+<hr>
+<div
     class="vertical-section w-100 h-lg-100 overflow-hidden d-flex justify-content-center gap-2 flex-wrap flex-lg-nowrap relative">
     <div class="sample-container col-12 col-lg-5 align-self-center bg-dark p-3">
         <img src="../../assets/projects/moneytoring.jpeg" alt="Homepage of moneytoring" class="project-image col-12">
         <div class="btn-group mx-auto col-10 col-lg-6 mt-3">
             <a class="btn btn-outline-primary" href="https://github.com/lucieno-zandry/moneytoring">View Code <i
                     class="fa-brands fa-github"></i></a>
-            <a class="btn btn-primary" href="https://moneytoring.xo.je"><i class="fa fa-globe"></i></a>
+            <a class="btn btn-primary" href="https://moneytoring.xo.je" target="_blank"><i class="fa fa-globe"></i></a>
         </div>
     </div>
     <div class="col-12 col-lg-5">
@@ -68,22 +111,22 @@
             <h6 class="display-7 muted mt-4 mb-1">What's my Role?</h6>
             <p>
                 I played a big part in the early conception such as in the making of the diagrams, conceiving the
-                database. I was primarily hired in the company as the frontend developper of the application and
+                database. I was primarily hired in the company as the frontend developer of the application and
                 proceeded to get a promotion. <br>
                 Now, I'm in charge of the whole operation, that's to mean all the client and server sides.
             </p>
             <h6 class="display-7 mt-4 mb-1 muted">Did I face challenges?</h6>
             <p>
-                Countless difficulties are encountered during the development process of the application.
+                Countless difficulties were encountered during the development process of the application.
                 <br>To cite a few, the project itself, having to make sure that everything, like payment and account
                 types operate correctly is a big challenge.
             </p>
             <h6 class="display-7 mt-4 mb-1 muted">What did I learn?</h6>
             <p>
-                Apart from programming, 6 months and going into the project had me learning the basics of automating
+                Apart from programming, 6 months and going into the project had me learn the basics of automating
                 tasks. <br>
                 A relevant example is the use of github actions to automatically build docker images and
-                deploy them to the server after a push to the main branch.
+                deploy them to the server after a push or a merge on the main branch.
             </p>
             <h6 class="display-7 mt-4 mb-1 muted">Technologies involved</h6>
             <p>
@@ -99,7 +142,7 @@
     </div>
     <div class="sample-container col-12 col-lg-5 align-self-center bg-dark p-3">
         <img src="../../assets/projects/maboo.png" alt="Homepage of maboo" class="project-image col-12">
-        <a class="btn btn-outline-primary mt-3 mx-auto d-block col-6 mx-auto" href="https://maboo.mg">View demo <i
+        <a class="btn btn-outline-primary mt-3 mx-auto d-block col-6 mx-auto" href="https://maboo.mg" target="_blank">View demo <i
                 class="fa fa-globe"></i></a>
     </div>
 </div>
@@ -108,7 +151,7 @@
     class="vertical-section w-100 h-lg-100 overflow-hidden d-flex justify-content-center gap-2 flex-wrap flex-lg-nowrap">
     <div class="sample-container col-12 col-lg-5 align-self-center bg-dark p-3">
         <img src="../../assets/projects/tudo.png" alt="Homepage of Tudo" class="project-image col-12">
-        <a class="btn btn-outline-primary mt-3 mx-auto d-block col-6 mx-auto" href="https://tudo.fr">Visit website <i
+        <a class="btn btn-outline-primary mt-3 mx-auto d-block col-6 mx-auto" href="https://tudo.fr" target="_blank">Visit website <i
                 class="fa fa-globe"></i></a>
     </div>
     <div class="col-12 col-lg-5">
@@ -192,9 +235,9 @@
     <div class="sample-container col-12 col-lg-5 align-self-center bg-dark p-3">
         <img src="../../assets/projects/budgetmanager.png" alt="Homepage of maboo" class="project-image col-12">
         <div class="btn-group mx-auto col-10 col-lg-6 mt-3">
-            <a class="btn btn-outline-primary" href="https://github.com/lucieno-zandry/budgetmanager-api">View Code <i
+            <a class="btn btn-outline-primary" href="https://github.com/lucieno-zandry/budgetmanager-api" target="_blank">View Code <i
                     class="fa-brands fa-github"></i></a>
-            <a class="btn btn-primary" href="https://budgetmanager.gt.tc/auth/login"><i class="fa fa-globe"></i></a>
+            <a class="btn btn-primary" href="https://budgetmanager.gt.tc/auth/login" target="_blank"><i class="fa fa-globe"></i></a>
         </div>
     </div>
 </div>

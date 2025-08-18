@@ -10,18 +10,30 @@
 
 <div class="relative timeline-container">
     <svg id="svg-stage" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1200">
+        <path class="line00 line" d="M 10 50 600 50"></path>
         <path class="line01 line" d="M 10 200 600 200"></path>
         <path class="line02 line" d="M 10 400 600 400"></path>
         <path class="line03 line" d="M 10 600 600 600"></path>
         <path class="line04 line" d="M 10 800 600 800"></path>
         <path class="line05 line" d="M 10 1000 600 1000"></path>
 
-        <text class="text01" x="30" y="190">Apr 2024 - Now</text>
+        <text class="text00" x="125" y="42">Dec 2024 - Now</text>
+        <text class="title-0 title" y="62">
+            <tspan dy=".5rem" x="135">REACT &amp; FLUTTER</tspan>
+            <tspan dy=".8rem" x="80">developer</tspan>
+        </text>
+        <text class="text00 company-name" x="90%" y="42">Group VII Origin</text>
+        <text class="text00 role-list" x="90%" y="62">
+            <tspan x="90%" dy=".3rem">> Design integration</tspan>
+            <tspan x="90%" dy=".3rem">> Android app coding</tspan>
+        </text>
+
+        <text class="text01" x="30" y="190">Apr 2024 - Nov 2024</text>
         <text class="title-1 title" y="210">
             <tspan dy=".5rem" x="35">PHP & REACT</tspan>
-            <tspan dy=".5rem" x="35">DEVELOPPER</tspan>
+            <tspan dy=".5rem" x="35">developer</tspan>
         </text>
-        <text class="text01 compagny-name" x="90%" y="190">Zafy Tody</text>
+        <text class="text01 company-name" x="90%" y="190">Zafy Tody</text>
         <text class="text01 role-list" x="90%" y="210">
             <tspan x="90%" dy=".3rem">> API Creation</tspan>
             <tspan x="90%" dy=".3rem">> Deployment</tspan>
@@ -33,7 +45,7 @@
             <tspan dy=".5rem" x="55">Frontend developer</tspan>
             <tspan dy=".5rem" x="55">Trainee</tspan>
         </text>
-        <text class="text02 compagny-name" x="93%" y="390">Maboo</text>
+        <text class="text02 company-name" x="93%" y="390">Maboo</text>
         <text class="text02 role-list" x="90%" y="410">
             <tspan x="90%" dy=".3rem">> Design integration</tspan>
             <tspan x="90%" dy=".3rem">> REST API</tspan>
@@ -46,7 +58,7 @@
             <tspan dy=".5rem" x="45">PHP & Frontend </tspan>
             <tspan dy=".5rem" x="45">Developer Trainee</tspan>
         </text>
-        <text class="text03 compagny-name" x="90%" y="590">Teko SARL</text>
+        <text class="text03 company-name" x="90%" y="590">Teko SARL</text>
         <text class="text03 role-list" x="90%" y="610">
             <tspan x="88%" dy=".3rem">> Frontend Optimisation</tspan>
             <tspan x="88%" dy=".3rem">> Prestashop modules</tspan>
@@ -72,7 +84,8 @@
         Q 100 850 300 1000
         T 150 1200" fill="none" stroke="white" stroke-width="10px" />
 
-        <circle class="ball ball01" r="10" cx="50" cy="100"></circle>
+        <circle class="ball ball00" r="10" cx="25" cy="50"></circle>
+        <circle class="ball ball01" r="10" cx="81" cy="50"></circle>
         <circle class="ball ball02" r="10" cx="278" cy="201"></circle>
         <circle class="ball ball03" r="10" cx="327" cy="401"></circle>
         <circle class="ball ball04" r="10" cx="203" cy="601"></circle>

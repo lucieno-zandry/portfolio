@@ -44,8 +44,8 @@
                                 <h2 class="display-5 display-lg-2 text-primary my-2">Clean and maintainable codebase.</h2>
                                 <p class="muted">
                                     As a <strong>bachelor</strong> in software engineering, I don't neglect
-                                    developper
-                                    experiences. Thus, I follow the best practices to favor the continuity of each
+                                    developer experiences.
+                                    Thus, I follow the best practices to favor the continuity of each
                                     project I take part of.
                                 </p>
                             </div>

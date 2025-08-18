@@ -11,6 +11,7 @@ const pulses = gsap
       ease: "elastic(2.5, 1)",
     },
   })
+  .to(".ball01, .text00, .title-0", {}, 0.05)
   .to(".ball02, .text01, .title-1", {}, 0.2)
   .to(".ball03, .text02, .title-2", {}, 0.33)
   .to(".ball04, .text03, .title-3", {}, 0.46)
@@ -28,10 +29,10 @@ const main = gsap
       markers: false,
     },
   })
-  .to(".ball01", { duration: 0.01, autoAlpha: 1 })
+  .to(".ball00", { duration: 0.01, autoAlpha: 1 })
   // .from(".theLine", {drawSVG: 0}, 0)
   .to(
-    ".ball01",
+    ".ball00",
     {
       motionPath: {
         path: ".theLine",
