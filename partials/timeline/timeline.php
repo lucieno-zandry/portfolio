@@ -17,7 +17,7 @@
         <path class="line04 line" d="M 10 800 600 800"></path>
         <path class="line05 line" d="M 10 1000 600 1000"></path>
 
-        <text class="text00" x="125" y="42">Dec 2024 - Now</text>
+        <text class="text00" x="125" y="42">Dec 2024 - Dec 2025</text>
         <text class="title-0 title" y="62">
             <tspan dy=".5rem" x="135">REACT &amp; FLUTTER</tspan>
             <tspan dy=".8rem" x="80">developer</tspan>
