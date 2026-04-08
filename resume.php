@@ -460,6 +460,7 @@
                     <li><i class="fas fa-envelope"></i> <a href="mailto:lucienozandry4@gmail.com">lucienozandry4@gmail.com</a></li>
                     <li><i class="fas fa-map-marker-alt"></i> Ambatoroka, Antananarivo, MG</li>
                     <li><i class="fas fa-globe"></i> <a href="https://lucieno-zandry.rf.gd" target="_blank">lucieno-zandry.rf.gd</a></li>
+                    <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/lucieno-zandry-a41a16324" target="_blank">Lucieno Zandry</a></li>
                 </ul>
                 <div class="side-section">
                     <h3><i class="fas fa-user-check"></i> Soft skills</h3>
