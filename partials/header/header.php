@@ -6,10 +6,10 @@
         <i class="fa fa-code absolute muted fa-3x text-dark"></i>
         <h1 class="display-4 display-md-2">I'm Lucieno Zandry</h1>
         <span class="display-6 muted my-2">Web Developer</span>
-        <a class="btn-group" href="../../assets/CV_Lucieno_Zandry.en.pdf">
-            <button class="btn btn-outline-dark col-8 col-sm-6 col-md-4">Get my resume</button>
-            <button class="btn btn-dark"><i class="fa fa-paperclip"></i></button>
-        </a>
+        <div class="btn-group">
+            <a class="btn btn-outline-dark col-8 col-sm-6 col-md-4" href="../../assets/CV_Lucieno_Zandry.en.pdf">Get my resume</a>
+            <a class="btn btn-dark" href="/resume.php"><i class="fa fa-eye"></i></a>
+        </div>
     </div>
     <div class="col-3 bg-dark h-100 text-light text-center py-3 d-none d-lg-block relative">
         <div class="d-flex gap-1 justify-content-center align-items-center">
