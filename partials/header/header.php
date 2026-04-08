@@ -8,7 +8,7 @@
         <span class="display-6 muted my-2">Web Developer</span>
         <div class="btn-group">
             <a class="btn btn-outline-dark col-8 col-sm-6 col-md-4" href="../../assets/CV_Lucieno_Zandry.en.pdf">Get my resume</a>
-            <a class="btn btn-dark" href="/resume.php"><i class="fa fa-eye"></i></a>
+            <a class="btn btn-dark" target="_blank" href="/resume.php"><i class="fa fa-eye"></i></a>
         </div>
     </div>
     <div class="col-3 bg-dark h-100 text-light text-center py-3 d-none d-lg-block relative">
