@@ -1,0 +1,35 @@
+<section class="hero">
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+        <p class="eyebrow">Backend-Leaning Fullstack Engineer</p>
+
+        <h1>
+            LUCIENO
+            <span>ZANDRY</span>
+        </h1>
+
+        <p class="description">
+            Building scalable systems, cloud-ready architectures,
+            and production-grade applications with React, Laravel,
+            Docker, and modern backend patterns.
+        </p>
+
+        <div class="hero-actions">
+            <a href="#projects">View Projects</a>
+            <a href="#contact" class="secondary">Contact Me</a>
+        </div>
+
+        <div class="tech-stack">
+            <span>React</span>
+            <span>Laravel</span>
+            <span>Docker</span>
+            <span>TypeScript</span>
+            <span>Node.js</span>
+        </div>
+    </div>
+
+    <div class="background-text">
+        <span>SYSTEMS</span>
+    </div>
+</section>

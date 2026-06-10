@@ -1,0 +1,92 @@
+.hero {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 5;
+    max-width: 900px;
+    text-align: center;
+}
+
+.eyebrow {
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.hero h1 {
+    font-size: clamp(4rem, 10vw, 8rem);
+    line-height: 0.9;
+    margin: 0;
+    font-weight: 900;
+}
+
+.hero h1 span {
+    display: block;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+}
+
+.description {
+    margin: 2rem auto;
+    max-width: 700px;
+    color: var(--muted);
+    line-height: 1.7;
+    font-size: 1.1rem;
+}
+
+.background-text {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    pointer-events: none;
+
+    font-size: 28vw;
+    font-weight: 900;
+    line-height: 1;
+
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)),
+        url('/images/infrastructure.jpg');
+
+    background-size: cover;
+    background-position: center;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    opacity: 0.25;
+    will-change: transform;
+}
+
+.tech-stack {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.tech-stack span {
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 0.7rem 1rem;
+    border-radius: 999px;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.03);
+    color: #dce3ff;
+    font-size: 0.9rem;
+}
