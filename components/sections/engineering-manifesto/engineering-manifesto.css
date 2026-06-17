@@ -1,0 +1,98 @@
+.engineering-manifesto {
+    position: relative;
+    min-height: 80vh;
+    overflow: clip;
+}
+
+.manifesto-header {
+    --start: 45vh;
+    --space: 38vh;
+
+    position: relative;
+    z-index: 2;
+}
+
+.manifesto-header section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.manifesto-header h2 {
+    position: sticky;
+    top: calc(var(--start) - 0.5lh);
+
+    margin: 0;
+
+    font-size: clamp(2rem, 5vw, 5rem);
+    line-height: 1;
+    font-weight: 900;
+
+    color: var(--text);
+
+    letter-spacing: -0.04em;
+}
+
+.manifesto-header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    font-size: clamp(2rem, 5vw, 5rem);
+    font-weight: 900;
+    line-height: 1;
+
+    margin-left: 1rem;
+}
+
+.manifesto-header li {
+    color: transparent;
+
+    background:
+        linear-gradient(180deg,
+            rgba(255, 255, 255, 0.15) 0 calc(var(--start) - 0.5lh),
+            var(--accent) calc(var(--start) - 0.55lh) calc(var(--start) + 0.55lh),
+            rgba(255, 255, 255, 0.15) calc(var(--start) + 0.5lh));
+
+    background-attachment: fixed;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    transition: transform 0.4s ease;
+}
+
+.engineering-manifesto::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(circle at center,
+            rgba(110, 168, 255, 0.12),
+            transparent 60%);
+
+    pointer-events: none;
+}
+
+.engineering-manifesto::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+
+    background-size: 60px 60px;
+
+    mask-image: linear-gradient(to bottom,
+            transparent,
+            white 20%,
+            white 80%,
+            transparent);
+
+    pointer-events: none;
+}

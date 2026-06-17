@@ -1,0 +1,29 @@
+/* Hide visually but keep accessible to screen readers */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    /* Prevent text wrapping */
+    border: 0;
+}
+
+/* Optional: Make it visible again when focused (for keyboard navigation) */
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+}
+
+.space {
+    height: 200px;
+}
