@@ -2,6 +2,7 @@
     position: relative;
     min-height: 80vh;
     overflow: clip;
+    padding: 100px 0;
 }
 
 .manifesto-header {
@@ -95,4 +96,37 @@
             transparent);
 
     pointer-events: none;
+}
+
+/* ── Mobile Responsive Reflow ── */
+@media (max-width: 768px) {
+    /* 1. Stack the header and list vertically and center them */
+    .manifesto-header section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* 2. Reposition the sticky title directly above the highlight zone */
+    .manifesto-header h2 {
+        position: sticky;
+        /* Move it up 1.5 line-heights so the scrolling list item fits right below it */
+        top: calc(var(--start) - 1.5lh); 
+        margin-bottom: 1rem;
+        margin-right: 0;
+        width: 100%;
+        background-color: var(--bg);
+    }
+
+    /* 3. Reset list margins and add vertical space so items have room to breathe */
+    .manifesto-header ul {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    /* 4. Give the container extra scroll runway so the first and last items 
+          can comfortably cross the center highlight line */
+    .engineering-manifesto {
+        padding: 50vh 0; 
+    }
 }

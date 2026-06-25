@@ -24,6 +24,6 @@
     white-space: normal;
 }
 
-.space {
-    height: 200px;
+body {
+    overflow-x: clip;
 }

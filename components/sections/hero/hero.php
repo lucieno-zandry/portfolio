@@ -6,7 +6,7 @@
 
         <h1>
             LUCIENO
-            <span>ZANDRY</span>
+            <span class="text-outline">ZANDRY</span>
         </h1>
 
         <p class="description">
