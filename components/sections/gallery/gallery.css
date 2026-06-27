@@ -1,6 +1,18 @@
 /* ── base ── */
 @import url(https://fonts.bunny.net/css?family=jura:300,500);
 
+/* ── Section Timeline ── */
+.gallery-section {
+    /* Creates a timeline based ONLY on this section's position in the viewport */
+    view-timeline-name: --gallery-timeline;
+    view-timeline-axis: block;
+
+    /* Make the section taller than 100vh so the sticky wrapper has room to scroll. 
+       Increase this value to make the animation play slower/longer! */
+    height: 250vh;
+    position: relative;
+}
+
 /* ── unsupported fallback ── */
 .msg-supports {
     position: fixed;
@@ -99,7 +111,6 @@
     will-change: transform;
 }
 
-/* ── each image tile ── */
 .wrapper .grid-inner>div {
     background-image: var(--bg);
     background-size: cover;
@@ -109,8 +120,14 @@
     animation-name: animate-boxes;
     animation-timing-function: linear;
     animation-fill-mode: both;
-    animation-timeline: scroll(root);
-    /* explicitly bind to root scroll */
+
+    /* REMOVED: animation-timeline: scroll(root); */
+    /* ADDED: Use your new named timeline */
+    animation-timeline: --gallery-timeline;
+
+    /* ADDED: Controls exactly when the animation starts and ends */
+    animation-range: entry 100% exit 0%;
+
     animation-duration: 1ms;
     /* needed for Firefox */
 
@@ -129,13 +146,17 @@
         animation-name: animate-center;
         animation-timing-function: linear;
         animation-fill-mode: both;
-        animation-timeline: scroll();
+
+        /* REMOVED: animation-timeline: scroll(); */
+        /* ADDED: Match the parent timeline */
+        animation-timeline: --gallery-timeline;
+        animation-range: entry 100% exit 0%;
+
         animation-duration: 1ms;
 
         .text-outline {
             -webkit-text-stroke: 1px white;
         }
-
         /* for Firefox */
     }
 }

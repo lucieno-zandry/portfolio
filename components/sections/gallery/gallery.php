@@ -1,7 +1,7 @@
-<section>
+<section class="gallery-section">
     <div class="systems-intro">
         <span class="eyebrow">
-            Selected Systems
+            Systems In Practice
         </span>
 
         <h2>
@@ -13,10 +13,10 @@
         </h2>
 
         <p class="description">
-            From e-commerce platforms and administrative dashboards
-            to mobile applications and reusable design systems,
-            every project strengthened my understanding of
-            architecture, ownership, and scalability.
+            A collection of architectural patterns,
+            production features, and engineering
+            decisions implemented across real-world
+            applications.
         </p>
     </div>
 
@@ -131,7 +131,7 @@
                         Payment <br> <span class="text-outline">Integration</span>
                     </h3>
                     <p>
-                        PHP 
+                        PHP
                     </p>
                 </div>
             </div>
