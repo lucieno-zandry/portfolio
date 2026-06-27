@@ -48,32 +48,33 @@ text {
     text-anchor: end;
 }
 
-/* Fluid Typographic Weights & Spacing */
+/* Fluid Typographic Weights & Spacing 
+   Sizes are slightly scaled down to compensate for viewport stretching. */
 .date {
-    font-size: 7px;
+    font-size: 11px;
     font-weight: 600;
     fill: var(--muted);
-    letter-spacing: 0.08em;
+    letter-spacing: 0.1em;
 }
 
 .title {
-    font-size: 11px;
+    font-size: 17px;
     font-weight: 800;
     fill: #ffffff;
-    letter-spacing: 0.02em;
-}
-
-.company-name {
-    font-size: 9px;
-    font-weight: 700;
-    fill: var(--accent);
     letter-spacing: 0.04em;
 }
 
+.company-name {
+    font-size: 14px;
+    font-weight: 700;
+    fill: var(--accent);
+    letter-spacing: 0.05em;
+}
+
 .role-list {
-    font-size: 7px;
+    font-size: 11px;
     font-weight: 400;
-    fill: rgba(255, 255, 255, 0.65);
+    fill: rgba(255, 255, 255, 0.75);
 }
 
 /* Graphics and Connectors */
@@ -85,8 +86,8 @@ text {
 .guideline {
     fill: none;
     stroke: rgba(255, 255, 255, 0.05);
-    stroke-width: 1px;
-    stroke-dasharray: 3 5;
+    stroke-width: 2px;
+    stroke-dasharray: 4 8;
 }
 
 .ball {
@@ -97,5 +98,5 @@ text {
 .anchor {
     fill: var(--bg);
     stroke: var(--accent);
-    stroke-width: 2.5px;
+    stroke-width: 4px;
 }
