@@ -1,4 +1,4 @@
-<section class="engineering-manifesto">
+<section class="engineering-manifesto reveal">
     <header class="manifesto-header fluid" style="--count: 7;">
         <section>
             <h2>

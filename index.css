@@ -119,7 +119,7 @@ h3 {
     background: rgba(255, 255, 255, 0.05);
 }
 
-section {
+.reveal {
     opacity: 0;
     transform: translateY(50px);
     /* Pushes the section down */
@@ -130,7 +130,7 @@ section {
 }
 
 /* 2. The Revealed State */
-section.active {
+.reveal.active {
     opacity: 1;
     transform: translateY(0);
     /* Slides up to its original position */

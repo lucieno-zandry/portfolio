@@ -1,5 +1,5 @@
 <section class="gallery-section">
-    <div class="systems-intro">
+    <div class="systems-intro reveal">
         <span class="eyebrow">
             Systems In Practice
         </span>

@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const sections = document.querySelectorAll("section");
+    const sections = document.querySelectorAll(".reveal");
 
     const observerOptions = {
         root: null,       // Defaults to the browser viewport

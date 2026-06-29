@@ -1,4 +1,4 @@
-<section class="hero">
+<section class="hero reveal">
     <div class="hero-overlay"></div>
 
     <div class="hero-content">

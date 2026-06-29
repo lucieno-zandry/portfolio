@@ -1,5 +1,5 @@
 <section class="timeline-section">
-    <div class="timeline-header">
+    <div class="timeline-header reveal">
         <span class="eyebrow">
             Engineering Journey
         </span>
