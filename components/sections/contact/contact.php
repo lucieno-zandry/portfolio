@@ -19,7 +19,7 @@
             <div class="cta-group">
                 <a class="primary-btn" href="mailto:lucienozandry4@gmail.com">Let's Talk</a>
                 <a class="secondary-btn" href="https://github.com/lucieno-zandry" target="_blank">GitHub</a>
-                <a class="secondary-btn" href="#" target="_blank">LinkedIn</a>
+                <a class="secondary-btn" href="https://www.linkedin.com/in/lucieno-zandry-a41a16324/" target="_blank">LinkedIn</a>
             </div>
         </div>
 
@@ -27,13 +27,13 @@
 
         <ul class="scroll-gallery">
             <li>
-                <img src="./components/sections/contact/assets/images/image1.jpg" alt="Lucieno" />
+                <img src="./components/sections/contact/assets/images/image1.jpg" alt="A professional picture of Lucieno" />
             </li>
             <li>
-                <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=800&auto=format&fit=crop" alt="Lucieno desk view" />
+                <img src="./components/sections/contact/assets/images/image2.jpg" alt="A normal, smiling photo of Lucieno" />
             </li>
             <li>
-                <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=800&auto=format&fit=crop" alt="Lucieno problem solving" />
+                <img src="./components/sections/contact/assets/images/image3.jpg" alt="A casual picture of Lucieno" />
             </li>
         </ul>
 
