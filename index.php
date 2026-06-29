@@ -25,10 +25,8 @@
 
 <body>
     <?php include('./components/sections/hero/hero.php')  ?>
-    <?php include('./components/ui/space.php') ?>
     <?php include('./components/sections/engineering-manifesto/engineering-manifesto.php')  ?>
     <?php include('./components/sections/gallery/gallery.php')  ?>
-    <?php include('./components/ui/space.php') ?>
     <?php include('./components/sections/timeline/timeline.php')  ?>
     <?php include('./components/sections/contact/contact.php')  ?>
 
@@ -58,6 +56,7 @@
     <script src="./components/sections/gallery/gallery.js"></script>
     <script src="./components/sections/timeline/timeline.js"></script>
     <script src="./components/sections/contact/contact.js"></script>
+    <script src="./index.js"></script>
 </body>
 
 </html>
