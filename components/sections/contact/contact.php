@@ -1,4 +1,4 @@
-<section class="content reveal">
+<section class="content reveal" id="contact">
     <header class="contact-header">
         <div class="contact-info">
             <div class="contact-status">

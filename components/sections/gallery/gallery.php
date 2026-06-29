@@ -1,4 +1,4 @@
-<section class="gallery-section">
+<section class="gallery-section" id="projects">
     <div class="systems-intro reveal">
         <span class="eyebrow">
             Systems In Practice
