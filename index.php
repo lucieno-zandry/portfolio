@@ -54,7 +54,7 @@
     </script>
 
     <script src="./components/sections/hero/hero.js"></script>
-    <script src="./components/sections/engineering-manifesto/engineering-manifesto.js" type="module"></script>
+    <script src="./components/sections/engineering-manifesto/engineering-manifesto.js"></script>
     <script src="./components/sections/gallery/gallery.js"></script>
     <script src="./components/sections/timeline/timeline.js"></script>
     <script src="./components/sections/contact/contact.js"></script>
