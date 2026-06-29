@@ -8,6 +8,10 @@
     padding: 4rem;
 }
 
+.hero-actions {
+    justify-content: center;
+}
+
 .hero-content {
     position: relative;
     z-index: 5;

@@ -16,7 +16,7 @@
             &::after {
                 content: '';
                 position: absolute;
-                inset: 0 -250%;
+                inset: -20px;
                 backdrop-filter: blur(calc(var(--blur) * 1px));
                 -webkit-backdrop-filter: blur(calc(var(--blur) * 1px));
                 mask: linear-gradient(180deg, transparent 0 calc((100 - var(--stop)) * 1%), black 100%);
@@ -43,7 +43,7 @@
     }
 
     .content {
-        width: 100%;
+        width: 100vw;
         max-width: 1200px;
         margin: 0 auto;
         display: flex;
@@ -173,46 +173,6 @@
             opacity: 1;
             transform: scale(1);
         }
-    }
-
-    /* Buttons */
-    .cta-group {
-        display: flex;
-        gap: 1rem;
-        flex-wrap: wrap;
-    }
-
-    .primary-btn,
-    .secondary-btn {
-        padding: 1rem 2rem;
-        border-radius: 8px;
-        font-size: 1rem;
-        font-weight: 600;
-        text-decoration: none;
-        transition: all 0.3s ease;
-    }
-
-    .primary-btn {
-        background: var(--accent);
-        color: var(--bg);
-        border: 2px solid var(--accent);
-    }
-
-    .primary-btn:hover {
-        background: transparent;
-        color: var(--accent);
-        box-shadow: 0 0 20px rgba(110, 168, 255, 0.3);
-    }
-
-    .secondary-btn {
-        background: transparent;
-        color: var(--text);
-        border: 2px solid rgba(255, 255, 255, 0.2);
-    }
-
-    .secondary-btn:hover {
-        border-color: var(--text);
-        background: rgba(255, 255, 255, 0.05);
     }
 
     /* Mobile Breakpoint */

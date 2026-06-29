@@ -15,9 +15,9 @@
             Docker, and modern backend patterns.
         </p>
 
-        <div class="hero-actions">
-            <a href="#projects">View Projects</a>
-            <a href="#contact" class="secondary">Contact Me</a>
+        <div class="cta-group hero-actions">
+            <a class="primary-btn" href="#projects">View Projects</a>
+            <a class="secondary-btn" href="#contact" class="secondary">Contact Me</a>
         </div>
 
         <div class="tech-stack">

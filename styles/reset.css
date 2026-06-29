@@ -23,7 +23,3 @@
     clip: auto;
     white-space: normal;
 }
-
-body {
-    overflow-x: clip;
-}
