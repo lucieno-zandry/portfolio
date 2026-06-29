@@ -1,9 +1,18 @@
 <section class="timeline-section">
     <div class="timeline-header">
-        <h2 class="timeline-heading">My Experiences</h2>
+        <span class="eyebrow">
+            Engineering Journey
+        </span>
+
+        <h2>
+            Becoming a Backend-Leaning<br />
+            Fullstack Engineer
+        </h2>
+
         <p class="description">
-            To keep it short and relevant to my career field, the following periodization shows when and where my
-            current knowledge comes from, focusing on scalable systems and backend-leaning fullstack development.
+            Every role introduced a new layer of engineering—from responsive interfaces and REST APIs
+            to scalable backend architecture, containerized deployments, and production ownership.
+            This timeline highlights the milestones that shaped how I design, build, and think about software today.
         </p>
     </div>
 
@@ -54,47 +63,47 @@
                 <tspan x="260" dy="20">Modular React &amp; TS frontend ·</tspan>
             </text>
 
-            <text class="text02 date" x="170" y="990">DEC 2023 - MAR 2024</text>
-            <text class="title-2 title" x="170" y="1020">
+            <text class="text02 date" x="170" y="950">DEC 2023 - MAR 2024</text>
+            <text class="title-2 title" x="170" y="1000">
                 <tspan x="170" dy="0">FRONTEND DEVELOPER</tspan>
                 <tspan x="170" dy="22">TRAINEE</tspan>
             </text>
-            <text class="text02 company-name" x="170" y="1075">Maboo</text>
-            <text class="text02 role-list" x="170" y="1105">
+            <text class="text02 company-name" x="170" y="1080">Maboo</text>
+            <text class="text02 role-list" x="170" y="1140">
                 <tspan x="170" dy="0">· Pixel-perfect responsive integration</tspan>
                 <tspan x="170" dy="20">· Real-time data handling with Axios</tspan>
                 <tspan x="170" dy="20">· Architected reusable SCSS components</tspan>
             </text>
 
-            <text class="text03 date right-align" x="260" y="1430">JUN 2023 - SEP 2023</text>
-            <text class="title-3 title right-align" x="260" y="1460">
-                <tspan x="260" dy="0">PHP &amp; FRONTEND</tspan>
-                <tspan x="260" dy="22">DEVELOPER TRAINEE</tspan>
+            <text class="text03 date right-align" x="320" y="1380">JUN 2023 - SEP 2023</text>
+            <text class="title-3 title right-align" x="320" y="1430">
+                <tspan x="320" dy="0">PHP &amp; FRONTEND</tspan>
+                <tspan x="320" dy="22">DEVELOPER TRAINEE</tspan>
             </text>
-            <text class="text03 company-name right-align" x="260" y="1515">Teko Consulting</text>
-            <text class="text03 role-list right-align" x="260" y="1545">
-                <tspan x="260" dy="0">Frontend optimization (20% faster) ·</tspan>
-                <tspan x="260" dy="20">Custom PrestaShop module design ·</tspan>
-                <tspan x="260" dy="20">Maintained legacy Laravel configurations ·</tspan>
+            <text class="text03 company-name right-align" x="320" y="1510">Teko Consulting</text>
+            <text class="text03 role-list right-align" x="320" y="1570">
+                <tspan x="320" dy="0">Frontend optimization (20% faster) ·</tspan>
+                <tspan x="320" dy="20">Custom PrestaShop module design ·</tspan>
+                <tspan x="320" dy="20">Maintained legacy Laravel configurations ·</tspan>
             </text>
 
-            <text class="text04 date" x="175" y="1870">2020 - 2025</text>
-            <text class="title-4 title" x="175" y="1900">
-                <tspan x="175" dy="0">HIGHER</tspan>
-                <tspan x="175" dy="22">EDUCATION</tspan>
+            <text class="text04 date" x="175" y="1850">2020 - 2025</text>
+            <text class="title-4 title" x="210" y="1900">
+                <tspan x="210" dy="0">HIGHER</tspan>
+                <tspan x="210" dy="22">EDUCATION</tspan>
             </text>
-            <text class="text04 company-name" x="175" y="1955">IT University &amp; Université Hay</text>
-            <text class="text04 role-list" x="175" y="1985">
+            <text class="text04 company-name" x="175" y="1980">IT University &amp; Université Hay</text>
+            <text class="text04 role-list" x="175" y="2040">
                 <tspan x="175" dy="0">· Master I in Information Technology</tspan>
                 <tspan x="175" dy="20">· Bachelor &amp; BTS in Programming</tspan>
             </text>
 
-            <text class="text05 date right-align" x="260" y="2310">2017 - 2018</text>
-            <text class="title-5 title right-align" x="260" y="2340">
-                <tspan x="260" dy="0">SCIENTIFIC</tspan>
-                <tspan x="260" dy="22">HIGH-SCHOOL DEGREE</tspan>
+            <text class="text05 date right-align" x="360" y="2280">2017 - 2018</text>
+            <text class="title-5 title right-align" x="360" y="2330">
+                <tspan x="360" dy="0">SCIENTIFIC</tspan>
+                <tspan x="360" dy="22">HIGH-SCHOOL DEGREE</tspan>
             </text>
-            <text class="text05 company-name right-align" x="260" y="2395">La Pepite d'Or</text>
+            <text class="text05 company-name right-align" x="360" y="2400">La Pepite d'Or</text>
 
             <path class="theLine" d="M -5,0
                 Q 450 400 300 600 

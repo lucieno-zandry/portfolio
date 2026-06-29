@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./components/sections/engineering-manifesto/engineering-manifesto.css">
     <link rel="stylesheet" href="./components/sections/gallery/gallery.css">
     <link rel="stylesheet" href="./components/sections/timeline/timeline.css">
+    <link rel="stylesheet" href="./components/sections/contact/contact.css">
 
     <!-- gsap -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
@@ -29,6 +30,7 @@
     <?php include('./components/sections/gallery/gallery.php')  ?>
     <?php include('./components/ui/space.php') ?>
     <?php include('./components/sections/timeline/timeline.php')  ?>
+    <?php include('./components/sections/contact/contact.php')  ?>
 
     <script>
         console.clear();
@@ -55,6 +57,7 @@
     <script src="./components/sections/engineering-manifesto/engineering-manifesto.js" type="module"></script>
     <script src="./components/sections/gallery/gallery.js"></script>
     <script src="./components/sections/timeline/timeline.js"></script>
+    <script src="./components/sections/contact/contact.js"></script>
 </body>
 
 </html>
