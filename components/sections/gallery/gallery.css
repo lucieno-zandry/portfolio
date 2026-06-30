@@ -157,6 +157,7 @@
         .text-outline {
             -webkit-text-stroke: 1px white;
         }
+
         /* for Firefox */
     }
 }
@@ -231,8 +232,13 @@
 
 .systems-intro {
     text-align: center;
-    margin: clamp(200px, 40vh, 400px) auto;
     width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, .5), black);
 }
 
 .project-card {
@@ -277,5 +283,34 @@
         width: 300vw;
         --gap: 0.5rem;
         /* Optionally tighten the gap on mobile */
+    }
+}
+
+/* Container holds everything together */
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* Takes up full viewport height */
+    overflow: hidden;
+}
+
+/* Video scales perfectly to fill the screen */
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Keeps aspect ratio while filling space */
+    z-index: -1;
+    /* Pushes the video behind the content */
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .background-video {
+        display: none;
+        /* Hides the video, showing your fallback image instead */
     }
 }

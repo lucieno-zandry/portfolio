@@ -1,23 +1,30 @@
 <section class="gallery-section" id="projects">
-    <div class="systems-intro reveal">
-        <span class="eyebrow">
-            Systems In Practice
-        </span>
+    <div class="video-container reveal">
+        <video autoplay muted loop playsinline class="background-video">
+            <source src="./components/sections/gallery/assets/background-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
 
-        <h2>
-            Real products.<br />
-            <span class="text-outline">
-                Real users.
-            </span><br />
-            Real constraints.
-        </h2>
+        <div class="systems-intro">
+            <span class="eyebrow">
+                Systems In Practice
+            </span>
 
-        <p class="description">
-            A collection of architectural patterns,
-            production features, and engineering
-            decisions implemented across real-world
-            applications.
-        </p>
+            <h2>
+                Real products.<br />
+                <span class="text-outline">
+                    Real users.
+                </span><br />
+                Real constraints.
+            </h2>
+
+            <p class="description">
+                A collection of architectural patterns,
+                production features, and engineering
+                decisions implemented across real-world
+                applications.
+            </p>
+        </div>
     </div>
 
     <p class="msg-supports">
