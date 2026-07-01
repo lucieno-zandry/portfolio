@@ -67,49 +67,57 @@
                 "title": "Snapshot-Based <br> <span class=\"text-outline\">Order Engine</span>",
                 "tech": "Laravel · MySQL · Data Integrity",
                 "link": "/case-studies/the-integrity-savior.php",
-                "bg": "./assets/image.jpeg"
+                "bg": "./assets/image.jpeg",
+                "actionLabel": "Read Case Study"
             },
             {
                 "title": "Priority-Stacked <br> <span class=\"text-outline\">Promo System</span>",
                 "tech": "Laravel ORM · SQL · Algorithms",
                 "link": "/case-studies/the-logic-engine.php",
-                "bg": "./assets/image8.jpeg"
+                "bg": "./assets/image8.jpeg",
+                "actionLabel": "Read Case Study"
             },
             {
                 "title": "Polymorphic <br> <span class=\"text-outline\">Landing Blocks</span>",
                 "tech": "React · Tsup · Morph Relations",
                 "link": "/case-studies/the-polymorphic-engine.php",
-                "bg": "./assets/image2.jpeg"
+                "bg": "./assets/image2.jpeg",
+                "actionLabel": "Read Case Study"
             },
             {
                 "title": "Advanced <br> <span class=\"text-outline\">Search</span>",
                 "tech": "Laravel · Meilisearch · SSR",
-                "link": null,
-                "bg": "./assets/image7.jpeg"
+                "link": "https://maboo.mg/fr/search/bébé",
+                "bg": "./assets/image7.jpeg",
+                "actionLabel": "View Demo"
             },
             {
                 "title": "SSR <br> <span class=\"text-outline\">Storefront</span>",
                 "tech": "React Router V7 · Remix",
-                "link": null,
-                "bg": "./assets/image4.jpeg"
+                "link": "https://maboo.mg",
+                "bg": "./assets/image4.jpeg",
+                "actionLabel": "View Demo"
             },
             {
                 "title": "Modern <br> <span class=\"text-outline\">Backoffice</span>",
                 "tech": "Shadcn UI · Tailwindcss · React",
-                "link": null,
-                "bg": "./assets/image3.png"
+                "link": "https://github.com/lucieno-zandry/wle-bo",
+                "bg": "./assets/image3.png",
+                "actionLabel": "View Source Code"
             },
             {
                 "title": "Immutable <br> <span class=\"text-outline\">Transaction Audit</span>",
                 "tech": "UUID · Webhooks · Event Ledger",
                 "link": "/case-studies/the-integrity-savior.php",
-                "bg": "./assets/image6.png"
+                "bg": "./assets/image6.png",
+                "actionLabel": "Read Case Study"
             },
             {
                 "title": "Bracket-Based <br> <span class=\"text-outline\">Shipping Engine</span>",
                 "tech": "Laravel · Regex · API Carrier",
                 "link": "/case-studies/the-integrity-savior.php",
-                "bg": "./assets/image5.jpeg"
+                "bg": "./assets/image5.jpeg",
+                "actionLabel": "Read Case Study"
             }
         ]
     },

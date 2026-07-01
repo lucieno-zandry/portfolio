@@ -36,7 +36,7 @@ $gallery = $data['gallery'];
                         <p><?= htmlspecialchars($project['tech']) ?></p>
                         <?php if ($project['link']): ?>
                             <a href="<?= htmlspecialchars($project['link']) ?>" class="overlay-link" target="_blank">
-                                Read Case Study &rarr;
+                                <?= $project['actionLabel']  ?> &rarr;
                             </a>
                         <?php endif; ?>
                     </div>
