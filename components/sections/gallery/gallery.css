@@ -314,3 +314,33 @@
         /* Hides the video, showing your fallback image instead */
     }
 }
+
+/* ── Overlay Action Button ── */
+.overlay-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1.25rem;
+    padding: 0.6rem 1.25rem;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(4px);
+    transition: background 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+    align-self: flex-start;
+    /* Prevents the button from stretching */
+    pointer-events: auto;
+    /* Ensures it's clickable inside the overlay */
+}
+
+.overlay-link:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #fff;
+    transform: translateY(-2px);
+}
