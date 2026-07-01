@@ -46,6 +46,10 @@
                 <tspan x="200" dy="22">DEVELOPER</tspan>
             </text>
             <text class="text00 company-name" x="250" y="165">Group VII Origin</text>
+            <g class="info-icon text00" data-index="0" tabindex="0" role="button" aria-label="About Group VII Origin" style="transform: translate(77%, 5.7%);">
+                <circle class="info-icon-bg" r="9" cx="0" cy="0"></circle>
+                <text class="info-icon-mark" x="0" y="0">i</text>
+            </g>
             <text class="text00 role-list" x="200" y="215">
                 <tspan x="200" dy="0">· Backend maintenance &amp; API sync</tspan>
                 <tspan x="200" dy="20">· Android app enhancement cycles</tspan>
@@ -56,7 +60,11 @@
                 <tspan x="260" dy="0">PHP &amp; REACT</tspan>
                 <tspan x="260" dy="22">DEVELOPER</tspan>
             </text>
-            <text class="text01 company-name right-align" x="260" y="600">Zafy Tody</text>
+            <text class="text01 company-name right-align" x="250" y="600">Zafy Tody</text>
+            <g class="info-icon text01" data-index="1" tabindex="0" role="button" aria-label="About Zafy Tody" style="transform: translate(18%, 21.25%);">
+                <circle class="info-icon-bg" r="9" cx="0" cy="0"></circle>
+                <text class="info-icon-mark" x="0" y="0">i</text>
+            </g>
             <text class="text01 role-list right-align" x="260" y="660">
                 <tspan x="260" dy="0">RESTful APIs with Laravel 11 ·</tspan>
                 <tspan x="260" dy="20">Full stack containerization via Docker ·</tspan>
@@ -69,6 +77,10 @@
                 <tspan x="170" dy="22">TRAINEE</tspan>
             </text>
             <text class="text02 company-name" x="170" y="1080">Maboo</text>
+            <g class="info-icon text02" data-index="2" tabindex="0" role="button" aria-label="About Maboo" style="transform: translate(45%, 38.4%);">
+                <circle class="info-icon-bg" r="9" cx="0" cy="0"></circle>
+                <text class="info-icon-mark" x="0" y="0">i</text>
+            </g>
             <text class="text02 role-list" x="170" y="1140">
                 <tspan x="170" dy="0">· Pixel-perfect responsive integration</tspan>
                 <tspan x="170" dy="20">· Real-time data handling with Axios</tspan>
@@ -81,6 +93,10 @@
                 <tspan x="320" dy="22">DEVELOPER TRAINEE</tspan>
             </text>
             <text class="text03 company-name right-align" x="320" y="1510">Teko Consulting</text>
+            <g class="info-icon text03" data-index="3" tabindex="0" role="button" aria-label="About Teko Consulting" style="transform: translate(18%, 53.75%);">
+                <circle class="info-icon-bg" r="9" cx="0" cy="0"></circle>
+                <text class="info-icon-mark" x="0" y="0">i</text>
+            </g>
             <text class="text03 role-list right-align" x="320" y="1570">
                 <tspan x="320" dy="0">Frontend optimization (20% faster) ·</tspan>
                 <tspan x="320" dy="20">Custom PrestaShop module design ·</tspan>
@@ -93,6 +109,10 @@
                 <tspan x="210" dy="22">EDUCATION</tspan>
             </text>
             <text class="text04 company-name" x="175" y="1980">IT University &amp; Université Hay</text>
+            <g class="info-icon text04" data-index="4" tabindex="0" role="button" aria-label="About IT University &amp; Université Hay" style="transform: translate(5%, 70.6%);">
+                <circle class="info-icon-bg" r="9" cx="0" cy="0"></circle>
+                <text class="info-icon-mark" x="0" y="0">i</text>
+            </g>
             <text class="text04 role-list" x="175" y="2040">
                 <tspan x="175" dy="0">· Master I in Information Technology</tspan>
                 <tspan x="175" dy="20">· Bachelor &amp; BTS in Programming</tspan>
@@ -104,6 +124,10 @@
                 <tspan x="360" dy="22">HIGH-SCHOOL DEGREE</tspan>
             </text>
             <text class="text05 company-name right-align" x="360" y="2400">La Pepite d'Or</text>
+            <g class="info-icon text05" data-index="5" tabindex="0" role="button" aria-label="About La Pepite d'Or" style="transform: translate(29%, 85.6%);">
+                <circle class="info-icon-bg" r="9" cx="0" cy="0"></circle>
+                <text class="info-icon-mark" x="0" y="0">i</text>
+            </g>
 
             <path class="theLine" d="M -5,0
                 Q 450 400 300 600 
@@ -122,5 +146,12 @@
             <circle class="ball ball05 anchor" r="6" cx="135" cy="1920"></circle>
             <circle class="ball ball06 anchor" r="6" cx="300" cy="2360"></circle>
         </svg>
+
+        <div class="info-popover" id="infoPopover" role="dialog" aria-hidden="true">
+            <button class="info-popover-close" type="button" aria-label="Close">&times;</button>
+            <h4 class="info-popover-title"></h4>
+            <p class="info-popover-text"></p>
+            <a class="info-popover-link" href="#" target="_blank" rel="noopener noreferrer">Visit website →</a>
+        </div>
     </div>
 </section>
