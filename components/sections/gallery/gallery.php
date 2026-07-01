@@ -139,14 +139,14 @@
                 </div>
             </div>
 
-            <div class="center">
+            <!-- <div class="center">
                 <h3 class="text-outline">
-                    2
+                    10+
                 </h3>
                 <span>
-                    years
+                    deployments
                 </span>
-            </div>
+            </div> -->
         </div>
     </div>
 </section>

@@ -91,6 +91,7 @@
     --gap: 1rem;
     --x: 0;
     --scale: 1;
+    --size-base: 0px;
 
     width: 120vw;
     flex-shrink: 0;
