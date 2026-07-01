@@ -119,6 +119,29 @@
         "description": "Every role introduced a new layer of engineering—from responsive interfaces and REST APIs to scalable backend architecture, containerized deployments, and production ownership. This timeline highlights the milestones that shaped how I design, build, and think about software today.",
         "items": [
             {
+                "date": "2022 - PRESENT",
+                "titleLine1": "BUILDING",
+                "titleLine2": "PRODUCTS",
+                "company": "Independent ...",
+                "info": "Beyond professional roles, I continuously build applications to explore new technologies, validate ideas and refine software architecture.",
+                "url": "",
+                "roleList": [
+                    "· Client projects",
+                    "· Personal products",
+                    "· Reusable libraries & tooling"
+                ],
+                "alignment": "left",
+                "lineY": 130,
+                "textX": 200,
+                "companyX": 225,
+                "roleX": 200,
+                "dateX": 200,
+                "titleX": 200,
+                "iconTransform": "translate(70%, 4.7%)",
+                "ballX": 130,
+                "roleY": 65
+            },
+            {
                 "date": "DEC 2024 - DEC 2025",
                 "titleLine1": "REACT & FLUTTER",
                 "titleLine2": "DEVELOPER",
@@ -129,15 +152,15 @@
                     "Backend maintenance & API sync",
                     "Android app enhancement cycles"
                 ],
-                "alignment": "left",
-                "lineY": 130,
-                "textX": 200,
+                "alignment": "right",
+                "lineY": 490,
+                "textX": 260,
                 "companyX": 250,
-                "roleX": 200,
-                "dateX": 200,
-                "titleX": 200,
-                "iconTransform": "translate(77%, 4.7%)",
-                "ballX": 130
+                "roleX": 260,
+                "dateX": 260,
+                "titleX": 280,
+                "iconTransform": "translate(3%, 17.4%)",
+                "ballX": 336
             },
             {
                 "date": "APR 2024 - OCT 2024",
@@ -151,15 +174,16 @@
                     "Full stack containerization via Docker ·",
                     "Modular React & TS frontend ·"
                 ],
-                "alignment": "right",
-                "lineY": 550,
-                "textX": 260,
-                "companyX": 250,
-                "roleX": 260,
-                "dateX": 260,
-                "titleX": 260,
-                "iconTransform": "translate(18%, 19.6%)",
-                "ballX": 327
+                "alignment": "left",
+                "lineY": 885,
+                "textX": 170,
+                "companyX": 215,
+                "roleX": 170,
+                "dateX": 170,
+                "titleX": 170,
+                "iconTransform": "translate(58%, 31.6%)",
+                "ballX": 157,
+                "roleY": 65
             },
             {
                 "date": "DEC 2023 - MAR 2024",
@@ -173,15 +197,16 @@
                     "· Real-time data handling with Axios",
                     "· Architected reusable SCSS components"
                 ],
-                "alignment": "left",
-                "lineY": 940,
-                "textX": 170,
-                "companyX": 200,
-                "roleX": 170,
-                "dateX": 170,
-                "titleX": 170,
-                "iconTransform": "translate(50%, 33.5%)",
-                "ballX": 145
+                "alignment": "right",
+                "lineY": 1300,
+                "textX": 320,
+                "companyX": 280,
+                "roleX": 320,
+                "dateX": 320,
+                "titleX": 350,
+                "iconTransform": "translate(55%, 46.5%)",
+                "ballX": 165,
+                "roleY": 65
             },
             {
                 "date": "JUN 2023 - SEP 2023",
@@ -195,15 +220,16 @@
                     "Custom PrestaShop module design ·",
                     "Maintained legacy Laravel configurations ·"
                 ],
-                "alignment": "right",
-                "lineY": 1360,
-                "textX": 320,
-                "companyX": 420,
-                "roleX": 320,
-                "dateX": 320,
-                "titleX": 320,
-                "iconTransform": "translate(85%, 48.7%)",
-                "ballX": 200
+                "alignment": "left",
+                "lineY": 1670,
+                "textX": 175,
+                "companyX": 170,
+                "roleX": 175,
+                "dateX": 175,
+                "titleX": 210,
+                "iconTransform": "translate(14%, 59.6%)",
+                "ballX": 376,
+                "roleY": 65
             },
             {
                 "date": "2024 - 2025",
@@ -216,14 +242,15 @@
                     "· Master I in Information Technology"
                 ],
                 "alignment": "left",
-                "lineY": 1730,
+                "lineY": 1995,
                 "textX": 175,
-                "companyX": 175,
+                "companyX": 210,
                 "roleX": 175,
                 "dateX": 175,
                 "titleX": 210,
-                "iconTransform": "translate(16%, 61.7%)",
-                "ballX": 352
+                "iconTransform": "translate(64%, 71.2%)",
+                "ballX": 120,
+                "roleY": 45
             },
             {
                 "date": "2020 - 2023",
@@ -235,15 +262,16 @@
                 "roleList": [
                     "· Bachelor's degree in Software engineering."
                 ],
-                "alignment": "left",
-                "lineY": 2050,
-                "textX": 175,
-                "companyX": 210,
-                "roleX": 175,
-                "dateX": 175,
-                "titleX": 210,
-                "iconTransform": "translate(16%, 61.7%)",
-                "ballX": 125
+                "alignment": "right",
+                "lineY": 2365,
+                "textX": 360,
+                "companyX": 200,
+                "roleX": 360,
+                "dateX": 360,
+                "titleX": 360,
+                "iconTransform": "translate(1%, 84.5%)",
+                "ballX": 305,
+                "roleY": 45
             },
             {
                 "date": "2017 - 2018",
@@ -254,14 +282,14 @@
                 "url": "https://www.facebook.com/lapepitedorantaninandro/",
                 "roleList": [],
                 "alignment": "right",
-                "lineY": 2500,
+                "lineY": 2730,
                 "textX": 360,
-                "companyX": 360,
+                "companyX": 440,
                 "roleX": 360,
                 "dateX": 360,
                 "titleX": 360,
-                "iconTransform": "translate(29%, 85.6%)",
-                "ballX": 160
+                "iconTransform": "translate(88%, 97.5%)",
+                "ballX": 250
             }
         ]
     }

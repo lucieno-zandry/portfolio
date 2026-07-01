@@ -45,20 +45,21 @@ $items = $timeline['items'];
                 $dateY = $lineY - 125;
                 $titleY = $lineY - 75;
                 $companyY = $lineY + 5;
-                $roleY = $lineY + 55;
+                $roleY = $lineY + (isset($item['roleY']) ? $item['roleY'] : 55);
             ?>
-                <text class="text0<?= $idx ?> date <?= $alignClass ?>" x="<?= $dateX ?>" y="<?= $dateY ?>"><?= htmlspecialchars($item['date']) ?></text>
+                <!-- Simplified dynamic classes: text-<?= $idx ?> -->
+                <text class="text-<?= $idx ?> date <?= $alignClass ?>" x="<?= $dateX ?>" y="<?= $dateY ?>"><?= htmlspecialchars($item['date']) ?></text>
                 <text class="title-<?= $idx ?> title <?= $alignClass ?>" x="<?= $titleX ?>" y="<?= $titleY ?>">
                     <tspan x="<?= $titleX ?>" dy="0"><?= htmlspecialchars($item['titleLine1']) ?></tspan>
                     <tspan x="<?= $titleX ?>" dy="22"><?= htmlspecialchars($item['titleLine2']) ?></tspan>
                 </text>
-                <text class="text0<?= $idx ?> company-name <?= $alignClass ?>" x="<?= $companyX ?>" y="<?= $companyY ?>"><?= htmlspecialchars($item['company']) ?></text>
-                <g class="info-icon text0<?= $idx ?>" data-index="<?= $idx ?>" tabindex="0" role="button" aria-label="About <?= htmlspecialchars($item['company']) ?>" style="transform: <?= $item['iconTransform'] ?>;">
+                <text class="text-<?= $idx ?> company-name <?= $alignClass ?>" x="<?= $companyX ?>" y="<?= $companyY ?>"><?= htmlspecialchars($item['company']) ?></text>
+                <g class="info-icon text-<?= $idx ?>" data-index="<?= $idx ?>" tabindex="0" role="button" aria-label="About <?= htmlspecialchars($item['company']) ?>" style="transform: <?= $item['iconTransform'] ?>;">
                     <circle class="info-icon-bg" r="9" cx="0" cy="0"></circle>
                     <text class="info-icon-mark" x="0" y="0">i</text>
                 </g>
                 <?php if (!empty($item['roleList'])): ?>
-                    <text class="text0<?= $idx ?> role-list <?= $alignClass ?>" x="<?= $roleX ?>" y="<?= $roleY ?>">
+                    <text class="text-<?= $idx ?> role-list <?= $alignClass ?>" x="<?= $roleX ?>" y="<?= $roleY ?>">
                         <?php foreach ($item['roleList'] as $j => $role): ?>
                             <tspan x="<?= $roleX ?>" dy="<?= $j === 0 ? 0 : 20 ?>"><?= htmlspecialchars($role) ?></tspan>
                         <?php endforeach; ?>
@@ -68,19 +69,20 @@ $items = $timeline['items'];
 
             <!-- the main curved path -->
             <path class="theLine" d="M -5,0
-                Q 450 400 300 600 
-                T 130 1040
-                Q 80 1260 300 1480
-                T 130 1920
-                Q 80 2140 300 2360
-                T 150 2800" fill="none" stroke="url(#lineGrad)" stroke-width="6px" filter="url(#glow)" />
+    Q 450 400 300 600 
+    T 130 1040
+    Q 80 1260 300 1480
+    T 130 1920
+    Q 80 2140 300 2360
+    T 150 2800" fill="none" stroke="url(#lineGrad)" stroke-width="6px" filter="url(#glow)" />
 
-            <!-- moving ball -->
-            <circle class="ball ball00" r="12" cx="25" cy="160" fill="#ffffff" filter="url(#glow)"></circle>
+            <!-- moving ball (renamed class to ball-main to distinguish it) -->
+            <circle class="ball ball-main" r="12" cx="25" cy="160" fill="#ffffff" filter="url(#glow)"></circle>
 
             <!-- anchor balls -->
             <?php foreach ($items as $idx => $item): ?>
-                <circle class="ball ball0<?= $idx + 1 ?> anchor" r="6" cx="<?= $item['ballX'] ?>" cy="<?= $item['lineY'] ?>"></circle>
+                <!-- Synchronized dynamic classes: ball-<?= $idx ?> -->
+                <circle class="ball ball-<?= $idx ?> anchor" r="6" cx="<?= $item['ballX'] ?>" cy="<?= $item['lineY'] ?>"></circle>
             <?php endforeach; ?>
         </svg>
 

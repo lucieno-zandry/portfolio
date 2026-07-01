@@ -1,23 +1,29 @@
 gsap.registerPlugin(MotionPathPlugin);
 gsap.defaults({ ease: "none" });
 
-const pulses = gsap
-    .timeline({
-        defaults: {
-            duration: 0.05,
-            autoAlpha: 1,
-            scale: 2,
-            transformOrigin: "center",
-            ease: "elastic(2.5, 1)",
-        },
-    })
-    .to(".ball01, .text00, .title-0", {}, 0.05)
-    .to(".ball02, .text01, .title-1", {}, 0.2)
-    .to(".ball03, .text02, .title-2", {}, 0.33)
-    .to(".ball04, .text03, .title-3", {}, 0.46)
-    .to(".ball05, .text04, .title-4", {}, 0.59)
-    .to(".ball06, .text05, .title-5", {}, 0.72);
+// 1. Initialize the timeline base
+const pulses = gsap.timeline({
+    defaults: {
+        duration: 0.05,
+        autoAlpha: 1,
+        scale: 2,
+        transformOrigin: "center",
+        ease: "elastic(2.5, 1)",
+    },
+});
 
+// 2. Dynamically look up all anchor points and loop through them
+const anchors = document.querySelectorAll(".anchor");
+
+anchors.forEach((anchor, idx) => {
+    // Calculates a clean incremental trigger point along the scroll duration
+    const timePosition = 0.05 + idx * 0.13;
+
+    // Group animations together effortlessly using the index
+    pulses.to(`.ball-${idx}, .text-${idx}, .title-${idx}`, {}, timePosition);
+});
+
+// 3. Attach everything to the main ScrollTrigger container
 const main = gsap
     .timeline({
         defaults: { duration: 1 },
@@ -29,9 +35,9 @@ const main = gsap
             markers: false,
         },
     })
-    .to(".ball00", { duration: 0.01, autoAlpha: 1 })
+    .to(".ball-main", { duration: 0.01, autoAlpha: 1 })
     .to(
-        ".ball00",
+        ".ball-main",
         {
             motionPath: {
                 path: ".theLine",
@@ -42,7 +48,7 @@ const main = gsap
         0
     )
     .add(pulses, 0);
-
+    
 /* ------------------------------------------------------------------ */
 /* Info popovers — data is injected by PHP as window.timelineCompanyInfo */
 /* ------------------------------------------------------------------ */
