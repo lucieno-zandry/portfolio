@@ -1,25 +1,29 @@
+<?php
+$data = json_decode(file_get_contents(dirname(__DIR__, 3) . DIRECTORY_SEPARATOR . 'data' . DIRECTORY_SEPARATOR . 'data.json'), true);
+$contact = $data['contact'];
+?>
+
 <section class="content reveal" id="contact">
     <header class="contact-header">
         <div class="contact-info">
             <div class="contact-status">
-                <span class="status-dot"></span> Available for new projects
+                <span class="status-dot"></span> <?= htmlspecialchars($contact['status']) ?>
             </div>
 
-            <h1 class="eyebrow">Lucieno Zandry</h1>
-            <h2>Ready to Architect Your Next Project?</h2>
+            <h1 class="eyebrow"><?= htmlspecialchars($contact['name']) ?></h1>
+            <h2><?= htmlspecialchars($contact['heading']) ?></h2>
 
-            <p class="description">
-                I am currently exploring new engineering opportunities. Whether it's designing scalable RESTful APIs, orchestrating Docker containers, or building highly responsive React interfaces, let's build something exceptional together.
-            </p>
+            <p class="description"><?= htmlspecialchars($contact['description']) ?></p>
 
             <div class="location-info">
-                <p>📍 Antananarivo, Madagascar (EAT)</p>
+                <p><?= htmlspecialchars($contact['location']) ?></p>
             </div>
 
             <div class="cta-group">
-                <a class="primary-btn" href="mailto:lucienozandry4@gmail.com">Let's Talk</a>
-                <a class="secondary-btn" href="https://github.com/lucieno-zandry" target="_blank">GitHub</a>
-                <a class="secondary-btn" href="https://www.linkedin.com/in/lucieno-zandry-a41a16324/" target="_blank">LinkedIn</a>
+                <a class="primary-btn" href="<?= htmlspecialchars($contact['cta']['primary']['href']) ?>"><?= htmlspecialchars($contact['cta']['primary']['text']) ?></a>
+                <?php foreach ($contact['cta']['secondary'] as $btn): ?>
+                    <a class="secondary-btn" href="<?= htmlspecialchars($btn['href']) ?>" target="_blank"><?= htmlspecialchars($btn['text']) ?></a>
+                <?php endforeach; ?>
             </div>
         </div>
 
@@ -41,6 +45,6 @@
     </header>
 
     <footer class="contact-footer">
-        <p>Designed and Built by Lucieno Zandry &copy; 2026</p>
+        <p><?= htmlspecialchars($contact['footer']) ?></p>
     </footer>
 </section>

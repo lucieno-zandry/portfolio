@@ -30,7 +30,6 @@ const main = gsap
         },
     })
     .to(".ball00", { duration: 0.01, autoAlpha: 1 })
-    // .from(".theLine", {drawSVG: 0}, 0)
     .to(
         ".ball00",
         {
@@ -45,56 +44,8 @@ const main = gsap
     .add(pulses, 0);
 
 /* ------------------------------------------------------------------ */
-/* Info popovers — fill in `info` and `url` for each establishment.    */
-/* Order matches text00 → text05 (data-index 0-5) in timeline.php.     */
+/* Info popovers — data is injected by PHP as window.timelineCompanyInfo */
 /* ------------------------------------------------------------------ */
-const companyInfo = [
-    {
-        name: "Group VII Origin",
-        info: "A french company specialized in application development based in Paris, France.",
-        url: "https://groupviiorigin.com/",
-    },
-    {
-        name: "Zafy Tody",
-        info: "This company helps accelerate the startup ecosystem in Madagascar.",
-        url: "https://zafytody.mg/en/",
-    },
-    {
-        name: "Maboo",
-        info: "An e-commerce based company that targets young mothers.",
-        url: "https://maboo.mg",
-    },
-    {
-        name: "Teko Consulting",
-        info: "A Software engineering services firm based in Madagascar.",
-        url: "https://www.linkedin.com/in/teko-consulting-03140a1b9?originalSubdomain=mg",
-    },
-    {
-        name: "IT University & Université Hay",
-        info: "IT University is ranked first as the best software college in Madagascar",
-        url: "https://www.ituniversity-mg.com",
-    },
-    {
-        name: "La Pepite d'Or",
-        info: "A very well known highschool in the capital of Antananarivo.",
-        url: "https://www.facebook.com/lapepitedorantaninandro/",
-    },
-];
-
-// Precisely places each info icon right after its company-name text,
-// using the text's real rendered bounding box (works for both
-// left-aligned and right-aligned entries).
-function positionInfoIcons() {
-    document.querySelectorAll(".company-name").forEach((el, i) => {
-        const icon = document.querySelector(`.info-icon[data-index="${i}"]`);
-        if (!icon) return;
-        const bbox = el.getBBox();
-        const x = bbox.x + bbox.width + 14;
-        const y = bbox.y + bbox.height / 2;
-        // icon.setAttribute("transform", `translate(${x}, ${y})`);
-    });
-}
-
 function initInfoPopovers() {
     const container = document.querySelector(".timeline-container");
     const popover = document.getElementById("infoPopover");
@@ -108,7 +59,8 @@ function initInfoPopovers() {
     let activeIcon = null;
 
     function openPopover(icon) {
-        const data = companyInfo[Number(icon.dataset.index)];
+        const idx = Number(icon.dataset.index);
+        const data = window.timelineCompanyInfo && window.timelineCompanyInfo[idx];
         if (!data) return;
 
         title.textContent = data.name;
@@ -153,13 +105,7 @@ function initInfoPopovers() {
         if (activeIcon && !popover.contains(e.target)) closePopover();
     });
     window.addEventListener("scroll", closePopover, { passive: true });
-    window.addEventListener("resize", () => {
-        // positionInfoIcons();
-        closePopover();
-    });
+    window.addEventListener("resize", closePopover);
 }
 
-window.addEventListener("load", () => {
-    // positionInfoIcons();
-    initInfoPopovers();
-});
+window.addEventListener("load", initInfoPopovers);

@@ -1,31 +1,30 @@
+<?php
+$data = json_decode(file_get_contents(dirname(__DIR__, 3) . DIRECTORY_SEPARATOR . 'data' . DIRECTORY_SEPARATOR . 'data.json'), true);
+$hero = $data['hero'];
+?>
+
 <section class="hero reveal">
     <div class="hero-overlay"></div>
 
     <div class="hero-content">
-        <p class="eyebrow">Backend-Leaning Fullstack Engineer</p>
+        <p class="eyebrow"><?= htmlspecialchars($hero['eyebrow']) ?></p>
 
         <h1>
-            LUCIENO
-            <span class="text-outline">ZANDRY</span>
+            <?= htmlspecialchars($hero['title']) ?>
+            <span class="text-outline"><?=  htmlspecialchars($hero['title-outline'])  ?></span>
         </h1>
 
-        <p class="description">
-            Building scalable systems, cloud-ready architectures,
-            and production-grade applications with React, Laravel,
-            Docker, and modern backend patterns.
-        </p>
+        <p class="description"><?= htmlspecialchars($hero['description']) ?></p>
 
         <div class="cta-group hero-actions">
-            <a class="primary-btn" href="#projects">View Projects</a>
-            <a class="secondary-btn" href="#contact" class="secondary">Contact Me</a>
+            <a class="primary-btn" href="<?= htmlspecialchars($hero['cta']['primary']['href']) ?>"><?= htmlspecialchars($hero['cta']['primary']['text']) ?></a>
+            <a class="secondary-btn" href="<?= htmlspecialchars($hero['cta']['secondary']['href']) ?>"><?= htmlspecialchars($hero['cta']['secondary']['text']) ?></a>
         </div>
 
         <div class="tech-stack">
-            <span>React</span>
-            <span>Laravel</span>
-            <span>Docker</span>
-            <span>TypeScript</span>
-            <span>Node.js</span>
+            <?php foreach ($hero['techStack'] as $tech): ?>
+                <span><?= htmlspecialchars($tech) ?></span>
+            <?php endforeach; ?>
         </div>
     </div>
 

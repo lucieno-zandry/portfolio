@@ -1,22 +1,23 @@
+<?php
+$data = json_decode(file_get_contents(dirname(__DIR__, 3) . DIRECTORY_SEPARATOR . 'data' . DIRECTORY_SEPARATOR . 'data.json'), true);
+$manifesto = $data['engineeringManifesto'];
+$count = count($manifesto['list']);
+?>
+
 <section class="engineering-manifesto reveal">
-    <header class="manifesto-header fluid" style="--count: 7;">
+    <header class="manifesto-header fluid" style="--count: <?= $count ?>;">
         <section>
             <h2>
                 <span aria-hidden="true">i engineer&nbsp;</span>
                 <span class="sr-only">
-                    i engineer systems, platforms, pipelines, backends,
-                    workflows, architecture, scale.
+                    <?= htmlspecialchars($manifesto['heading']) ?>
                 </span>
             </h2>
 
             <ul aria-hidden="true">
-                <li style="--i: 0">systems.</li>
-                <li style="--i: 1">platforms.</li>
-                <li style="--i: 2">pipelines.</li>
-                <li style="--i: 3">backends.</li>
-                <li style="--i: 4">workflows.</li>
-                <li style="--i: 5">architecture.</li>
-                <li style="--i: 6">scale.</li>
+                <?php foreach ($manifesto['list'] as $i => $item): ?>
+                    <li style="--i: <?= $i ?>"><?= htmlspecialchars($item) ?></li>
+                <?php endforeach; ?>
             </ul>
         </section>
     </header>
