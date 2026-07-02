@@ -103,7 +103,7 @@
                 "tech": "Shadcn UI · Tailwindcss · React",
                 "link": "https://github.com/lucieno-zandry/wle-bo",
                 "bg": "./assets/image3.png",
-                "actionLabel": "View Source Code"
+                "actionLabel": "Repository"
             },
             {
                 "title": "Immutable <br> <span class=\"text-outline\">Transaction Audit</span>",

@@ -157,7 +157,7 @@
 <body>
 
     <nav>
-        <a href="index.html" class="nav-logo">Lucieno<span>.</span></a>
+        <a href="/" class="nav-logo">Lucieno<span>.</span></a>
         <a href="mailto:lucienozandry4@gmail.com" class="secondary-btn">Hire me</a>
     </nav>
 

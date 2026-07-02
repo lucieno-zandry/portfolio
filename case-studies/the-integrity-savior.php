@@ -211,7 +211,7 @@
 
     <!-- Navigation matched to your main portfolio flow -->
     <nav>
-        <a href="index.html" class="nav-logo">Lucieno<span>.</span></a> <!--[cite: 1] -->
+        <a href="/" class="nav-logo">Lucieno<span>.</span></a> <!--[cite: 1] -->
         <a href="mailto:lucienozandry4@gmail.com" class="secondary-btn">Hire me</a> <!--[cite: 1] -->
     </nav>
 
