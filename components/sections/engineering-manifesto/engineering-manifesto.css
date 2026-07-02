@@ -1,0 +1,143 @@
+/* 1. Global Scroll Behavior 
+      Using 'proximity' ensures the browser only snaps when near your manifesto lines.
+      Other sections on your page will scroll completely normally. */
+html {
+    scroll-snap-type: y proximity;
+    scroll-behavior: smooth;
+}
+
+.engineering-manifesto {
+    position: relative;
+    min-height: 100vh;
+    overflow: clip;
+    /* Generous padding gives lines a tracking runway to cross the screen center */
+    padding: 65vh 0;
+}
+
+.manifesto-header {
+    --start: 50vh;
+    /* Viewport target line (exact center) */
+    --space: 38vh;
+    /* Customize your spotlight color here */
+
+    position: relative;
+    z-index: 2;
+}
+
+.manifesto-header section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.manifesto-header h2 {
+    position: sticky;
+    top: calc(var(--start) - 0.5lh);
+
+    margin: 0;
+    font-size: clamp(2rem, 5vw, 5rem);
+    line-height: 1;
+    font-weight: 900;
+    color: var(--text);
+    letter-spacing: -0.04em;
+}
+
+.manifesto-header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    font-size: clamp(2rem, 5vw, 5rem);
+    font-weight: 900;
+    line-height: 1;
+    margin-left: 1.5rem;
+}
+
+.manifesto-header li {
+    /* Base dim state */
+    color: rgba(255, 255, 255, 0.15);
+    margin-bottom: 4rem;
+    /* Adds physical space so items don't crowd the spotlight */
+
+    /* 2. Scroll Snapping configuration per line */
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+
+    /* 3. Modern Scroll-Driven Animation 
+          This tracks the element's position inside the viewport container */
+    animation: spotlight linear both;
+    animation-timeline: view();
+    animation-range: cover 30% cover 70%;
+}
+
+/* The spotlight timeline keyframe 
+   As the element reaches 50% (the center of the screen), it hits full brightness and scale */
+@keyframes spotlight {
+
+    0%,
+    100% {
+        color: rgba(255, 255, 255, 0.15);
+        transform: scale(0.96);
+        filter: blur(1px);
+        /* Optional: slight organic depth of field */
+    }
+
+    48%,
+    52% {
+        color: var(--accent);
+        transform: scale(1.04);
+        /* Subtle pop forward when active */
+        filter: blur(0px);
+    }
+}
+
+.engineering-manifesto::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(110, 168, 255, 0.08), transparent 60%);
+    pointer-events: none;
+}
+
+.engineering-manifesto::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: linear-gradient(to bottom, transparent, white 20%, white 80%, transparent);
+    pointer-events: none;
+}
+
+/* ── Mobile Responsive Reflow ── */
+@media (max-width: 768px) {
+    .manifesto-header section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .manifesto-header h2 {
+        position: sticky;
+        top: calc(var(--start) - 1.5lh);
+        margin-bottom: 2rem;
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .manifesto-header ul {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .engineering-manifesto {
+        padding: 55vh 0;
+    }
+
+    .manifesto-header li {
+        margin-bottom: 5rem;
+        /* More breathing space on smaller viewports */
+    }
+}

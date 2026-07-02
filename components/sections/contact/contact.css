@@ -1,0 +1,210 @@
+@import url('https://unpkg.com/normalize.css') layer(normalize);
+
+@layer normalize, base, layout, blurring;
+
+@layer blurring {
+    .blur {
+        pointer-events: none;
+
+        /* Let users click things underneath */
+        div {
+            --blur: calc(sin(((var(--layers) - var(--i)) / var(--layers)) * 90deg) * var(--blur-max));
+            --stop: calc(sin(((var(--i)) / var(--layers)) * 90deg) * var(--mask-stop));
+            position: absolute;
+            inset: 0;
+
+            &::after {
+                content: '';
+                position: absolute;
+                inset: -20px;
+                backdrop-filter: blur(calc(var(--blur) * 1px));
+                -webkit-backdrop-filter: blur(calc(var(--blur) * 1px));
+                mask: linear-gradient(180deg, transparent 0 calc((100 - var(--stop)) * 1%), black 100%);
+                -webkit-mask: linear-gradient(180deg, transparent 0 calc((100 - var(--stop)) * 1%), black 100%);
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: calc(var(--stop) * 1%);
+                z-index: 10;
+            }
+        }
+    }
+}
+
+@layer layout {
+    :root {
+        --img-size: clamp(250px, 40vmin, 450px);
+        scrollbar-color: var(--accent) transparent;
+    }
+
+    .content {
+        width: 100vw;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+        padding: 0 2rem;
+    }
+
+    .contact-header {
+        position: relative;
+        min-height: 100vh;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+    }
+
+    /* Left Column (Sticky Text) */
+    .contact-info {
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        grid-area: 1 / 1;
+        max-width: 500px;
+        z-index: 20;
+    }
+
+    .contact-info h2 {
+        font-size: clamp(2.5rem, 5vw, 4rem);
+        margin-bottom: 1.5rem;
+    }
+
+    .location-info {
+        color: var(--muted);
+        font-size: 0.9rem;
+        margin-bottom: 2rem;
+        font-weight: 500;
+        letter-spacing: 0.05em;
+    }
+
+    /* Right Column (Scrolling Images) */
+    .blur {
+        grid-area: 1 / 2;
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        width: 100%;
+        justify-self: center;
+    }
+
+    .scroll-gallery {
+        grid-area: 1 / 2;
+        padding: 0;
+        padding-block: calc((var(--padding) * 1vh) - (var(--img-size) * 0.5));
+        list-style-type: none;
+        gap: 8rem;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        width: fit-content;
+    }
+
+    .scroll-gallery li {
+        width: var(--img-size);
+        aspect-ratio: 3 / 4;
+        /* Portrait ratio looks better for personal photos */
+    }
+
+    .scroll-gallery img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 12px;
+        filter: saturate(var(--saturate, 1));
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    .contact-footer {
+        color: var(--muted);
+        font-size: 0.875rem;
+        padding: 4rem 0 2rem 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    /* Status Indicator */
+    .contact-status {
+        display: flex;
+        align-items: center;
+        font-size: 0.85rem;
+        color: var(--text);
+        margin-bottom: 2rem;
+        background: rgba(255, 255, 255, 0.05);
+        padding: 0.5rem 1rem;
+        border-radius: 50px;
+        width: fit-content;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .status-dot {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        background: #4ade80;
+        border-radius: 50%;
+        margin-right: 10px;
+        box-shadow: 0 0 12px #4ade80;
+        animation: pulse 2s infinite ease-in-out;
+    }
+
+    @keyframes pulse {
+        0% {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        50% {
+            opacity: 0.5;
+            transform: scale(1.3);
+        }
+
+        100% {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    /* Mobile Breakpoint */
+    @media screen and (max-width: 900px) {
+        .contact-header {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .contact-info {
+            position: relative;
+            height: auto;
+            padding: 4rem 0 2rem 0;
+            max-width: 100%;
+        }
+
+        .blur {
+            display: none;
+            /* Disable blur overlay on mobile to save performance */
+        }
+
+        .scroll-gallery {
+            grid-area: 2 / 1;
+            padding-block: 2rem;
+            width: 100%;
+            gap: 2rem;
+        }
+
+        .scroll-gallery li {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            /* Switch to landscape for mobile view */
+        }
+    }
+}

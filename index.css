@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:900');
+
+:root {
+    --bg: #050816;
+    --text: #f5f7ff;
+    --muted: #9aa4bf;
+    --accent: #6ea8ff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: Inter, sans-serif;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.sr-only {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.text-outline {
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+}
+
+h1 {
+    font-size: clamp(4rem, 10vw, 8rem);
+    line-height: 0.9;
+    margin: 0;
+    font-weight: 900;
+}
+
+h2 {
+    font-size: clamp(3rem, 7.5vw, 5rem);
+    line-height: 0.9;
+    margin: 0;
+    font-weight: 900;
+}
+
+h3 {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    line-height: 0.9;
+    margin: 0;
+    font-weight: 900;
+}
+
+.eyebrow {
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.description {
+    margin: 2rem auto;
+    max-width: 700px;
+    color: var(--muted);
+    line-height: 1.7;
+    font-size: 1.1rem;
+}
+
+.space {
+    height: 200px;
+}
+
+@media screen and (max-width: 760px) {
+    .space {
+        height: 50px;
+    }
+}
+
+/* Buttons */
+.cta-group {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.primary-btn,
+.secondary-btn {
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.primary-btn {
+    background: var(--accent);
+    color: var(--bg);
+    border: 2px solid var(--accent);
+}
+
+.primary-btn:hover {
+    background: transparent;
+    color: var(--accent);
+    box-shadow: 0 0 20px rgba(110, 168, 255, 0.3);
+}
+
+.secondary-btn {
+    background: transparent;
+    color: var(--text);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.secondary-btn:hover {
+    border-color: var(--text);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    /* Pushes the section down */
+    transition: opacity 1s cubic-bezier(0.5, 1, 0.89, 1),
+        transform 1s cubic-bezier(0.5, 1, 0.89, 1);
+    will-change: opacity, transform;
+    /* Optimizes browser rendering */
+}
+
+/* 2. The Revealed State */
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+    /* Slides up to its original position */
+}

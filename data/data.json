@@ -1,0 +1,305 @@
+{
+    "hero": {
+        "eyebrow": "Backend-Leaning Fullstack Engineer",
+        "title": "LUCIENO",
+        "title-outline": "ZANDRY",
+        "description": "Building scalable systems, cloud-ready architectures, and production-grade applications with React, Laravel, Docker, and modern backend patterns.",
+        "cta": {
+            "primary": {
+                "text": "View Projects",
+                "href": "#projects"
+            },
+            "secondary": {
+                "text": "Contact Me",
+                "href": "#contact"
+            }
+        },
+        "techStack": [
+            "React",
+            "Laravel",
+            "Docker",
+            "TypeScript",
+            "Node.js"
+        ]
+    },
+    "contact": {
+        "status": "Available for new projects",
+        "name": "Lucieno Zandry",
+        "heading": "Ready to Architect Your Next Project?",
+        "description": "I am currently exploring new engineering opportunities. Whether it's designing scalable RESTful APIs, orchestrating Docker containers, or building highly responsive React interfaces, let's build something exceptional together.",
+        "location": "📍 Antananarivo, Madagascar (EAT)",
+        "cta": {
+            "primary": {
+                "text": "Let's Talk",
+                "href": "mailto:lucienozandry4@gmail.com"
+            },
+            "secondary": [
+                {
+                    "text": "GitHub",
+                    "href": "https://github.com/lucieno-zandry"
+                },
+                {
+                    "text": "LinkedIn",
+                    "href": "https://www.linkedin.com/in/lucieno-zandry-a41a16324/"
+                }
+            ]
+        },
+        "footer": "Designed and Built by Lucieno Zandry © 2026"
+    },
+    "engineeringManifesto": {
+        "heading": "i engineer systems, platforms, pipelines, backends, workflows, architecture, scale.",
+        "list": [
+            "systems.",
+            "platforms.",
+            "pipelines.",
+            "backends.",
+            "workflows.",
+            "architecture.",
+            "scale."
+        ]
+    },
+    "gallery": {
+        "eyebrow": "Systems In Practice",
+        "title": "Real products.<br /><span class=\"text-outline\">Real users.</span><br />Real constraints.",
+        "description": "A collection of architectural patterns, production features, and engineering decisions implemented across real-world applications.",
+        "projects": [
+            {
+                "title": "Snapshot-Based <br> <span class=\"text-outline\">Order Engine</span>",
+                "tech": "Laravel · MySQL · Data Integrity",
+                "link": "/case-studies/the-integrity-savior.php",
+                "bg": "./assets/image.jpeg",
+                "actionLabel": "Read Case Study"
+            },
+            {
+                "title": "Priority-Stacked <br> <span class=\"text-outline\">Promo System</span>",
+                "tech": "Laravel ORM · SQL · Algorithms",
+                "link": "/case-studies/the-logic-engine.php",
+                "bg": "./assets/image8.jpeg",
+                "actionLabel": "Read Case Study"
+            },
+            {
+                "title": "Polymorphic <br> <span class=\"text-outline\">Landing Blocks</span>",
+                "tech": "React · Tsup · Morph Relations",
+                "link": "/case-studies/the-polymorphic-engine.php",
+                "bg": "./assets/image2.jpeg",
+                "actionLabel": "Read Case Study"
+            },
+            {
+                "title": "Advanced <br> <span class=\"text-outline\">Search</span>",
+                "tech": "Laravel · Meilisearch · SSR",
+                "link": "https://maboo.mg/fr/search/bébé",
+                "bg": "./assets/image7.jpeg",
+                "actionLabel": "View Demo"
+            },
+            {
+                "title": "SSR <br> <span class=\"text-outline\">Storefront</span>",
+                "tech": "React Router V7 · Remix",
+                "link": "https://maboo.mg",
+                "bg": "./assets/image4.jpeg",
+                "actionLabel": "View Demo"
+            },
+            {
+                "title": "Modern <br> <span class=\"text-outline\">Backoffice</span>",
+                "tech": "Shadcn UI · Tailwindcss · React",
+                "link": "https://github.com/lucieno-zandry/wle-bo",
+                "bg": "./assets/image3.png",
+                "actionLabel": "Repository"
+            },
+            {
+                "title": "Immutable <br> <span class=\"text-outline\">Transaction Audit</span>",
+                "tech": "UUID · Webhooks · Event Ledger",
+                "link": "/case-studies/the-integrity-savior.php",
+                "bg": "./assets/image6.png",
+                "actionLabel": "Read Case Study"
+            },
+            {
+                "title": "Bracket-Based <br> <span class=\"text-outline\">Shipping Engine</span>",
+                "tech": "Laravel · Regex · API Carrier",
+                "link": "/case-studies/the-integrity-savior.php",
+                "bg": "./assets/image5.jpeg",
+                "actionLabel": "Read Case Study"
+            }
+        ]
+    },
+    "timeline": {
+        "eyebrow": "Engineering Journey",
+        "title": "Becoming a Backend-Leaning<br />Fullstack Engineer",
+        "description": "Every role introduced a new layer of engineering—from responsive interfaces and REST APIs to scalable backend architecture, containerized deployments, and production ownership. This timeline highlights the milestones that shaped how I design, build, and think about software today.",
+        "items": [
+            {
+                "date": "2022 - PRESENT",
+                "titleLine1": "BUILDING",
+                "titleLine2": "PRODUCTS",
+                "company": "Independent ...",
+                "info": "Beyond professional roles, I continuously build applications to explore new technologies, validate ideas and refine software architecture.",
+                "url": "https://github.com/lucieno-zandry",
+                "actionLabel": "Visit Github →",
+                "roleList": [
+                    "· Client projects",
+                    "· Personal products",
+                    "· Reusable libraries & tooling"
+                ],
+                "alignment": "left",
+                "lineY": 130,
+                "textX": 200,
+                "companyX": 225,
+                "roleX": 200,
+                "dateX": 200,
+                "titleX": 200,
+                "iconTransform": "translate(70%, 4.7%)",
+                "ballX": 130,
+                "roleY": 65
+            },
+            {
+                "date": "DEC 2024 - DEC 2025",
+                "titleLine1": "REACT & FLUTTER",
+                "titleLine2": "DEVELOPER",
+                "company": "Group VII Origin",
+                "info": "A french company specialized in application development based in Paris, France.",
+                "url": "https://groupviiorigin.com/",
+                "roleList": [
+                    "Backend maintenance & API sync",
+                    "Android app enhancement cycles"
+                ],
+                "alignment": "right",
+                "lineY": 490,
+                "textX": 260,
+                "companyX": 250,
+                "roleX": 260,
+                "dateX": 260,
+                "titleX": 280,
+                "iconTransform": "translate(3%, 17.4%)",
+                "ballX": 336
+            },
+            {
+                "date": "APR 2024 - OCT 2024",
+                "titleLine1": "PHP & REACT",
+                "titleLine2": "DEVELOPER",
+                "company": "Zafy Tody",
+                "info": "This company helps accelerate the startup ecosystem in Madagascar.",
+                "url": "https://zafytody.mg/en/",
+                "roleList": [
+                    "RESTful APIs with Laravel 11 ·",
+                    "Full stack containerization via Docker ·",
+                    "Modular React & TS frontend ·"
+                ],
+                "alignment": "left",
+                "lineY": 885,
+                "textX": 170,
+                "companyX": 215,
+                "roleX": 170,
+                "dateX": 170,
+                "titleX": 170,
+                "iconTransform": "translate(58%, 31.6%)",
+                "ballX": 157,
+                "roleY": 65
+            },
+            {
+                "date": "DEC 2023 - MAR 2024",
+                "titleLine1": "FRONTEND DEVELOPER",
+                "titleLine2": "TRAINEE",
+                "company": "Maboo",
+                "info": "An e-commerce based company that targets young mothers.",
+                "url": "https://maboo.mg",
+                "roleList": [
+                    "· Pixel-perfect responsive integration",
+                    "· Real-time data handling with Axios",
+                    "· Architected reusable SCSS components"
+                ],
+                "alignment": "right",
+                "lineY": 1300,
+                "textX": 320,
+                "companyX": 280,
+                "roleX": 320,
+                "dateX": 320,
+                "titleX": 350,
+                "iconTransform": "translate(55%, 46.5%)",
+                "ballX": 165,
+                "roleY": 65
+            },
+            {
+                "date": "JUN 2023 - SEP 2023",
+                "titleLine1": "PHP & FRONTEND",
+                "titleLine2": "DEVELOPER TRAINEE",
+                "company": "Teko Consulting",
+                "info": "A Software engineering services firm based in Madagascar.",
+                "url": "https://www.linkedin.com/in/teko-consulting-03140a1b9?originalSubdomain=mg",
+                "roleList": [
+                    "Frontend optimization (20% faster) ·",
+                    "Custom PrestaShop module design ·",
+                    "Maintained legacy Laravel configurations ·"
+                ],
+                "alignment": "left",
+                "lineY": 1670,
+                "textX": 175,
+                "companyX": 170,
+                "roleX": 175,
+                "dateX": 175,
+                "titleX": 210,
+                "iconTransform": "translate(14%, 59.6%)",
+                "ballX": 376,
+                "roleY": 65
+            },
+            {
+                "date": "2024 - 2025",
+                "titleLine1": "HIGHER",
+                "titleLine2": "EDUCATION",
+                "company": "IT University",
+                "info": "IT University is ranked first as the best software college in Madagascar",
+                "url": "https://www.ituniversity-mg.com",
+                "roleList": [
+                    "· Master I in Information Technology"
+                ],
+                "alignment": "left",
+                "lineY": 1995,
+                "textX": 175,
+                "companyX": 210,
+                "roleX": 175,
+                "dateX": 175,
+                "titleX": 210,
+                "iconTransform": "translate(64%, 71.2%)",
+                "ballX": 120,
+                "roleY": 45
+            },
+            {
+                "date": "2020 - 2023",
+                "titleLine1": "HIGHER",
+                "titleLine2": "EDUCATION",
+                "company": "University Hay",
+                "info": "This University focuses on peer to peer learning approach rather than a classic tuition program.",
+                "url": "https://www.uph.mg",
+                "roleList": [
+                    "· Bachelor's degree in Software engineering."
+                ],
+                "alignment": "right",
+                "lineY": 2365,
+                "textX": 360,
+                "companyX": 200,
+                "roleX": 360,
+                "dateX": 360,
+                "titleX": 360,
+                "iconTransform": "translate(1%, 84.5%)",
+                "ballX": 305,
+                "roleY": 45
+            },
+            {
+                "date": "2017 - 2018",
+                "titleLine1": "SCIENTIFIC",
+                "titleLine2": "HIGH-SCHOOL DEGREE",
+                "company": "La Pepite d'Or",
+                "info": "A very well known highschool in the capital of Antananarivo.",
+                "url": "https://www.facebook.com/lapepitedorantaninandro/",
+                "roleList": [],
+                "alignment": "right",
+                "lineY": 2730,
+                "textX": 360,
+                "companyX": 440,
+                "roleX": 360,
+                "dateX": 360,
+                "titleX": 360,
+                "iconTransform": "translate(88%, 97.5%)",
+                "ballX": 250
+            }
+        ]
+    }
+}

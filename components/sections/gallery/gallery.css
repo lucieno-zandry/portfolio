@@ -1,0 +1,347 @@
+/* ── base ── */
+@import url(https://fonts.bunny.net/css?family=jura:300,500);
+
+/* ── Section Timeline ── */
+.gallery-section {
+    /* Creates a timeline based ONLY on this section's position in the viewport */
+    view-timeline-name: --gallery-timeline;
+    view-timeline-axis: block;
+
+    /* Make the section taller than 100vh so the sticky wrapper has room to scroll. 
+       Increase this value to make the animation play slower/longer! */
+    height: 250vh;
+    position: relative;
+}
+
+/* ── unsupported fallback ── */
+.msg-supports {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    color: #fff;
+    background: #c00;
+    margin: 0;
+    padding: 1rem;
+    text-align: center;
+    border-block-end: 1px solid rgba(255 255 255 / 0.5);
+}
+
+@supports (animation-timeline: auto) {
+    .msg-supports {
+        display: none;
+    }
+}
+
+/* ── custom properties ── */
+@property --gap {
+    syntax: "<length>";
+    inherits: true;
+    initial-value: 0;
+}
+
+@property --scale {
+    syntax: "<number>";
+    inherits: true;
+    initial-value: 1;
+}
+
+@property --x {
+    syntax: "<percent>";
+    inherits: true;
+    initial-value: 0;
+}
+
+@property --y {
+    syntax: "<percent>";
+    inherits: true;
+    initial-value: 0;
+}
+
+@property --pan-x {
+    syntax: "<length>";
+    inherits: true;
+    initial-value: 0px;
+}
+
+/* ── spacer to make room for the sticky section ── */
+.section-spacer {
+    height: 100vh;
+    pointer-events: none;
+}
+
+/* ── wrapper – sticky + full viewport ── */
+.wrapper {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+    max-width: 100vw;
+    height: 100vh;
+    /* clip the inner grid */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* ── the inner grid (wider than viewport) ── */
+.wrapper .grid-inner {
+    --gap: 1rem;
+    --x: 0;
+    --scale: 1;
+    --size-base: 0px;
+
+    width: 120vw;
+    flex-shrink: 0;
+    /* 60% extra space on each side */
+    height: 100vh;
+
+    display: grid;
+    /* Left and right columns now 2fr (was 1fr) to match middle columns */
+    grid-template-columns: 2fr 2fr var(--size-base, 100px) 2fr 2fr;
+    grid-template-rows: 1fr var(--size-base, 100px) 1fr;
+    grid-template-areas:
+        "one   two    two     three  four"
+        "one   six    center  three  eight"
+        "five  six    seven   seven  eight";
+    gap: var(--gap);
+
+    transform: translateX(var(--pan-x));
+    will-change: transform;
+}
+
+.wrapper .grid-inner>div {
+    background-image: var(--bg);
+    background-size: cover;
+    background-position: center;
+
+    /* ─── scroll‑driven slide animation ─── */
+    animation-name: animate-boxes;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+
+    /* REMOVED: animation-timeline: scroll(root); */
+    /* ADDED: Use your new named timeline */
+    animation-timeline: --gallery-timeline;
+
+    /* ADDED: Controls exactly when the animation starts and ends */
+    animation-range: entry 100% exit 0%;
+
+    animation-duration: 1ms;
+    /* needed for Firefox */
+
+    &.center {
+        grid-area: center;
+        /* background-color: #333; */
+        color: white;
+        display: grid;
+        place-content: center;
+        aspect-ratio: 1;
+        translate: var(--center-x) var(--center-y);
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 900;
+
+        animation-name: animate-center;
+        animation-timing-function: linear;
+        animation-fill-mode: both;
+
+        /* REMOVED: animation-timeline: scroll(); */
+        /* ADDED: Match the parent timeline */
+        animation-timeline: --gallery-timeline;
+        animation-range: entry 100% exit 0%;
+
+        animation-duration: 1ms;
+
+        .text-outline {
+            -webkit-text-stroke: 1px white;
+        }
+
+        /* for Firefox */
+    }
+}
+
+.wrapper .grid-inner>div:nth-child(1) {
+    grid-area: one;
+    --x: -500%;
+    --y: -200%;
+}
+
+.wrapper .grid-inner>div:nth-child(2) {
+    grid-area: two;
+    --x: -75%;
+    --y: -200%;
+}
+
+.wrapper .grid-inner>div:nth-child(3) {
+    grid-area: three;
+    --x: 200%;
+    --y: 0;
+}
+
+.wrapper .grid-inner>div:nth-child(4) {
+    grid-area: four;
+    --x: 500%;
+    --y: -200%;
+}
+
+.wrapper .grid-inner>div:nth-child(5) {
+    grid-area: five;
+    --x: -500%;
+    --y: 100%;
+}
+
+.wrapper .grid-inner>div:nth-child(6) {
+    grid-area: six;
+    --x: -200%;
+    --y: 0;
+}
+
+.wrapper .grid-inner>div:nth-child(7) {
+    grid-area: seven;
+    --x: 75%;
+    --y: 200%;
+}
+
+.wrapper .grid-inner>div:nth-child(8) {
+    grid-area: eight;
+    --x: 500%;
+    --y: 200%;
+}
+
+
+@keyframes animate-boxes {
+
+    0%,
+    15% {
+        translate: var(--x) var(--y);
+    }
+
+    100% {
+        translate: 0;
+    }
+}
+
+/* ── in‑viewport indicator ── */
+.wrapper.in-viewport {
+    outline: 2px solid rgba(100, 200, 255, 0.10);
+    outline-offset: -2px;
+    transition: outline 0.3s ease;
+}
+
+.systems-intro {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, .5), black);
+}
+
+.project-card {
+    position: relative;
+    overflow: hidden;
+
+    transform: scale(1);
+    transition: transform .3s ease-in-out;
+    transform-origin: center center;
+}
+
+.project-overlay {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    line-break: anywhere;
+
+    padding: 1rem;
+
+    background:
+        linear-gradient(to top,
+            rgba(5, 8, 22, 1),
+            rgba(5, 8, 22, .5));
+
+    opacity: 0;
+
+    transition: .35s ease;
+}
+
+.project-card:hover {
+    .project-overlay {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .wrapper .grid-inner {
+        /* Expand the width significantly so the 5 columns have room to breathe */
+        width: 300vw;
+        --gap: 0.5rem;
+        /* Optionally tighten the gap on mobile */
+    }
+}
+
+/* Container holds everything together */
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* Takes up full viewport height */
+    overflow: hidden;
+}
+
+/* Video scales perfectly to fill the screen */
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Keeps aspect ratio while filling space */
+    z-index: -1;
+    /* Pushes the video behind the content */
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .background-video {
+        display: none;
+        /* Hides the video, showing your fallback image instead */
+    }
+}
+
+/* ── Overlay Action Button ── */
+.overlay-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1.25rem;
+    padding: 0.6rem 1.25rem;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(4px);
+    transition: background 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+    align-self: flex-start;
+    /* Prevents the button from stretching */
+    pointer-events: auto;
+    /* Ensures it's clickable inside the overlay */
+}
+
+.overlay-link:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #fff;
+    transform: translateY(-2px);
+}

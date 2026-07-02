@@ -1,0 +1,206 @@
+.timeline-container {
+    position: relative;
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 0 1rem 5rem 1rem;
+}
+
+#svg-stage {
+    overflow: visible;
+    width: 100%;
+    height: auto;
+}
+
+/* Base Text Mapping for SVG Coordinates */
+text {
+    font-family: 'Inter', sans-serif;
+    letter-spacing: normal;
+    visibility: hidden;
+    /* Maintained for GSAP triggers */
+}
+
+.right-align {
+    text-anchor: end;
+}
+
+/* Fluid Typographic Weights & Spacing 
+   Sizes are slightly scaled down to compensate for viewport stretching. */
+.date {
+    font-size: 11px;
+    font-weight: 600;
+    fill: var(--muted);
+    letter-spacing: 0.1em;
+}
+
+.title {
+    font-size: 17px;
+    font-weight: 800;
+    fill: #ffffff;
+    letter-spacing: 0.04em;
+}
+
+.company-name {
+    font-size: 14px;
+    font-weight: 700;
+    fill: var(--accent);
+    letter-spacing: 0.05em;
+}
+
+.role-list {
+    font-size: 11px;
+    font-weight: 400;
+    fill: rgba(255, 255, 255, 0.75);
+}
+
+/* Graphics and Connectors */
+.theLine {
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.guideline {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.05);
+    stroke-width: 2px;
+    stroke-dasharray: 4 8;
+}
+
+.ball {
+    visibility: hidden;
+    /* Maintained for GSAP triggers */
+}
+
+.anchor {
+    fill: var(--bg);
+    stroke: var(--accent);
+    stroke-width: 4px;
+}
+
+.timeline-header {
+    text-align: center;
+    margin: clamp(200px, 40vh, 400px) auto;
+    width: 100%;
+}
+
+/* Info Icon (next to company name) */
+.info-icon {
+    visibility: hidden;
+    /* Revealed by GSAP, same as sibling .textNN elements */
+    cursor: pointer;
+}
+
+.info-icon-bg {
+    fill: var(--bg);
+    stroke: var(--accent);
+    stroke-width: 1.5px;
+    transition: fill 0.2s ease, stroke 0.2s ease;
+}
+
+.info-icon-mark {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    fill: var(--accent);
+    text-anchor: middle;
+    dominant-baseline: central;
+    visibility: inherit;
+    /* Overrides the generic `text { visibility: hidden }` rule; parent .info-icon controls visibility instead */
+    pointer-events: none;
+    transition: fill 0.2s ease;
+}
+
+.info-icon:hover .info-icon-bg,
+.info-icon:focus-visible .info-icon-bg {
+    fill: var(--accent);
+}
+
+.info-icon:hover .info-icon-mark,
+.info-icon:focus-visible .info-icon-mark {
+    fill: var(--bg);
+}
+
+/* Info Popover */
+.info-popover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 240px;
+    padding: 16px 18px;
+    border-radius: 10px;
+    background: rgba(15, 15, 25, 0.92);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+    transform: translate(14px, -50%) scale(0.96);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.18s ease, transform 0.18s ease;
+    z-index: 20;
+}
+
+.info-popover.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translate(14px, -50%) scale(1);
+}
+
+.info-popover.align-left {
+    transform: translate(calc(-100% - 14px), -50%) scale(0.96);
+}
+
+.info-popover.align-left.is-open {
+    transform: translate(calc(-100% - 14px), -50%) scale(1);
+}
+
+.info-popover-close {
+    position: absolute;
+    top: 6px;
+    right: 8px;
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 16px;
+    line-height: 1;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.info-popover-close:hover {
+    color: #ffffff;
+}
+
+.info-popover-title {
+    margin: 0 18px 8px 0;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: var(--accent);
+    text-transform: uppercase;
+}
+
+.info-popover-text {
+    margin: 0 0 12px 0;
+    font-size: 12.5px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.info-popover-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #ffffff;
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: 1px;
+}
+
+.info-popover-link:hover {
+    color: var(--accent);
+}
