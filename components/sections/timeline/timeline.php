@@ -90,7 +90,7 @@ $items = $timeline['items'];
             <button class="info-popover-close" type="button" aria-label="Close">&times;</button>
             <h4 class="info-popover-title"></h4>
             <p class="info-popover-text"></p>
-            <a class="info-popover-link" href="#" target="_blank" rel="noopener noreferrer">Visit website →</a>
+            <a class="info-popover-link" href="#" target="_blank" rel="noopener noreferrer"></a>
         </div>
     </div>
 
@@ -100,7 +100,8 @@ $items = $timeline['items'];
                                             return [
                                                 'name' => $item['company'],
                                                 'info' => $item['info'],
-                                                'url' => $item['url']
+                                                'url' => $item['url'],
+                                                'actionLabel' => $item['actionLabel'] ?? null,
                                             ];
                                         }, $items)) ?>;
     </script>

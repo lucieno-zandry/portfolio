@@ -48,7 +48,7 @@ const main = gsap
         0
     )
     .add(pulses, 0);
-    
+
 /* ------------------------------------------------------------------ */
 /* Info popovers — data is injected by PHP as window.timelineCompanyInfo */
 /* ------------------------------------------------------------------ */
@@ -72,6 +72,7 @@ function initInfoPopovers() {
         title.textContent = data.name;
         text.textContent = data.info;
         link.href = data.url;
+        link.textContent = data.actionLabel ?? "Visit website →";
 
         const iconRect = icon.getBoundingClientRect();
         const containerRect = container.getBoundingClientRect();
