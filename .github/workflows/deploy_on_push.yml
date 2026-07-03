@@ -30,11 +30,11 @@ jobs:
             ./ deploy/
 
       - name: Upload via FTP
-        uses: airvzxf/ftp-deployment-action@latest
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
           server: ${{ secrets.FTP_SERVER }}
-          user: ${{ secrets.FTP_USERNAME }}
+          username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local_dir: "./deploy"
-          remote_dir: "/htdocs"
-          max_retries: "2"
+          local_dir: "./deploy/"
+          server_dir: "/htdocs/"
+          timeout: 600000

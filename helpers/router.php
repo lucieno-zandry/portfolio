@@ -1,12 +1,15 @@
 <?php
 session_start();
 
-// If the request is for an actual file, serve it directly
-if (file_exists(dirname(__DIR__) . $_SERVER['SCRIPT_NAME']) && $_SERVER['SCRIPT_NAME'] !== '/index.php') {
-    return false;
+// Only execute this safety check if running via the PHP built-in CLI server
+if (php_sapi_name() === 'cli-server') {
+    if (file_exists(dirname(__DIR__) . $_SERVER['SCRIPT_NAME']) && $_SERVER['SCRIPT_NAME'] !== '/index.php') {
+        return false;
+    }
 }
 
 require(__DIR__ . DIRECTORY_SEPARATOR . 'helpers.php');
+
 require(get_safe_path('/helpers/view.php'));
 require(get_safe_path('/helpers/deferred-include.php'));
 
