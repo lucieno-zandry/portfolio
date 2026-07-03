@@ -1,10 +1,8 @@
-<IfModule mod_rewrite.c>
-    RewriteEngine On
+RewriteEngine On
+RewriteBase /
 
-    # Skip existing files and directories
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteCond %{REQUEST_FILENAME} !-d
+# 1. If it's a real, existing file (like a CSS, JS, or image file), serve it directly
+RewriteCond %{REQUEST_FILENAME} !-f
 
-    # Redirect everything else to router.php
-    RewriteRule ^ helpers/router.php [L]
-</IfModule>
+# 2. Route absolutely everything else (including the homepage and folders) to your router
+RewriteRule ^(.*)$ /helpers/router.php [L,QSA]

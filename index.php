@@ -19,11 +19,11 @@ View::endSection('head');
 
 View::startSection('content');
 
-include('./components/sections/hero/hero.php');
-include('./components/sections/engineering-manifesto/engineering-manifesto.php');
-include('./components/sections/gallery/gallery.php');
-include('./components/sections/timeline/timeline.php');
-include('./components/sections/contact/contact.php');
+include get_safe_path('components/sections/hero/hero.php');
+include get_safe_path('components/sections/engineering-manifesto/engineering-manifesto.php');
+include get_safe_path('components/sections/gallery/gallery.php');
+include get_safe_path('components/sections/timeline/timeline.php');
+include get_safe_path('components/sections/contact/contact.php');
 
 View::endSection('content');
 ?>

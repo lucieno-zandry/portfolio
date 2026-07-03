@@ -35,13 +35,13 @@ $contact = $data['contact'];
 
         <ul class="scroll-gallery">
             <li>
-                <img src="./components/sections/contact/assets/images/image1.jpg" alt="A professional picture of Lucieno" />
+                <img src="./components/sections/contact/assets/images/image1.webp" alt="A professional picture of Lucieno" />
             </li>
             <li>
-                <img src="./components/sections/contact/assets/images/image2.jpg" alt="A normal, smiling photo of Lucieno" />
+                <img src="./components/sections/contact/assets/images/image2.webp" alt="A normal, smiling photo of Lucieno" />
             </li>
             <li>
-                <img src="./components/sections/contact/assets/images/image3.jpg" alt="A casual picture of Lucieno" />
+                <img src="./components/sections/contact/assets/images/image3.webp" alt="A casual picture of Lucieno" />
             </li>
         </ul>
 

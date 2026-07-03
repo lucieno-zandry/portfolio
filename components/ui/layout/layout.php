@@ -19,8 +19,8 @@
         <?= View::yield('nav') ?>
         <?= View::yield('content') ?>
 
-        <?php include('./components/ui/lang-selector/lang-selector.php')  ?>
-        <?php include('./components/ui/cv-downloader/cv-downloader.php')  ?>
+        <?php include get_safe_path('components/ui/lang-selector/lang-selector.php')  ?>
+        <?php include get_safe_path('components/ui/cv-downloader/cv-downloader.php')  ?>
 
         <?= View::yield('script') ?>
 

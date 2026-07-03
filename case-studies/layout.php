@@ -44,6 +44,6 @@ View::startSection('head');
 <?php
 
 View::endSection('head');
-include('./components/ui/layout/layout.php');
+include get_safe_path('components/ui/layout/layout.php');
 
 ?>

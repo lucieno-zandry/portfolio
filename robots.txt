@@ -1,0 +1,20 @@
+User-agent: *
+
+# 1. Allow the public pages
+Allow: /$
+Allow: /resume
+Allow: /case-studies/
+
+# 2. Block the layout file inside case-studies
+Disallow: /case-studies/layout.php
+
+# 3. Block internal system directories and configuration files
+Disallow: /components/
+Disallow: /data/
+Disallow: /helpers/
+Disallow: /.env
+Disallow: /.gitignore
+Disallow: /.htaccess
+
+# 4. (Optional) Replace with your actual domain if you have a sitemap
+# Sitemap: https://yourdomain.com/sitemap.xml
