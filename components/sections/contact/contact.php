@@ -3,6 +3,10 @@ $data = load_data();
 $contact = $data['contact'];
 ?>
 
+<?php View::startSection('head'); ?>
+<link rel="stylesheet" href="./components/sections/contact/contact.css">
+<?php View::endSection('head'); ?>
+
 <section class="content reveal" id="contact">
     <header class="contact-header">
         <div class="contact-info">
@@ -48,3 +52,7 @@ $contact = $data['contact'];
         <p><?= htmlspecialchars($contact['footer']) ?></p>
     </footer>
 </section>
+
+<?php View::startSection('script'); ?>
+<script src="./components/sections/contact/contact.js" type="module"></script>
+<?php View::endSection('script'); ?>

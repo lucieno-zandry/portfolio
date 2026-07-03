@@ -4,6 +4,10 @@ $manifesto = $data['engineeringManifesto'];
 $count = count($manifesto['list']);
 ?>
 
+<?php View::startSection('head') ?>
+<link rel="stylesheet" href="./components/sections/engineering-manifesto/engineering-manifesto.css">
+<?php View::endSection('head') ?>
+
 <section class="engineering-manifesto reveal">
     <header class="manifesto-header fluid" style="--count: <?= $count ?>;">
         <section>

@@ -3,6 +3,10 @@ $data = load_data();
 $hero = $data['hero'];
 ?>
 
+<?php View::startSection('head') ?>
+<link rel="stylesheet" href="./components/sections/hero/hero.css">
+<?php View::endSection('head') ?>
+
 <section class="hero reveal">
     <div class="hero-overlay"></div>
 
@@ -11,7 +15,7 @@ $hero = $data['hero'];
 
         <h1>
             <?= htmlspecialchars($hero['title']) ?>
-            <span class="text-outline"><?=  htmlspecialchars($hero['title-outline'])  ?></span>
+            <span class="text-outline"><?= htmlspecialchars($hero['title-outline'])  ?></span>
         </h1>
 
         <p class="description"><?= htmlspecialchars($hero['description']) ?></p>
@@ -32,3 +36,7 @@ $hero = $data['hero'];
         <span>SYSTEMS</span>
     </div>
 </section>
+
+<?php View::startSection('script') ?>
+<script src="./components/sections/hero/hero.js" type="module"></script>
+<?php View::endSection('script') ?>

@@ -28,14 +28,19 @@ function load_server_lang()
 
 function load_lang()
 {
-    $lang = $_GET['lang'] ?? load_server_lang();
+    $lang =  $_GET['lang'] ?? $_SESSION['lang'] ?? load_server_lang();
     $allowed_languages = array_keys(ALLOWED_LANGUAGES);
 
-    if (isset($lang) && array_search(strtolower($lang), $allowed_languages) !== false) {
-        return $lang;
+    if (!isset($lang) || array_search(strtolower($lang), $allowed_languages) === false) {
+        $lang = "en";
     }
 
-    return "en";
+    // sync lang with session
+    if (!isset($_SESSION['lang']) || $_SESSION['lang'] !== $lang) {
+        $_SESSION['lang'] = $lang;
+    }
+
+    return $lang;
 }
 
 
@@ -45,4 +50,33 @@ function load_data()
 
     $data = json_decode(file_get_contents(dirname(__DIR__) . DIRECTORY_SEPARATOR . 'data' . DIRECTORY_SEPARATOR . $lang . DIRECTORY_SEPARATOR .  'data.json'), true);
     return $data;
+}
+
+function get_safe_path(string $input)
+{
+    $input_frags = explode("/", $input);
+
+    $path = "";
+
+    foreach ($input_frags as $frag) {
+        if ($frag !== "") {
+            $path .= DIRECTORY_SEPARATOR . $frag;
+        }
+    }
+
+    return dirname(__DIR__) . $path;
+}
+
+function add_lang_to_uri(string $uri)
+{
+    $data = explode("?", $uri, 2);
+
+    $path_info = $data[0];
+    $query_params = "?lang=" . load_lang();
+
+    if (isset($data[1]) && $data[1] !== "") {
+        $query_params .= "&" . $data[1];
+    }
+
+    return $path_info . $query_params;
 }

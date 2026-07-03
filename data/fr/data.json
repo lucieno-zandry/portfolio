@@ -67,21 +67,21 @@
             {
                 "title": "Moteur de Commandes <br> <span class=\"text-outline\">Basé sur des Instantanés</span>",
                 "tech": "Laravel · MySQL · Intégrité des Données",
-                "link": "/case-studies/the-integrity-savior.php",
+                "link": "/case-studies/the-integrity-savior",
                 "bg": "./assets/image.jpeg",
                 "actionLabel": "Lire l'Étude de Cas"
             },
             {
                 "title": "Système de Promotion <br> <span class=\"text-outline\">Empilé par Priorité</span>",
                 "tech": "Laravel ORM · SQL · Algorithmes",
-                "link": "/case-studies/the-logic-engine.php",
+                "link": "/case-studies/the-logic-engine",
                 "bg": "./assets/image8.jpeg",
                 "actionLabel": "Lire l'Étude de Cas"
             },
             {
                 "title": "Blocs de Landing <br> <span class=\"text-outline\">Polymorphes</span>",
                 "tech": "React · Tsup · Relations Polymorphes",
-                "link": "/case-studies/the-polymorphic-engine.php",
+                "link": "/case-studies/the-polymorphic-engine",
                 "bg": "./assets/image2.jpeg",
                 "actionLabel": "Lire l'Étude de Cas"
             },
@@ -109,14 +109,14 @@
             {
                 "title": "Audit de Transactions <br> <span class=\"text-outline\">Immuable</span>",
                 "tech": "UUID · Webhooks · Registre d'Événements",
-                "link": "/case-studies/the-integrity-savior.php",
+                "link": "/case-studies/the-integrity-savior",
                 "bg": "./assets/image6.png",
                 "actionLabel": "Lire l'Étude de Cas"
             },
             {
                 "title": "Moteur d'Expédition <br> <span class=\"text-outline\">Basé sur des Paliers</span>",
                 "tech": "Laravel · Regex · API Transporteur",
-                "link": "/case-studies/the-integrity-savior.php",
+                "link": "/case-studies/the-integrity-savior",
                 "bg": "./assets/image5.jpeg",
                 "actionLabel": "Lire l'Étude de Cas"
             }
@@ -302,5 +302,233 @@
                 "ballX": 250
             }
         ]
+    },
+    "the-integrity-savior": {
+        "meta_title": "Le Sauveur d'Intégrité - Lucieno Zandry",
+        "hero_eyebrow": "Étude de cas 01",
+        "hero_title_text": "L'Intégrité",
+        "hero_title_outline": "Sauvée",
+        "hero_description": "Conception d'un moteur de commande infaillible pour les audits avec des instantanés historiques immuables. Parce que les données ne devraient pas réécrire leur propre histoire.",
+        "hero_tags": [
+            "Laravel",
+            "MySQL",
+            "TypeScript"
+        ],
+        "problem_title_text": "Le",
+        "problem_title_outline": "Problème",
+        "problem_description": "Imaginez diagnostiquer un court-circuit électrique sur votre moto, tracer le câblage et le réparer. Puis, une semaine plus tard, l'éditeur du manuel d'entretien modifie rétroactivement le schéma électrique de votre livre physique pendant votre sommeil.<br><br>C'est exactement ce qui se passe dans une base de données e-commerce naïve. Une base de données relationnelle standard repose strictement sur des clés étrangères. Si la commande <code>Order #1042</code> pointe simplement vers <code>product_id: 99</code>, la mise à jour du prix de ce produit aujourd'hui modifiera de manière dynamique — et désastreuse — le reçu de l'année dernière. L'équipe comptable est furieuse, et l'intégrité financière du système est complètement brisée.",
+        "solution_title_text": "La",
+        "solution_title_outline": "Solution",
+        "solution_description": "Nous ne laissons pas l'histoire se réécrire.<br><br>Au lieu de simplement lier des identifiants dans le panier, j'ai conçu une architecture d'instantanés (snapshots) immuables. Au moment exact de la validation de la commande, le système sérialise une copie profonde (deep copy) de l'objet <code>Product</code>, <code>Variant</code>, <code>Address</code>, et <code>ShippingMethod</code>.<br><br>Ces objets sont sauvegardés sous forme d'instantanés isolés (par ex. <code>ProductSnapshot</code>, <code>VariantSnapshot</code>) directement intégrés dans l'enregistrement de la commande (<code>Order</code>).",
+        "outcome_title_text": "Le",
+        "outcome_title_outline": "Résultat",
+        "outcome_description": "Une conformité légale et financière en béton armé. Les administrateurs de la boutique peuvent désormais supprimer en toute confiance les variantes obsolètes, refondre les grilles de tarifs et ajuster les formules de livraison sans jamais altérer la moindre transaction historique.<br><br>C'est un backend défensif et prévisible qui ne réveillera personne à 2 heures du matin pour une crise de base de données.",
+        "outcome_back_btn": "← Retour au Portfolio"
+    },
+    "the-logic-engine": {
+        "meta_title": "Le Moteur Logique - Lucieno Zandry",
+        "hero_eyebrow": "Étude de cas 02",
+        "hero_title_text": "Le Moteur",
+        "hero_title_outline": "Logique",
+        "hero_description": "Construction d'un système de promotions empilées par priorité et sans conflit. Parce que les utilisateurs ne devraient pas pouvoir acheter tout votre inventaire pour 0,00 $.",
+        "hero_tags": [
+            "Laravel ORM",
+            "Algorithms",
+            "SQL"
+        ],
+        "problem_title_text": "Le",
+        "problem_title_outline": "Problème",
+        "problem_description": "Les remises en e-commerce ont l'air trompeusement simples jusqu'à l'arrivée du Black Friday. Un utilisateur se connecte avec une remise de niveau de 20 %, applique un crédit d'achat de 15 $ et cumule un code promo \"HALF_OFF\" issu d'une newsletter.<br><br>Dans un système basique, l'une de ces trois situations se produit : les remises s'écrasent mutuellement, la validation du panier plante, ou pire — les calculs s'appliquent dans le mauvais ordre et la boutique se retrouve à devoir de l'argent au client pour avoir pris un article.",
+        "solution_title_text": "La",
+        "solution_title_outline": "Solution",
+        "solution_description": "J'ai développé un moteur de tarification déterministe basé sur des règles. J'ai conçu le schéma <code>Promotion</code> pour gérér une orchestration mathématique stricte à la volée.<br><br>Au lieu d'exécuter des calculs bruts à l'aveugle, le système vérifie les booléens <code>stackable</code>, trie par un index de priorité (<code>priority</code>) strict et obéit à une logique explicite d'ordre d'application (<code>apply_order</code>), garantissant que les pourcentages s'appliquent avant les montants fixes. Il utilise même un scope <code>applies_to</code> pour séparer physiquement les prix de gros B2B des coupons de réduction grand public.",
+        "outcome_title_text": "Le",
+        "outcome_title_outline": "Résultat",
+        "outcome_description": "Une certitude mathématique totale. L'équipe marketing peut désormais lancer simultanément 15 campagnes promotionnelles qui se chevauchent sans bloquer le paiement. Le moteur calcule le prix effectif sans faille, respecte les plafonds <code>max_discount</code> caps, et ne perd jamais un centime à cause de situations de compétition (race conditions).",
+        "outcome_back_btn": "← Retour au Portfolio"
+    },
+    "the-polymorphic-engine": {
+        "meta_title": "Le Moteur Polymorphe - Lucieno Zandry",
+        "hero_eyebrow": "Étude de cas 03",
+        "hero_title_text": "Moteur",
+        "hero_title_outline": "Polymorphe",
+        "hero_description": "Création d'un CMS dynamique pour des pages d'atterrissage (landing pages) à fort taux de conversion. Parce que les développeurs ne devraient pas avoir à déployer du code juste pour mettre à jour une bannière marketing.",
+        "hero_tags": [
+            "React",
+            "Tsup",
+            "Morph Relations"
+        ],
+        "problem_title_text": "Le",
+        "problem_title_outline": "Problème",
+        "problem_description": "L'équipe marketing souhaite remplacer une bannière principale pour le Black Friday. Ensuite, elle veut insérer une section \"Produits Vedettes\" juste au-dessus du pied de page.<br><br>Si la mise en page du frontend est codée en dur, la moindre volonté du marketing nécessite un développeur, une pull request et un déploiement en production. Cela crée un goulot d'étranglement massif où les ingénieurs se retrouvent à jouer le rôle d'éditeurs de contenu surpayés.",
+        "solution_title_text": "La",
+        "solution_title_outline": "Solution",
+        "solution_description": "J'ai développé un moteur de mise en page polymorphe en utilisant les relations polymorphes (Morph Relations) de Laravel (<code>landing_able_type</code> et <code>landing_able_id</code>), associé à une bibliothèque de composants React personnalisée packagée via <code>tsup</code>.<br><br>Au lieu de modèles de pages statiques, le frontend consomme un tableau ordonné d'objets <code>LandingBlock</code>. Une simple ligne de base de données générique peut se résoudre dynamiquement en un produit spécifique (<code>Product</code>), une catégorie entière (<code>Category</code>) ou des structures JSON personnalisées telles que <code>TestimonialsContent</code> ou <code>FaqContent</code>. Le frontend React boucle simplement sur les blocs et affiche le composant correspondant fortement typé.",
+        "outcome_title_text": "Le",
+        "outcome_title_outline": "Résultat",
+        "outcome_description": "Un véritable découplage. Les équipes marketing peuvent assembler, réorganiser et publier des pages d'atterrissage riches et variées à la volée, sans toucher à une seule ligne de React. Le frontend reste strictement typé, la base de données reste relationnelle, et les ingénieurs peuvent se recentrer sur la résolution de vrais problèmes d'architecture plutôt que sur l'ajustement des marges en CSS.",
+        "outcome_back_btn": "← Retour au Portfolio"
+    },
+    "resume": {
+        "meta_title": "Lucieno Zandry · Développeur Logiciel Full-Stack · CV",
+        "name": "LUCIENO ZANDRY",
+        "job_title": "Développeur Logiciel Full-Stack",
+        "contact": {
+            "github": "github.com/lucieno-zandry",
+            "phone": "+261 34 85 277 52",
+            "email": "lucienozandry4@gmail.com",
+            "location": "Antananarivo, MG — À distance",
+            "website": "lucienozandry.ct.ws",
+            "linkedin": "Lucieno Zandry"
+        },
+        "sections": {
+            "soft_skills": "Soft skills",
+            "core_competencies": "Compétences clés",
+            "languages": "Langues",
+            "certificates": "Certifications",
+            "profile": "Profil",
+            "experience": "Expérience",
+            "education": "Formations",
+            "tech_stack": "Stack technique & Outils",
+            "engineering_focus": "Focus ingénierie"
+        },
+        "soft_skills_list": [
+            "Collaboration transfonctionnelle",
+            "Résolution de problèmes",
+            "Sens des responsabilités (Ownership)",
+            "Pensée systémique",
+            "Adaptabilité",
+            "Communication à distance"
+        ],
+        "core_competencies_list": [
+            "Architecture d'applications de bout en bout",
+            "Conception de bases de données & Optimisation de recherche",
+            "JavaScript & TypeScript Avancé",
+            "Développement & Intégration d'API",
+            "Solutions E-commerce & SaaS",
+            "Implémentation d'interfaces UI/UX modernes",
+            "Gestion de versions & CI/CD",
+            "Capacités multiplateformes"
+        ],
+        "languages_list": [
+            {
+                "name": "Anglais",
+                "proficiency": "Capacité professionnelle complète"
+            },
+            {
+                "name": "Français",
+                "proficiency": "Capacité professionnelle complète"
+            },
+            {
+                "name": "Malagasy",
+                "proficiency": "Langue maternelle"
+            }
+        ],
+        "certificates_list": [
+            "DELF B2 (Maîtrise du français)",
+            "Permis de conduire (Catégorie B)"
+        ],
+        "availability_note": "Disponible pour des contrats à distance · Opportunités internationales",
+        "profile_description": "<strong>Développeur Logiciel Full-Stack</strong> avec plus de 2 ans d'expérience dans la conception d'applications web scalables, de plateformes e-commerce et de produits SaaS. Compétent pour lier les écosystèmes frontend modernes (React, TypeScript, Tailwind) à des architectures backend robustes (PHP, Laravel, Node.js). Expérimenté dans la traduction d'exigences métiers complexes en bases de code maintenables, la conception de bases de données optimisées et l'intégration transparente d'API. Habitué à collaborer dans des environnements axés sur le télétravail pour livrer des solutions sécurisées et performantes, du concept au déploiement.",
+        "experience_list": [
+            {
+                "role": "Développeur Web Full-Stack",
+                "date": "Déc 2024 – Déc 2025",
+                "company": "Group VII Origin",
+                "highlights": [
+                    "<strong>Architecté et développé</strong> des applications web responsives, garantissant une haute performance et une gestion d'état fiable sur l'ensemble de la stack.",
+                    "<strong>Collaboré</strong> de manière transversale dans un environnement à distance pour conceptualiser, concevoir et livrer des fonctionnalités robustes dans les délais impartis.",
+                    "<strong>Amélioré la fiabilité du système</strong> en rationalisant les communications d'API, en menant des revues de code rigoureuses et en minimisant la latence frontend-to-backend."
+                ]
+            },
+            {
+                "role": "Ingénieur Logiciel",
+                "date": "Avr 2024 – Oct 2025",
+                "company": "Zafy Tody",
+                "highlights": [
+                    "<strong>Conçu</strong> des bibliothèques de composants réutilisables et une logique backend robuste, réduisant de 30 % les goulots d'étranglement de développement pour les fonctionnalités d'interface complexes.",
+                    "<strong>Déployé des pipelines CI/CD</strong> via Docker pour standardiser les environnements de développement, permettant une intégration fluide du staging à la production.",
+                    "<strong>Optimisé les modèles de données</strong> et les requêtes backend pour servir efficacement les applications dynamiques côté client, tout en maintenant des normes strictes de qualité de code."
+                ]
+            },
+            {
+                "role": "Développeur Frontend",
+                "date": "Déc 2023 – Mar 2024",
+                "company": "Zafy Tody",
+                "highlights": [
+                    "<strong>Développé</strong> des interfaces utilisateur scalables et accessibles à l'aide de React et TypeScript, en respectant les modèles de conception modernes basés sur les composants.",
+                    "<strong>Intégré des API REST</strong> avec une gestion sophistiquée des données en temps réel, optimisant les mises à jour d'état pour réduire les temps de chargement globaux de l'application."
+                ]
+            },
+            {
+                "role": "Stagiaire Développeur PHP & Frontend",
+                "date": "Juin 2023 – Sept 2023",
+                "company": "Teko Consulting",
+                "highlights": [
+                    "<strong>Développé</strong> des modules e-commerce personnalisés en PHP et JavaScript, élargissant les capacités fonctionnelles des boutiques en ligne des clients.",
+                    "<strong>Optimisé les performances de l'application</strong> en suivant les Web Analytics et en refactorisant des bases de code existantes pour une meilleure stabilité et un rendu plus rapide."
+                ]
+            }
+        ],
+        "education_list": [
+            {
+                "degree": "Master I en Informatique",
+                "school": "IT University Madagascar",
+                "date": "2024 – 2025"
+            },
+            {
+                "degree": "Licence en Génie Logiciel",
+                "school": "Université Privée Hay",
+                "date": "2022 – 2023"
+            },
+            {
+                "degree": "Diplôme de BTS en Programmation",
+                "school": "Université Privée Hay",
+                "date": "2020 – 2022"
+            }
+        ],
+        "tech_badges_key": [
+            "React & TypeScript",
+            "PHP & Laravel",
+            "Tailwind CSS / Shadcn UI",
+            "JavaScript (ES6+)",
+            "Git & CI/CD",
+            "REST APIs",
+            "Architecture de Base de Données"
+        ],
+        "tech_badges_supporting": [
+            "Node.js & Express",
+            "Flutter",
+            "Docker",
+            "React Router / Remix",
+            "Redux / Gestion d'État",
+            "SASS/SCSS",
+            "Webpack / Vite"
+        ],
+        "additional_tech_note": "Complémentaire : Conception de systèmes (UML/MERISE), relations de bases de données polymorphes, workflows de revue de code, optimisation des performances",
+        "focus": {
+            "title_bold": "🔹 Immersion dans les Systèmes Full-Stack :",
+            "intro": "Engagé dans l'architecture de solutions logicielles résilientes, de la couche de base de données à l'interface utilisateur. Perfectionne actuellement son expertise en :",
+            "items": [
+                "Structuration avancée d'applications SaaS",
+                "Modélisation de données complexes & relations polymorphes",
+                "Optimisation de la logique de recherche et indexation",
+                "Modèles UI/UX modernes (Tailwind, Shadcn)",
+                "Mentalités micro-services & API-first"
+            ],
+            "footer": "J'associe la productivité assistée par l'IA à un jugement d'ingénierie rigoureux pour livrer un code propre, efficace et réutilisable — conçu pour évoluer et facile à maintenir pour les équipes."
+        }
+    },
+    "case_studies": {
+        "nav_logo": "Lucieno",
+        "nav_hire": "Recrutez-moi"
+    },
+    "page_404": {
+        "meta_title": "Portfolio Lucieno Zandry - Page Introuvable",
+        "eyebrow": "Perdu dans l'espace",
+        "title": "Page Introuvable",
+        "description": "La page que vous recherchez a été déplacée, supprimée, ou n'a peut-être jamais existé dans cette dimension. Laissez-nous vous remettre sur la bonne voie.",
+        "btn_back": "Retourner en arrière",
+        "btn_home": "Retour à l'accueil"
     }
 }

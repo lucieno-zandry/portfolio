@@ -4,6 +4,10 @@ $timeline = $data['timeline'];
 $items = $timeline['items'];
 ?>
 
+<?php View::startSection('head'); ?>
+<link rel="stylesheet" href="./components/sections/timeline/timeline.css">
+<?php View::endSection('head'); ?>
+
 <section class="timeline-section">
     <div class="timeline-header reveal">
         <span class="eyebrow"><?= htmlspecialchars($timeline['eyebrow']) ?></span>
@@ -106,3 +110,7 @@ $items = $timeline['items'];
                                         }, $items)) ?>;
     </script>
 </section>
+
+<?php View::startSection('script'); ?>
+<script src="./components/sections/timeline/timeline.js"></script>
+<?php View::endSection('script'); ?>

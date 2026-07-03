@@ -1,10 +1,13 @@
+<?php
+$data = load_data()['resume'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Lucieno Zandry · Full-Stack Software Developer · Resume</title>
+    <title><?php echo htmlspecialchars($data['meta_title']); ?></title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
@@ -281,6 +284,7 @@
             border-radius: 30px;
             color: #3a6b8c;
             font-weight: 500;
+            white-space: nowrap;
         }
 
         .exp-desc {
@@ -455,61 +459,54 @@
             <!-- LEFT COLUMN -->
             <aside class="sidebar">
                 <div class="profile-img-wrapper">
-                    <img class="profile-img" src="./components/sections/contact/assets/images/image1.jpg" alt="Lucieno Zandry profile picture" title="Update with your photo">
+                    <img class="profile-img" src="./components/sections/contact/assets/images/image1.jpg" alt="<?php echo htmlspecialchars($data['name']); ?> profile picture">
                 </div>
                 <div class="name-side">
-                    <h1>LUCIENO ZANDRY</h1>
-                    <div class="title">Full-Stack Software Developer</div>
+                    <h1><?php echo htmlspecialchars($data['name']); ?></h1>
+                    <div class="title"><?php echo htmlspecialchars($data['job_title']); ?></div>
                 </div>
                 <ul class="contact-info">
-                    <li><i class="fab fa-github"></i> <a href="https://github.com/lucieno-zandry" target="_blank">github.com/lucieno-zandry</a></li>
-                    <li><i class="fas fa-phone-alt"></i> +261 34 85 277 52</li>
-                    <li><i class="fas fa-envelope"></i> <a href="mailto:lucienozandry4@gmail.com">lucienozandry4@gmail.com</a></li>
-                    <li><i class="fas fa-map-marker-alt"></i> Antananarivo, MG — Remote</li>
-                    <li><i class="fas fa-globe"></i> <a href="https://lucienozandry.ct.ws" target="_blank">lucienozandry.ct.ws</a></li>
-                    <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/lucieno-zandry-a41a16324" target="_blank">Lucieno Zandry</a></li>
+                    <li><i class="fab fa-github"></i> <a href="https://<?php echo htmlspecialchars($data['contact']['github']); ?>" target="_blank"><?php echo htmlspecialchars($data['contact']['github']); ?></a></li>
+                    <li><i class="fas fa-phone-alt"></i> <?php echo htmlspecialchars($data['contact']['phone']); ?></li>
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:<?php echo htmlspecialchars($data['contact']['email']); ?>"><?php echo htmlspecialchars($data['contact']['email']); ?></a></li>
+                    <li><i class="fas fa-map-marker-alt"></i> <?php echo htmlspecialchars($data['contact']['location']); ?></li>
+                    <li><i class="fas fa-globe"></i> <a href="https://<?php echo htmlspecialchars($data['contact']['website']); ?>" target="_blank"><?php echo htmlspecialchars($data['contact']['website']); ?></a></li>
+                    <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/lucieno-zandry-a41a16324" target="_blank"><?php echo htmlspecialchars($data['contact']['linkedin']); ?></a></li>
                 </ul>
                 <div class="side-section">
-                    <h3><i class="fas fa-user-check"></i> Soft skills</h3>
+                    <h3><i class="fas fa-user-check"></i> <?php echo htmlspecialchars($data['sections']['soft_skills']); ?></h3>
                     <div class="soft-skills">
-                        <span class="soft-badge">Cross-functional Collaboration</span>
-                        <span class="soft-badge">Problem Solving</span>
-                        <span class="soft-badge">Ownership Mindset</span>
-                        <span class="soft-badge">Systematic Thinking</span>
-                        <span class="soft-badge">Adaptable</span>
-                        <span class="soft-badge">Remote Communication</span>
+                        <?php foreach ($data['soft_skills_list'] as $skill): ?>
+                            <span class="soft-badge"><?php echo htmlspecialchars($skill); ?></span>
+                        <?php endforeach; ?>
                     </div>
                 </div>
                 <div class="side-section">
-                    <h3><i class="fas fa-code"></i> Core competencies</h3>
+                    <h3><i class="fas fa-code"></i> <?php echo htmlspecialchars($data['sections']['core_competencies']); ?></h3>
                     <ul class="core-list">
-                        <li><i class="fas fa-layer-group"></i> End-to-End Application Architecture</li>
-                        <li><i class="fas fa-database"></i> Database Design & Search Optimization</li>
-                        <li><i class="fab fa-js-square"></i> Advanced JavaScript & TypeScript</li>
-                        <li><i class="fas fa-server"></i> API Development & Integration</li>
-                        <li><i class="fas fa-shopping-cart"></i> E-commerce & SaaS Solutions</li>
-                        <li><i class="fas fa-paint-brush"></i> Modern UI/UX Implementation</li>
-                        <li><i class="fas fa-code-branch"></i> Version Control & CI/CD</li>
-                        <li><i class="fas fa-mobile-alt"></i> Cross-Platform Capabilities</li>
+                        <?php foreach ($data['core_competencies_list'] as $competency): ?>
+                            <li><i class="fas fa-check-circle"></i> <?php echo htmlspecialchars($competency); ?></li>
+                        <?php endforeach; ?>
                     </ul>
                 </div>
                 <div class="side-section">
-                    <h3><i class="fas fa-language"></i> Languages</h3>
+                    <h3><i class="fas fa-language"></i> <?php echo htmlspecialchars($data['sections']['languages']); ?></h3>
                     <ul class="lang-list">
-                        <li><i class="fas fa-comment-dots"></i> <span>English</span> – Professional working proficiency</li>
-                        <li><i class="fas fa-comment-dots"></i> <span>French</span> – Professional working proficiency</li>
-                        <li><i class="fas fa-comment-dots"></i> <span>Malagasy</span> – Native</li>
+                        <?php foreach ($data['languages_list'] as $lang): ?>
+                            <li><i class="fas fa-comment-dots"></i> <span><?php echo htmlspecialchars($lang['name']); ?></span> – <?php echo htmlspecialchars($lang['proficiency']); ?></li>
+                        <?php endforeach; ?>
                     </ul>
                 </div>
                 <div class="side-section">
-                    <h3><i class="fas fa-certificate"></i> Certificates</h3>
+                    <h3><i class="fas fa-certificate"></i> <?php echo htmlspecialchars($data['sections']['certificates']); ?></h3>
                     <ul class="cert-list">
-                        <li><i class="fas fa-check-circle"></i> DELF B2 (French proficiency)</li>
-                        <li><i class="fas fa-id-card"></i> Driver's License (Category B)</li>
+                        <?php foreach ($data['certificates_list'] as $cert): ?>
+                            <li><i class="fas fa-check-circle"></i> <?php echo htmlspecialchars($cert); ?></li>
+                        <?php endforeach; ?>
                     </ul>
                 </div>
                 <div class="small-note">
-                    <i class="fas fa-sync-alt"></i> Available for remote contract work · Global opportunities
+                    <i class="fas fa-sync-alt"></i> <?php echo htmlspecialchars($data['availability_note']); ?>
                 </div>
             </aside>
 
@@ -517,147 +514,80 @@
             <main class="main-content">
                 <!-- PROFILE SUMMARY -->
                 <div class="main-section">
-                    <h2>Profile</h2>
+                    <h2><?php echo htmlspecialchars($data['sections']['profile']); ?></h2>
                     <div class="profile-text">
-                        <strong>Full-Stack Software Developer</strong> with 2+ years of experience engineering scalable web applications, e-commerce platforms, and SaaS products.
-                        Proficient in bridging modern frontend ecosystems (React, TypeScript, Tailwind) with robust backend architectures (PHP, Laravel, Node.js).
-                        Skilled at translating complex business requirements into maintainable codebases, designing optimized databases, and ensuring seamless API integrations.
-                        Experienced in collaborating within remote-first environments to deliver secure, high-performance solutions from concept to deployment.
+                        <?php echo $data['profile_description']; ?>
                     </div>
                 </div>
 
                 <!-- WORK EXPERIENCE -->
                 <div class="main-section">
-                    <h2><i class="fas fa-briefcase"></i> Experience</h2>
+                    <h2><i class="fas fa-briefcase"></i> <?php echo htmlspecialchars($data['sections']['experience']); ?></h2>
 
-                    <!-- Full-Stack Web Developer -->
-                    <div class="exp-item">
-                        <div class="exp-header">
-                            <span class="exp-role">Full-Stack Web Developer</span>
-                            <span class="exp-date">Dec 2024 – Dec 2025</span>
+                    <?php foreach ($data['experience_list'] as $exp): ?>
+                        <div class="exp-item">
+                            <div class="exp-header">
+                                <span class="exp-role"><?php echo htmlspecialchars($exp['role']); ?></span>
+                                <span class="exp-date"><?php echo htmlspecialchars($exp['date']); ?></span>
+                            </div>
+                            <div class="exp-company"><?php echo htmlspecialchars($exp['company']); ?></div>
+                            <div class="exp-desc">
+                                <ul>
+                                    <?php foreach ($exp['highlights'] as $highlight): ?>
+                                        <li><i class="fas fa-check-circle"></i> <?php echo $highlight; ?></li>
+                                    <?php endforeach; ?>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="exp-company">Group VII Origin</div>
-                        <div class="exp-desc">
-                            <ul>
-                                <li><i class="fas fa-check-circle"></i> <strong>Architected and developed</strong> responsive web applications, ensuring high performance and reliable state management across the full stack.</li>
-                                <li><i class="fas fa-check-circle"></i> <strong>Collaborated</strong> cross-functionally in a remote environment to conceptualize, build, and ship robust features on schedule.</li>
-                                <li><i class="fas fa-check-circle"></i> <strong>Improved system reliability</strong> by streamlining API communications, conducting rigorous code reviews, and minimizing frontend-to-backend latency.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Software Engineer -->
-                    <div class="exp-item">
-                        <div class="exp-header">
-                            <span class="exp-role">Software Engineer</span>
-                            <span class="exp-date">Apr 2024 – Oct 2025</span>
-                        </div>
-                        <div class="exp-company">Zafy Tody</div>
-                        <div class="exp-desc">
-                            <ul>
-                                <li><i class="fas fa-check-circle"></i> <strong>Engineered</strong> reusable component libraries and robust backend logic, reducing development bottlenecks for complex UI features by 30%.</li>
-                                <li><i class="fas fa-check-circle"></i> <strong>Implemented CI/CD pipelines</strong> using Docker to standardize development environments, enabling seamless integration from staging to production.</li>
-                                <li><i class="fas fa-check-circle"></i> <strong>Optimized data models</strong> and backend queries to efficiently serve dynamic client-side applications, maintaining strict code quality standards.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Frontend Developer Trainee -->
-                    <div class="exp-item">
-                        <div class="exp-header">
-                            <span class="exp-role">Frontend Developer</span>
-                            <span class="exp-date">Dec 2023 – Mar 2024</span>
-                        </div>
-                        <div class="exp-company">Zafy Tody</div>
-                        <div class="exp-desc">
-                            <ul>
-                                <li><i class="fas fa-check-circle"></i> <strong>Built</strong> scalable, accessible user interfaces using React and TypeScript, adhering to modern component-driven design patterns.</li>
-                                <li><i class="fas fa-check-circle"></i> <strong>Integrated REST APIs</strong> with sophisticated real-time data handling, optimizing state updates to reduce overall application load times.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- PHP & Frontend Developer Trainee -->
-                    <div class="exp-item">
-                        <div class="exp-header">
-                            <span class="exp-role">PHP & Web Developer Trainee</span>
-                            <span class="exp-date">Jun 2023 – Sep 2023</span>
-                        </div>
-                        <div class="exp-company">Teko Consulting</div>
-                        <div class="exp-desc">
-                            <ul>
-                                <li><i class="fas fa-check-circle"></i> <strong>Developed</strong> custom e-commerce modules using PHP and JavaScript, expanding the functional capabilities of client-facing storefronts.</li>
-                                <li><i class="fas fa-check-circle"></i> <strong>Optimized application performance</strong> by tracking Web Analytics and refactoring legacy codebases for improved stability and faster rendering.</li>
-                            </ul>
-                        </div>
-                    </div>
+                    <?php endforeach; ?>
                 </div>
 
                 <!-- EDUCATION -->
                 <div class="main-section">
-                    <h2><i class="fas fa-graduation-cap"></i> Education</h2>
-                    <div class="edu-item">
-                        <div class="edu-degree">Master I in Information Technology</div>
-                        <div class="edu-school">IT University Madagascar</div>
-                        <div class="edu-date">2024 – 2025</div>
-                    </div>
-                    <div class="edu-item">
-                        <div class="edu-degree">Bachelor's Degree in Software Engineering</div>
-                        <div class="edu-school">Université Privée Hay</div>
-                        <div class="edu-date">2022 – 2023</div>
-                    </div>
-                    <div class="edu-item">
-                        <div class="edu-degree">BTS Degree in Programming</div>
-                        <div class="edu-school">Université Privée Hay</div>
-                        <div class="edu-date">2020 – 2022</div>
-                    </div>
+                    <h2><i class="fas fa-graduation-cap"></i> <?php echo htmlspecialchars($data['sections']['education']); ?></h2>
+                    <?php foreach ($data['education_list'] as $edu): ?>
+                        <div class="edu-item">
+                            <div class="edu-degree"><?php echo htmlspecialchars($edu['degree']); ?></div>
+                            <div class="edu-school"><?php echo htmlspecialchars($edu['school']); ?></div>
+                            <div class="edu-date"><?php echo htmlspecialchars($edu['date']); ?></div>
+                        </div>
+                    <?php endforeach; ?>
                 </div>
 
                 <!-- TECH STACK & TOOLS -->
                 <div class="main-section">
-                    <h2><i class="fas fa-microchip"></i> Tech Stack & Tools</h2>
+                    <h2><i class="fas fa-microchip"></i> <?php echo htmlspecialchars($data['sections']['tech_stack']); ?></h2>
                     <div class="tech-badges">
-                        <!-- Key job requirements highlighted -->
-                        <span class="tech-badge key">React & TypeScript</span>
-                        <span class="tech-badge key">PHP & Laravel</span>
-                        <span class="tech-badge key">Tailwind CSS / Shadcn UI</span>
-                        <span class="tech-badge key">JavaScript (ES6+)</span>
-                        <span class="tech-badge key">Git & CI/CD</span>
-                        <span class="tech-badge key">REST APIs</span>
-                        <span class="tech-badge key">Database Architecture</span>
+                        <?php foreach ($data['tech_badges_key'] as $badge): ?>
+                            <span class="tech-badge key"><?php echo htmlspecialchars($badge); ?></span>
+                        <?php endforeach; ?>
 
-                        <!-- Supporting skills -->
-                        <span class="tech-badge">Node.js & Express</span>
-                        <span class="tech-badge">Flutter</span>
-                        <span class="tech-badge">Docker</span>
-                        <span class="tech-badge">React Router / Remix</span>
-                        <span class="tech-badge">Redux / State Management</span>
-                        <span class="tech-badge">SASS/SCSS</span>
-                        <span class="tech-badge">Webpack / Vite</span>
+                        <?php foreach ($data['tech_badges_supporting'] as $badge): ?>
+                            <span class="tech-badge"><?php echo htmlspecialchars($badge); ?></span>
+                        <?php endforeach; ?>
                     </div>
                     <hr>
                     <div style="font-size: 0.75rem; color: #406e8c; margin-top: 0.5rem;">
-                        <i class="fas fa-tachometer-alt"></i> Additional: System design (UML/MERISE), polymorphic database relationships, code review workflows, performance optimization
+                        <i class="fas fa-tachometer-alt"></i> <?php echo htmlspecialchars($data['additional_tech_note']); ?>
                     </div>
                 </div>
 
                 <!-- ENGINEERING FOCUS -->
                 <div class="main-section">
-                    <h2><i class="fas fa-chart-line"></i> Engineering Focus</h2>
+                    <h2><i class="fas fa-chart-line"></i> <?php echo htmlspecialchars($data['sections']['engineering_focus']); ?></h2>
                     <div class="focus-box">
-                        <p><strong>🔹 Full-Stack Systems Depth:</strong> Committed to architecting resilient software solutions from the database layer to the user interface. Currently refining expertise in:</p>
+                        <p><strong><?php echo htmlspecialchars($data['focus']['title_bold']); ?></strong> <?php echo htmlspecialchars($data['focus']['intro']); ?></p>
                         <ul class="focus-list">
-                            <li>Advanced SaaS application structuring</li>
-                            <li>Complex data modeling & polymorphic relationships</li>
-                            <li>Search logic optimization and indexing</li>
-                            <li>Modern UI/UX patterns (Tailwind, Shadcn)</li>
-                            <li>Micro-service & API-first mentalities</li>
+                            <?php foreach ($data['focus']['items'] as $item): ?>
+                                <li><?php echo htmlspecialchars($item); ?></li>
+                            <?php endforeach; ?>
                         </ul>
-                        <p style="margin-top: 0.6rem; font-size: 0.8rem; color: #2c7da0;"><i class="fas fa-brain"></i> I combine AI-assisted productivity with rigorous engineering judgment to deliver clean, efficient, reusable code — built to scale and easy for teams to maintain.</p>
+                        <p style="margin-top: 0.6rem; font-size: 0.8rem; color: #2c7da0;"><i class="fas fa-brain"></i> <?php echo htmlspecialchars($data['focus']['footer']); ?></p>
                     </div>
                 </div>
             </main>
         </div>
     </div>
 </body>
+
 </html>

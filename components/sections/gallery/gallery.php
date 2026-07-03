@@ -3,6 +3,10 @@ $data = load_data();
 $gallery = $data['gallery'];
 ?>
 
+<?php View::startSection('head') ?>
+<link rel="stylesheet" href="./components/sections/gallery/gallery.css">
+<?php View::endSection('head') ?>
+
 <section class="gallery-section" id="projects">
     <div class="video-container reveal">
         <video autoplay muted loop playsinline class="background-video">
@@ -35,7 +39,7 @@ $gallery = $data['gallery'];
                             ?></h3>
                         <p><?= htmlspecialchars($project['tech']) ?></p>
                         <?php if ($project['link']): ?>
-                            <a href="<?= htmlspecialchars($project['link']) ?>" class="overlay-link" target="_blank">
+                            <a href="<?= htmlspecialchars(add_lang_to_uri($project['link'])) ?>" class="overlay-link" target="_blank">
                                 <?= $project['actionLabel']  ?> &rarr;
                             </a>
                         <?php endif; ?>
@@ -45,3 +49,7 @@ $gallery = $data['gallery'];
         </div>
     </div>
 </section>
+
+<?php View::startSection('script') ?>
+<script src="./components/sections/gallery/gallery.js" type="module"></script>
+<?php View::endSection('script') ?>

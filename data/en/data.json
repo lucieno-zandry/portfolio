@@ -67,21 +67,21 @@
             {
                 "title": "Snapshot-Based <br> <span class=\"text-outline\">Order Engine</span>",
                 "tech": "Laravel · MySQL · Data Integrity",
-                "link": "/case-studies/the-integrity-savior.php",
+                "link": "/case-studies/the-integrity-savior",
                 "bg": "./assets/image.jpeg",
                 "actionLabel": "Read Case Study"
             },
             {
                 "title": "Priority-Stacked <br> <span class=\"text-outline\">Promo System</span>",
                 "tech": "Laravel ORM · SQL · Algorithms",
-                "link": "/case-studies/the-logic-engine.php",
+                "link": "/case-studies/the-logic-engine",
                 "bg": "./assets/image8.jpeg",
                 "actionLabel": "Read Case Study"
             },
             {
                 "title": "Polymorphic <br> <span class=\"text-outline\">Landing Blocks</span>",
                 "tech": "React · Tsup · Morph Relations",
-                "link": "/case-studies/the-polymorphic-engine.php",
+                "link": "/case-studies/the-polymorphic-engine",
                 "bg": "./assets/image2.jpeg",
                 "actionLabel": "Read Case Study"
             },
@@ -109,14 +109,14 @@
             {
                 "title": "Immutable <br> <span class=\"text-outline\">Transaction Audit</span>",
                 "tech": "UUID · Webhooks · Event Ledger",
-                "link": "/case-studies/the-integrity-savior.php",
+                "link": "/case-studies/the-integrity-savior",
                 "bg": "./assets/image6.png",
                 "actionLabel": "Read Case Study"
             },
             {
                 "title": "Bracket-Based <br> <span class=\"text-outline\">Shipping Engine</span>",
                 "tech": "Laravel · Regex · API Carrier",
-                "link": "/case-studies/the-integrity-savior.php",
+                "link": "/case-studies/the-integrity-savior",
                 "bg": "./assets/image5.jpeg",
                 "actionLabel": "Read Case Study"
             }
@@ -302,5 +302,233 @@
                 "ballX": 250
             }
         ]
+    },
+    "the-integrity-savior": {
+        "meta_title": "The Integrity Savior - Lucieno Zandry",
+        "hero_eyebrow": "Case Study 01",
+        "hero_title_text": "The Integrity",
+        "hero_title_outline": "Savior",
+        "hero_description": "Designing an audit-safe checkout engine with immutable historical snapshots. Because data shouldn't rewrite itself.",
+        "hero_tags": [
+            "Laravel",
+            "MySQL",
+            "TypeScript"
+        ],
+        "problem_title_text": "The",
+        "problem_title_outline": "Problem",
+        "problem_description": "Imagine diagnosing an electrical short on your Motorbike, mapping out the wiring, and repairing it. Then, a week later, the publisher of the service manual retroactively changes the wiring diagram in your physical book while you sleep.<br><br>That is exactly what happens in a naive e-commerce database. A standard relational database relies strictly on foreign keys. If <code>Order #1042</code> simply points to <code>product_id: 99</code>, updating that product's price today will dynamically—and disastrously—alter last year's receipt. The accounting team is furious, and the system’s financial integrity is completely broken.",
+        "solution_title_text": "The",
+        "solution_title_outline": "Solution",
+        "solution_description": "We don't let history rewrite itself.<br><br>Instead of linking IDs in the cart, I engineered an immutable snapshot architecture. At the exact moment of checkout, the system serializes a deep copy of the <code>Product</code>, <code>Variant</code>, <code>Address</code>, and <code>ShippingMethod</code>.<br><br>These objects are saved as isolated snapshots (e.g., <code>ProductSnapshot</code>, <code>VariantSnapshot</code>) embedded directly into the <code>Order</code> record.",
+        "outcome_title_text": "The",
+        "outcome_title_outline": "Outcome",
+        "outcome_description": "Bulletproof legal and financial compliance. Store administrators can now confidently delete obsolete variants, overhaul pricing brackets, and tweak shipping formulas without ever altering a single historical transaction.<br><br>It’s a defensive, predictable backend that doesn't wake anyone up with a database crisis at 2 AM.",
+        "outcome_back_btn": "← Back to Portfolio"
+    },
+    "the-logic-engine": {
+        "meta_title": "The Logic Engine - Lucieno Zandry",
+        "hero_eyebrow": "Case Study 02",
+        "hero_title_text": "The Logic",
+        "hero_title_outline": "Engine",
+        "hero_description": "Building a priority-stacked, conflict-free promotion system. Because users shouldn't be able to buy your entire inventory for $0.00.",
+        "hero_tags": [
+            "Laravel ORM",
+            "Algorithms",
+            "SQL"
+        ],
+        "problem_title_text": "The",
+        "problem_title_outline": "Problem",
+        "problem_description": "E-commerce discounts look deceptively simple until Black Friday hits. A user logs in with a 20% tier discount, applies a $15 store credit, and stacks a \"HALF_OFF\" coupon code from a newsletter.<br><br>In a basic system, one of three things happens: the discounts overwrite each other, the checkout crashes, or worse—the math applies in the wrong order, and the store ends up owing the customer money for taking an item.",
+        "solution_title_text": "The",
+        "solution_title_outline": "Solution",
+        "solution_description": "I engineered a deterministic, rules-based pricing engine. I designed the <code>Promotion</code> schema to handle strict mathematical orchestration on the fly.<br><br>Instead of running raw calculations blindly, the system checks <code>stackable</code> booleans, sorts by a strict <code>priority</code> index, and obeys explicit <code>apply_order</code> logic (ensuring percentages apply before fixed amounts). It even uses an <code>applies_to</code> scope to physically segregate B2B wholesale prices from retail holiday coupons.",
+        "outcome_title_text": "The",
+        "outcome_title_outline": "Outcome",
+        "outcome_description": "Total mathematical certainty. The marketing team can now run 15 overlapping promotional campaigns simultaneously without breaking the checkout. The engine calculates the effective price flawlessly, respects <code>max_discount</code> caps, and never loses a dime to race conditions.",
+        "outcome_back_btn": "← Back to Portfolio"
+    },
+    "the-polymorphic-engine": {
+        "meta_title": "The Polymorphic Engine - Lucieno Zandry",
+        "hero_eyebrow": "Case Study 03",
+        "hero_title_text": "Polymorphic",
+        "hero_title_outline": "Engine",
+        "hero_description": "Engineering a dynamic CMS for high-converting landing pages. Because developers shouldn't be pushing code just to update a marketing banner.",
+        "hero_tags": [
+            "React",
+            "Tsup",
+            "Morph Relations"
+        ],
+        "problem_title_text": "The",
+        "problem_title_outline": "Problem",
+        "problem_description": "Marketing wants to swap out a hero banner for Black Friday. Then they want to insert a \"Featured Products\" row right above the footer.<br><br>If the frontend layout is hardcoded, every marketing whim requires a developer, a pull request, and a production deployment. It creates a massive bottleneck where engineers are effectively acting as highly-paid content editors.",
+        "solution_title_text": "The",
+        "solution_title_outline": "Solution",
+        "solution_description": "I built a polymorphic layout engine using Laravel's Morph Relations (<code>landing_able_type</code> and <code>landing_able_id</code>) paired with a custom React component library bundled via <code>tsup</code>.<br><br>Instead of static page templates, the frontend consumes an ordered array of <code>LandingBlock</code> objects. A single generic database row can resolve dynamically into a specific <code>Product</code>, an entire <code>Category</code>, or custom JSON structures like <code>TestimonialsContent</code> or <code>FaqContent</code>. The React frontend simply maps over the blocks and renders the corresponding strict-typed component.",
+        "outcome_title_text": "The",
+        "outcome_title_outline": "Outcome",
+        "outcome_description": "True decoupling. Marketing teams can assemble, reorder, and publish rich, diverse landing pages on the fly without touching a single line of React. The frontend remains strictly typed, the database stays relational, and engineers can go back to solving actual architectural problems instead of tweaking margin CSS.",
+        "outcome_back_btn": "← Back to Portfolio"
+    },
+    "resume": {
+        "meta_title": "Lucieno Zandry · Full-Stack Software Developer · Resume",
+        "name": "LUCIENO ZANDRY",
+        "job_title": "Full-Stack Software Developer",
+        "contact": {
+            "github": "github.com/lucieno-zandry",
+            "phone": "+261 34 85 277 52",
+            "email": "lucienozandry4@gmail.com",
+            "location": "Antananarivo, MG — Remote",
+            "website": "lucienozandry.ct.ws",
+            "linkedin": "Lucieno Zandry"
+        },
+        "sections": {
+            "soft_skills": "Soft skills",
+            "core_competencies": "Core competencies",
+            "languages": "Languages",
+            "certificates": "Certificates",
+            "profile": "Profile",
+            "experience": "Experience",
+            "education": "Education",
+            "tech_stack": "Tech Stack & Tools",
+            "engineering_focus": "Engineering Focus"
+        },
+        "soft_skills_list": [
+            "Cross-functional Collaboration",
+            "Problem Solving",
+            "Ownership Mindset",
+            "Systematic Thinking",
+            "Adaptable",
+            "Remote Communication"
+        ],
+        "core_competencies_list": [
+            "End-to-End Application Architecture",
+            "Database Design & Search Optimization",
+            "Advanced JavaScript & TypeScript",
+            "API Development & Integration",
+            "E-commerce & SaaS Solutions",
+            "Modern UI/UX Implementation",
+            "Version Control & CI/CD",
+            "Cross-Platform Capabilities"
+        ],
+        "languages_list": [
+            {
+                "name": "English",
+                "proficiency": "Professional working proficiency"
+            },
+            {
+                "name": "French",
+                "proficiency": "Professional working proficiency"
+            },
+            {
+                "name": "Malagasy",
+                "proficiency": "Native"
+            }
+        ],
+        "certificates_list": [
+            "DELF B2 (French proficiency)",
+            "Driver's License (Category B)"
+        ],
+        "availability_note": "Available for remote contract work · Global opportunities",
+        "profile_description": "<strong>Full-Stack Software Developer</strong> with 2+ years of experience engineering scalable web applications, e-commerce platforms, and SaaS products. Proficient in bridging modern frontend ecosystems (React, TypeScript, Tailwind) with robust backend architectures (PHP, Laravel, Node.js). Skilled at translating complex business requirements into maintainable codebases, designing optimized databases, and ensuring seamless API integrations. Experienced in collaborating within remote-first environments to deliver secure, high-performance solutions from concept to deployment.",
+        "experience_list": [
+            {
+                "role": "Full-Stack Web Developer",
+                "date": "Dec 2024 – Dec 2025",
+                "company": "Group VII Origin",
+                "highlights": [
+                    "<strong>Architected and developed</strong> responsive web applications, ensuring high performance and reliable state management across the full stack.",
+                    "<strong>Collaborated</strong> cross-functionally in a remote environment to conceptualize, build, and ship robust features on schedule.",
+                    "<strong>Improved system reliability</strong> by streamlining API communications, conducting rigorous code reviews, and minimizing frontend-to-backend latency."
+                ]
+            },
+            {
+                "role": "Software Engineer",
+                "date": "Apr 2024 – Oct 2025",
+                "company": "Zafy Tody",
+                "highlights": [
+                    "<strong>Engineered</strong> reusable component libraries and robust backend logic, reducing development bottlenecks for complex UI features by 30%.",
+                    "<strong>Implemented CI/CD pipelines</strong> using Docker to standardize development environments, enabling seamless integration from staging to production.",
+                    "<strong>Optimized data models</strong> and backend queries to efficiently serve dynamic client-side applications, maintaining strict code quality standards."
+                ]
+            },
+            {
+                "role": "Frontend Developer",
+                "date": "Dec 2023 – Mar 2024",
+                "company": "Zafy Tody",
+                "highlights": [
+                    "<strong>Built</strong> scalable, accessible user interfaces using React and TypeScript, adhering to modern component-driven design patterns.",
+                    "<strong>Integrated REST APIs</strong> with sophisticated real-time data handling, optimizing state updates to reduce overall application load times."
+                ]
+            },
+            {
+                "role": "PHP & Web Developer Trainee",
+                "date": "Jun 2023 – Sep 2023",
+                "company": "Teko Consulting",
+                "highlights": [
+                    "<strong>Developed</strong> custom e-commerce modules using PHP and JavaScript, expanding the functional capabilities of client-facing storefronts.",
+                    "<strong>Optimized application performance</strong> by tracking Web Analytics and refactoring legacy codebases for improved stability and faster rendering."
+                ]
+            }
+        ],
+        "education_list": [
+            {
+                "degree": "Master I in Information Technology",
+                "school": "IT University Madagascar",
+                "date": "2024 – 2025"
+            },
+            {
+                "degree": "Bachelor's Degree in Software Engineering",
+                "school": "Université Privée Hay",
+                "date": "2022 – 2023"
+            },
+            {
+                "degree": "BTS Degree in Programming",
+                "school": "Université Privée Hay",
+                "date": "2020 – 2022"
+            }
+        ],
+        "tech_badges_key": [
+            "React & TypeScript",
+            "PHP & Laravel",
+            "Tailwind CSS / Shadcn UI",
+            "JavaScript (ES6+)",
+            "Git & CI/CD",
+            "REST APIs",
+            "Database Architecture"
+        ],
+        "tech_badges_supporting": [
+            "Node.js & Express",
+            "Flutter",
+            "Docker",
+            "React Router / Remix",
+            "Redux / State Management",
+            "SASS/SCSS",
+            "Webpack / Vite"
+        ],
+        "additional_tech_note": "Additional: System design (UML/MERISE), polymorphic database relationships, code review workflows, performance optimization",
+        "focus": {
+            "title_bold": "🔹 Full-Stack Systems Depth:",
+            "intro": "Committed to architecting resilient software solutions from the database layer to the user interface. Currently refining expertise in:",
+            "items": [
+                "Advanced SaaS application structuring",
+                "Complex data modeling & polymorphic relationships",
+                "Search logic optimization and indexing",
+                "Modern UI/UX patterns (Tailwind, Shadcn)",
+                "Micro-service & API-first mentalities"
+            ],
+            "footer": "I combine AI-assisted productivity with rigorous engineering judgment to deliver clean, efficient, reusable code — built to scale and easy for teams to maintain."
+        }
+    },
+    "case_studies": {
+        "nav_logo": "Lucieno",
+        "nav_hire": "Hire me"
+    },
+    "page_404": {
+        "meta_title": "Portfolio Lucieno Zandry - Page Not Found",
+        "eyebrow": "Lost in Space",
+        "title": "Page Not Found",
+        "description": "The page you are searching for has been moved, deleted, or perhaps it never existed in this dimension. Let's get you back on track.",
+        "btn_back": "Go Back",
+        "btn_home": "Back to Home"
     }
 }
