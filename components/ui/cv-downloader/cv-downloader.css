@@ -1,0 +1,62 @@
+/* Floating CV Download Component */
+.cv-download-floating {
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: rgba(5, 8, 22, 0.75);
+    /* Matches your --bg with transparency */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 0.6rem 1rem;
+    color: var(--text);
+    font-family: Inter, sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+.cv-download-floating:hover {
+    border-color: var(--accent);
+    color: var(--text);
+    box-shadow: 0 0 20px rgba(110, 168, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.download-icon {
+    color: var(--accent);
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+/* Micro-interaction: nudge the arrow down slightly on hover */
+.cv-download-floating:hover .download-icon {
+    transform: translateY(2px);
+}
+
+/* Responsive adjustment matching your 760px breakpoint */
+@media screen and (max-width: 760px) {
+    .cv-download-floating {
+        bottom: 1rem;
+        left: 1rem;
+        padding: 0.5rem 0.8rem;
+    }
+
+    /* Shorten the text on mobile to save screen real estate */
+    .cv-text {
+        font-size: 0.85rem;
+    }
+
+    .cv-text::before {
+        content: "";
+    }
+
+    /* Optional: change text to just "CV" on tiny screens if preferred */
+}

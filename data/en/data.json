@@ -530,5 +530,8 @@
         "description": "The page you are searching for has been moved, deleted, or perhaps it never existed in this dimension. Let's get you back on track.",
         "btn_back": "Go Back",
         "btn_home": "Back to Home"
+    },
+    "common" : {
+        "download_cv": "Download CV"
     }
 }

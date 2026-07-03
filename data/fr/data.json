@@ -530,5 +530,8 @@
         "description": "La page que vous recherchez a été déplacée, supprimée, ou n'a peut-être jamais existé dans cette dimension. Laissez-nous vous remettre sur la bonne voie.",
         "btn_back": "Retourner en arrière",
         "btn_home": "Retour à l'accueil"
+    },
+    "common": {
+        "download_cv": "Obtenir mon CV"
     }
 }
