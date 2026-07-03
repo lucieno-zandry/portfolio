@@ -1,5 +1,5 @@
 <?php
-$data = json_decode(file_get_contents(dirname(__DIR__, 3) . DIRECTORY_SEPARATOR . 'data' . DIRECTORY_SEPARATOR . 'data.json'), true);
+$data = load_data();
 $timeline = $data['timeline'];
 $items = $timeline['items'];
 ?>

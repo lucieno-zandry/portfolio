@@ -1,0 +1,306 @@
+{
+    "hero": {
+        "eyebrow": "Ingénieur Fullstack Orienté Backend",
+        "title": "LUCIENO",
+        "title-outline": "ZANDRY",
+        "description": "Création de systèmes évolutifs, d'architectures prêtes pour le cloud et d'applications de qualité production avec React, Laravel, Docker et des modèles backend modernes.",
+        "cta": {
+            "primary": {
+                "text": "Voir les Projets",
+                "href": "#projects"
+            },
+            "secondary": {
+                "text": "Me Contacter",
+                "href": "#contact"
+            }
+        },
+        "techStack": [
+            "React",
+            "Laravel",
+            "Docker",
+            "TypeScript",
+            "Node.js"
+        ]
+    },
+    "contact": {
+        "status": "Disponible pour de nouveaux projets",
+        "name": "Lucieno Zandry",
+        "heading": "Prêt à Concevoir Votre Prochain Projet ?",
+        "description": "Je suis actuellement à la recherche de nouvelles opportunités en ingénierie. Qu'il s'agisse de concevoir des API RESTful évolutives, d'orchestrer des conteneurs Docker ou de créer des interfaces React hautement réactives, construisons ensemble quelque chose d'exceptionnel.",
+        "location": "📍 Antananarivo, Madagascar (EAT)",
+        "cta": {
+            "primary": {
+                "text": "Discutons",
+                "href": "mailto:lucienozandry4@gmail.com"
+            },
+            "secondary": [
+                {
+                    "text": "GitHub",
+                    "href": "https://github.com/lucieno-zandry"
+                },
+                {
+                    "text": "LinkedIn",
+                    "href": "https://www.linkedin.com/in/lucieno-zandry-a41a16324/"
+                }
+            ]
+        },
+        "footer": "Conçu et Développé par Lucieno Zandry © 2026"
+    },
+    "engineeringManifesto": {
+        "heading": "je conçois des systèmes, des plateformes, des pipelines, des backends, des flux de travail, de l'architecture, de la mise à l'échelle.",
+        "list": [
+            "des systèmes.",
+            "des plateformes.",
+            "des pipelines.",
+            "des backends.",
+            "des flux de travail.",
+            "de l'architecture.",
+            "de la mise à l'échelle."
+        ],
+        "static_text": "Je conçois"
+    },
+    "gallery": {
+        "eyebrow": "Systèmes en Pratique",
+        "title": "De vrais produits.<br /><span class=\"text-outline\">De vrais utilisateurs.</span><br />De vraies contraintes.",
+        "description": "Une collection de modèles architecturaux, de fonctionnalités de production et de décisions d'ingénierie mis en œuvre dans des applications concrètes.",
+        "projects": [
+            {
+                "title": "Moteur de Commandes <br> <span class=\"text-outline\">Basé sur des Instantanés</span>",
+                "tech": "Laravel · MySQL · Intégrité des Données",
+                "link": "/case-studies/the-integrity-savior.php",
+                "bg": "./assets/image.jpeg",
+                "actionLabel": "Lire l'Étude de Cas"
+            },
+            {
+                "title": "Système de Promotion <br> <span class=\"text-outline\">Empilé par Priorité</span>",
+                "tech": "Laravel ORM · SQL · Algorithmes",
+                "link": "/case-studies/the-logic-engine.php",
+                "bg": "./assets/image8.jpeg",
+                "actionLabel": "Lire l'Étude de Cas"
+            },
+            {
+                "title": "Blocs de Landing <br> <span class=\"text-outline\">Polymorphes</span>",
+                "tech": "React · Tsup · Relations Polymorphes",
+                "link": "/case-studies/the-polymorphic-engine.php",
+                "bg": "./assets/image2.jpeg",
+                "actionLabel": "Lire l'Étude de Cas"
+            },
+            {
+                "title": "Recherche <br> <span class=\"text-outline\">Avancée</span>",
+                "tech": "Laravel · Meilisearch · SSR",
+                "link": "https://maboo.mg/fr/search/bébé",
+                "bg": "./assets/image7.jpeg",
+                "actionLabel": "Voir la Démo"
+            },
+            {
+                "title": "Vitrine <br> <span class=\"text-outline\">SSR</span>",
+                "tech": "React Router V7 · Remix",
+                "link": "https://maboo.mg",
+                "bg": "./assets/image4.jpeg",
+                "actionLabel": "Voir la Démo"
+            },
+            {
+                "title": "Backoffice <br> <span class=\"text-outline\">Moderne</span>",
+                "tech": "Shadcn UI · Tailwindcss · React",
+                "link": "https://github.com/lucieno-zandry/wle-bo",
+                "bg": "./assets/image3.png",
+                "actionLabel": "Dépôt"
+            },
+            {
+                "title": "Audit de Transactions <br> <span class=\"text-outline\">Immuable</span>",
+                "tech": "UUID · Webhooks · Registre d'Événements",
+                "link": "/case-studies/the-integrity-savior.php",
+                "bg": "./assets/image6.png",
+                "actionLabel": "Lire l'Étude de Cas"
+            },
+            {
+                "title": "Moteur d'Expédition <br> <span class=\"text-outline\">Basé sur des Paliers</span>",
+                "tech": "Laravel · Regex · API Transporteur",
+                "link": "/case-studies/the-integrity-savior.php",
+                "bg": "./assets/image5.jpeg",
+                "actionLabel": "Lire l'Étude de Cas"
+            }
+        ]
+    },
+    "timeline": {
+        "eyebrow": "Parcours d'Ingénierie",
+        "title": "Devenir un Ingénieur Fullstack<br />Orienté Backend",
+        "description": "Chaque rôle a apporté une nouvelle dimension d'ingénierie — des interfaces réactives et API REST à l'architecture backend évolutive, aux déploiements conteneurisés et à la responsabilité de la production. Cette chronologie met en lumière les étapes clés qui ont façonné ma manière de concevoir, de développer et de penser le logiciel aujourd'hui.",
+        "items": [
+            {
+                "date": "2022 - PRÉSENT",
+                "titleLine1": "DÉVELOPPEMENT DE",
+                "titleLine2": "PRODUITS",
+                "company": "Indépendant ...",
+                "info": "Au-delà de mes rôles professionnels, je développe continuellement des applications pour explorer de nouvelles technologies, valider des idées et perfectionner l'architecture logicielle.",
+                "url": "https://github.com/lucieno-zandry",
+                "actionLabel": "Visiter GitHub →",
+                "roleList": [
+                    "· Projets clients",
+                    "· Produits personnels",
+                    "· Bibliothèques et outils réutilisables"
+                ],
+                "alignment": "left",
+                "lineY": 130,
+                "textX": 200,
+                "companyX": 225,
+                "roleX": 200,
+                "dateX": 200,
+                "titleX": 200,
+                "iconTransform": "translate(70%, 4.7%)",
+                "ballX": 130,
+                "roleY": 65
+            },
+            {
+                "date": "DÉC 2024 - DÉC 2025",
+                "titleLine1": "DÉVELOPPEUR",
+                "titleLine2": "REACT & FLUTTER",
+                "company": "Group VII Origin",
+                "info": "Une entreprise française spécialisée dans le développement d'applications basée à Paris, en France.",
+                "url": "https://groupviiorigin.com/",
+                "roleList": [
+                    "Maintenance backend & synchronisation d'API",
+                    "Cycles d'amélioration de l'application Android"
+                ],
+                "alignment": "right",
+                "lineY": 490,
+                "textX": 260,
+                "companyX": 250,
+                "roleX": 260,
+                "dateX": 260,
+                "titleX": 280,
+                "iconTransform": "translate(3%, 17.4%)",
+                "ballX": 336
+            },
+            {
+                "date": "AVR 2024 - OCT 2024",
+                "titleLine1": "DÉVELOPPEUR",
+                "titleLine2": "PHP & REACT",
+                "company": "Zafy Tody",
+                "info": "Cette entreprise contribue à accélérer l'écosystème des startups à Madagascar.",
+                "url": "https://zafytody.mg/en/",
+                "roleList": [
+                    "API RESTful avec Laravel 11 ·",
+                    "Conteneurisation complète via Docker ·",
+                    "Frontend modulaire avec React & TS ·"
+                ],
+                "alignment": "left",
+                "lineY": 885,
+                "textX": 170,
+                "companyX": 215,
+                "roleX": 170,
+                "dateX": 170,
+                "titleX": 170,
+                "iconTransform": "translate(58%, 31.6%)",
+                "ballX": 157,
+                "roleY": 65
+            },
+            {
+                "date": "DÉC 2023 - MAR 2024",
+                "titleLine1": "STAGIAIRE DÉVELOPPEUR",
+                "titleLine2": "FRONTEND",
+                "company": "Maboo",
+                "info": "Une entreprise d'e-commerce ciblant les jeunes mamans.",
+                "url": "https://maboo.mg",
+                "roleList": [
+                    "· Intégration réactive au pixel près (Pixel-perfect)",
+                    "· Gestion des données en temps réel avec Axios",
+                    "· Conception de composants SCSS réutilisables"
+                ],
+                "alignment": "right",
+                "lineY": 1300,
+                "textX": 320,
+                "companyX": 280,
+                "roleX": 320,
+                "dateX": 320,
+                "titleX": 350,
+                "iconTransform": "translate(55%, 46.5%)",
+                "ballX": 165,
+                "roleY": 65
+            },
+            {
+                "date": "JUIN 2023 - SEPT 2023",
+                "titleLine1": "STAGIAIRE DÉVELOPPEUR",
+                "titleLine2": "PHP & FRONTEND",
+                "company": "Teko Consulting",
+                "info": "Une entreprise de services en ingénierie logicielle basée à Madagascar.",
+                "url": "https://www.linkedin.com/in/teko-consulting-03140a1b9?originalSubdomain=mg",
+                "roleList": [
+                    "Optimisation frontend (20% plus rapide) ·",
+                    "Conception de modules PrestaShop personnalisés ·",
+                    "Maintenance de configurations héritées (legacy) Laravel ·"
+                ],
+                "alignment": "left",
+                "lineY": 1670,
+                "textX": 175,
+                "companyX": 170,
+                "roleX": 175,
+                "dateX": 175,
+                "titleX": 210,
+                "iconTransform": "translate(14%, 59.6%)",
+                "ballX": 376,
+                "roleY": 65
+            },
+            {
+                "date": "2024 - 2025",
+                "titleLine1": "ENSEIGNEMENT",
+                "titleLine2": "SUPÉRIEUR",
+                "company": "IT University",
+                "info": "IT University est classée première parmi les meilleures universités d'informatique à Madagascar.",
+                "url": "https://www.ituniversity-mg.com",
+                "roleList": [
+                    "· Master I en Technologies de l'Information"
+                ],
+                "alignment": "left",
+                "lineY": 1995,
+                "textX": 175,
+                "companyX": 210,
+                "roleX": 175,
+                "dateX": 175,
+                "titleX": 210,
+                "iconTransform": "translate(64%, 71.2%)",
+                "ballX": 120,
+                "roleY": 45
+            },
+            {
+                "date": "2020 - 2023",
+                "titleLine1": "ENSEIGNEMENT",
+                "titleLine2": "SUPÉRIEUR",
+                "company": "University Hay",
+                "info": "Cette université se concentre sur une approche d'apprentissage par les pairs plutôt que sur un programme d'enseignement classique.",
+                "url": "https://www.uph.mg",
+                "roleList": [
+                    "· Licence en Génie Logiciel."
+                ],
+                "alignment": "right",
+                "lineY": 2365,
+                "textX": 360,
+                "companyX": 200,
+                "roleX": 360,
+                "dateX": 360,
+                "titleX": 360,
+                "iconTransform": "translate(1%, 84.5%)",
+                "ballX": 305,
+                "roleY": 45
+            },
+            {
+                "date": "2017 - 2018",
+                "titleLine1": "BACCALAURÉAT",
+                "titleLine2": "SCIENTIFIQUE",
+                "company": "La Pepite d'Or",
+                "info": "Un lycée très réputé dans la capitale, Antananarivo.",
+                "url": "https://www.facebook.com/lapepitedorantaninandro/",
+                "roleList": [],
+                "alignment": "right",
+                "lineY": 2730,
+                "textX": 360,
+                "companyX": 440,
+                "roleX": 360,
+                "dateX": 360,
+                "titleX": 360,
+                "iconTransform": "translate(88%, 97.5%)",
+                "ballX": 250
+            }
+        ]
+    }
+}

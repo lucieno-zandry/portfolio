@@ -37,3 +37,4 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local_dir: "./deploy"
           remote_dir: "/htdocs"
+          max_retries: "2"
