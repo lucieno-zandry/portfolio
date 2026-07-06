@@ -12,6 +12,10 @@
         <link rel="stylesheet" href="/components/ui/cv-downloader/cv-downloader.css">
         <link rel="shortcut icon" href="/assets/icon.png" type="image/png">
 
+        <script>
+            window.apiUrl = "<?= env('API_URL') ?>"
+        </script>
+
         <?= View::yield('head') ?>
     </head>
 
@@ -25,6 +29,7 @@
         <?= View::yield('script') ?>
 
         <script src="/components/ui/layout/layout.js"></script>
+        <script src="/api/analytics.js"></script>
     </body>
 
     </html>

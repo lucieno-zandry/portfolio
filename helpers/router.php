@@ -12,6 +12,9 @@ require(__DIR__ . DIRECTORY_SEPARATOR . 'helpers.php');
 
 require(get_safe_path('/helpers/view.php'));
 require(get_safe_path('/helpers/deferred-include.php'));
+require(get_safe_path('/helpers/env.php'));
+
+load_env(get_safe_path('.env'));
 
 $uri = $_SERVER['REQUEST_URI'];
 $path_info = explode("?", $uri)[0];
