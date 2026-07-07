@@ -459,7 +459,7 @@ $data = load_data()['resume'];
             <!-- LEFT COLUMN -->
             <aside class="sidebar">
                 <div class="profile-img-wrapper">
-                    <img class="profile-img" src="./components/sections/contact/assets/images/image1.jpg" alt="<?php echo htmlspecialchars($data['name']); ?> profile picture">
+                    <img class="profile-img" src="/components/sections/contact/assets/images/image1.webp" alt="<?php echo htmlspecialchars($data['name']); ?> profile picture">
                 </div>
                 <div class="name-side">
                     <h1><?php echo htmlspecialchars($data['name']); ?></h1>
