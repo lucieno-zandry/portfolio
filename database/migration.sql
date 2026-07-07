@@ -1,5 +1,5 @@
 -- Up Migration: Create portfolio_visits table
-CREATE TABLE IF NOT EXISTS `if0_42319175_portfolio_visits` (
+CREATE TABLE IF NOT EXISTS `portfolio_visits` (
     `id` BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     
     -- Traffic & Tracking Source

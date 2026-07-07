@@ -95,7 +95,7 @@ class Mailer
 
             // --- Sender Setup ---
             $fromAddress = env('MAIL_FROM_ADDRESS', 'noreply@yourdomain.com');
-            $fromName    = env('MAIL_FROM_NAME', 'Portfolio Bot');
+            $fromName    = env('APP_NAME', 'Portfolio Bot');
             $mail->setFrom($fromAddress, $fromName);
 
             // --- Recipients ---

@@ -10,7 +10,7 @@ use Src\Mailer;
 function sendAlertEmail(string $to, array $data, string $ip, array $geo): void
 {
     try {
-        $subject = "🚀 Portfolio Visitor Alert: [" . ($data['tracking']['source'] ?? 'Direct') . "]";
+        $subject = "Portfolio Visitor Alert: [" . ($data['tracking']['source'] ?? 'Direct') . "]";
 
         $source  = htmlspecialchars($data['tracking']['source'] ?? 'Direct');
         $page    = htmlspecialchars($data['context']['landingPage'] ?? '/');
