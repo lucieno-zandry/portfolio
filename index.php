@@ -3,8 +3,6 @@ View::extends('components/ui/layout/layout');
 View::section('title', 'Lucieno Zandry - Portfolio');
 
 View::startSection('head');
-
-writeLog("Hello world");
 ?>
 
 <!-- gsap -->

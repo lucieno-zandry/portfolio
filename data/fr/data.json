@@ -68,56 +68,56 @@
                 "title": "Moteur de Commandes <br> <span class=\"text-outline\">Basé sur des Instantanés</span>",
                 "tech": "Laravel · MySQL · Intégrité des Données",
                 "link": "/case-studies/the-integrity-savior",
-                "bg": "./assets/image.jpeg",
+                "bg": "./assets/image.webp",
                 "actionLabel": "Lire l'Étude de Cas"
             },
             {
                 "title": "Système de Promotion <br> <span class=\"text-outline\">Empilé par Priorité</span>",
                 "tech": "Laravel ORM · SQL · Algorithmes",
                 "link": "/case-studies/the-logic-engine",
-                "bg": "./assets/image8.jpeg",
+                "bg": "./assets/image8.webp",
                 "actionLabel": "Lire l'Étude de Cas"
             },
             {
                 "title": "Blocs de Landing <br> <span class=\"text-outline\">Polymorphes</span>",
                 "tech": "React · Tsup · Relations Polymorphes",
                 "link": "/case-studies/the-polymorphic-engine",
-                "bg": "./assets/image2.jpeg",
+                "bg": "./assets/image2.webp",
                 "actionLabel": "Lire l'Étude de Cas"
             },
             {
                 "title": "Recherche <br> <span class=\"text-outline\">Avancée</span>",
                 "tech": "Laravel · Meilisearch · SSR",
                 "link": "https://maboo.mg/fr/search/bébé",
-                "bg": "./assets/image7.jpeg",
+                "bg": "./assets/image7.webp",
                 "actionLabel": "Voir la Démo"
             },
             {
                 "title": "Vitrine <br> <span class=\"text-outline\">SSR</span>",
                 "tech": "React Router V7 · Remix",
                 "link": "https://maboo.mg",
-                "bg": "./assets/image4.jpeg",
+                "bg": "./assets/image4.webp",
                 "actionLabel": "Voir la Démo"
             },
             {
                 "title": "Backoffice <br> <span class=\"text-outline\">Moderne</span>",
                 "tech": "Shadcn UI · Tailwindcss · React",
                 "link": "https://github.com/lucieno-zandry/wle-bo",
-                "bg": "./assets/image3.png",
+                "bg": "./assets/image3.webp",
                 "actionLabel": "Dépôt"
             },
             {
                 "title": "Audit de Transactions <br> <span class=\"text-outline\">Immuable</span>",
                 "tech": "UUID · Webhooks · Registre d'Événements",
                 "link": "/case-studies/the-integrity-savior",
-                "bg": "./assets/image6.png",
+                "bg": "./assets/image6.webp",
                 "actionLabel": "Lire l'Étude de Cas"
             },
             {
                 "title": "Moteur d'Expédition <br> <span class=\"text-outline\">Basé sur des Paliers</span>",
                 "tech": "Laravel · Regex · API Transporteur",
                 "link": "/case-studies/the-integrity-savior",
-                "bg": "./assets/image5.jpeg",
+                "bg": "./assets/image5.webp",
                 "actionLabel": "Lire l'Étude de Cas"
             }
         ]
