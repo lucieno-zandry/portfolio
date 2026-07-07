@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="/components/ui/layout/reset.css">
         <link rel="stylesheet" href="/components/ui/lang-selector/lang-selector.css">
         <link rel="stylesheet" href="/components/ui/cv-downloader/cv-downloader.css">
+        <link rel="stylesheet" href="/components/ui/scroller-btn/scroller-btn.css">
         <link rel="shortcut icon" href="/storage/public/assets/icon.png" type="image/png">
 
         <script>
@@ -24,6 +25,7 @@
         <?= View::yield('content') ?>
 
         <?php include get_safe_path('components/ui/lang-selector/lang-selector.php')  ?>
+        <?php include get_safe_path('components/ui/scroller-btn/scroller-btn.php')  ?>
         <?php include get_safe_path('components/ui/cv-downloader/cv-downloader.php')  ?>
 
         <?= View::yield('script') ?>

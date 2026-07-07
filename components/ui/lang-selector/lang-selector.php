@@ -10,7 +10,13 @@
 
             <select name="lang" id="lang-select">
                 <?php foreach (ALLOWED_LANGUAGES as $key => $value) : ?>
-                    <option value="<?= htmlspecialchars($key) ?>" <?php if (load_lang() === htmlspecialchars($key)) echo "selected" ?>> <?= htmlspecialchars($value['label']) ?></option>
+                    <option
+                        value="<?= htmlspecialchars($key) ?>"
+                        data-long="<?= htmlspecialchars($value['label']) ?>"
+                        data-short="<?= htmlspecialchars(strtoupper($key)) ?>"
+                        <?php if (load_lang() === htmlspecialchars($key)) echo "selected" ?>>
+                        <?= htmlspecialchars($value['label']) ?>
+                    </option>
                 <?php endforeach ?>
             </select>
         </div>
@@ -24,6 +30,18 @@
         const langSelect = document.querySelector('#lang-select');
 
         if (!button || !langSelect) return;
+
+        // Swaps between target strings on window resize limits
+        const adaptLabels = () => {
+            const isMobile = window.innerWidth <= 760;
+            langSelect.querySelectorAll('option').forEach(option => {
+                option.textContent = isMobile ? option.dataset.short : option.dataset.long;
+            });
+        };
+
+        // Initialize display configuration and track browser layout updates
+        adaptLabels();
+        window.addEventListener('resize', adaptLabels);
 
         langSelect.addEventListener('change', () => {
             button.click();

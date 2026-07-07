@@ -41,6 +41,11 @@
     transform: translateY(2px);
 }
 
+/* Hide mobile label on standard displays */
+.cv-text-short {
+    display: none;
+}
+
 /* Responsive adjustment matching your 760px breakpoint */
 @media screen and (max-width: 760px) {
     .cv-download-floating {
@@ -49,14 +54,11 @@
         padding: 0.5rem 0.8rem;
     }
 
-    /* Shorten the text on mobile to save screen real estate */
-    .cv-text {
-        font-size: 0.85rem;
+    /* Handle responsive label swap */
+    .cv-text-long {
+        display: none;
     }
-
-    .cv-text::before {
-        content: "";
+    .cv-text-short {
+        display: inline;
     }
-
-    /* Optional: change text to just "CV" on tiny screens if preferred */
 }
