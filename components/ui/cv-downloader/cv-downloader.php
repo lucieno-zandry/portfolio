@@ -4,7 +4,7 @@ $data = load_data()['common'];
 function generate_cv_link()
 {
     $lang = load_lang();
-    return "/assets/lucieno-zandry.resume.{$lang}.pdf";
+    return "/storage/public/assets/lucieno-zandry.resume.{$lang}.pdf";
 }
 ?>
 

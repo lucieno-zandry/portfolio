@@ -80,3 +80,29 @@ function add_lang_to_uri(string $uri)
 
     return $path_info . $query_params;
 }
+
+function writeLog(
+    mixed $message,
+    string $level = 'INFO'
+): void {
+
+    $file = get_safe_path('storage/logs/app.log');
+    $directory = dirname($file);
+    if (!is_dir($directory)) {
+        mkdir($directory, 0755, true);
+    }
+
+    if (!is_string($message)) {
+        $message = print_r($message, true);
+    }
+
+    $entry = sprintf(
+        "[%s] [%s] %s%s",
+        date('Y-m-d H:i:s'),
+        strtoupper($level),
+        $message,
+        PHP_EOL
+    );
+
+    file_put_contents($file, $entry, FILE_APPEND | LOCK_EX);
+}

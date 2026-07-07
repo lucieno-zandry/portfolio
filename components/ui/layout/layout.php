@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="/components/ui/layout/reset.css">
         <link rel="stylesheet" href="/components/ui/lang-selector/lang-selector.css">
         <link rel="stylesheet" href="/components/ui/cv-downloader/cv-downloader.css">
-        <link rel="shortcut icon" href="/assets/icon.png" type="image/png">
+        <link rel="shortcut icon" href="/storage/public/assets/icon.png" type="image/png">
 
         <script>
             window.apiUrl = "<?= env('API_URL') ?>"

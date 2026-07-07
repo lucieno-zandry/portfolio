@@ -91,5 +91,5 @@ try {
     echo json_encode(["status" => "error", "message" => "Internal processes completed silently"]);
 
     // Log the actual error on your server for debugging
-    error_log("Portfolio Tracker Error: " . $e->getMessage());
+    writeLog("Portfolio Tracker Error: " . $e->getMessage(), 'ERROR');
 }
