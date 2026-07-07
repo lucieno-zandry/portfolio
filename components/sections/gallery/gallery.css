@@ -239,7 +239,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(rgba(0, 0, 0, .5), black);
+    background: rgba(var(--bg-value), .9);
+    padding: clamp(4rem, 10vw, 8rem) clamp(1.5rem, 5vw, 4rem);
 }
 
 .project-card {
@@ -278,13 +279,19 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 560px) {
     .wrapper .grid-inner {
         /* Expand the width significantly so the 5 columns have room to breathe */
         width: 300vw;
         --gap: 0.5rem;
         /* Optionally tighten the gap on mobile */
     }
+
+    .systems-intro {
+        text-align: left;
+        align-items: start;
+    }
+
 }
 
 /* Container holds everything together */

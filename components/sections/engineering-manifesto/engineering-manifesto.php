@@ -10,7 +10,7 @@ $count = count($manifesto['list']);
 
 <section class="engineering-manifesto reveal">
     <header class="manifesto-header fluid" style="--count: <?= $count ?>;">
-        <section>
+        <div>
             <h2>
                 <span aria-hidden="true"><?= htmlspecialchars($manifesto['static_text']) ?>&nbsp;</span>
                 <span class="sr-only">
@@ -23,6 +23,6 @@ $count = count($manifesto['list']);
                     <li style="--i: <?= $i ?>"><?= htmlspecialchars($item) ?></li>
                 <?php endforeach; ?>
             </ul>
-        </section>
+        </div>
     </header>
 </section>

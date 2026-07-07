@@ -1,10 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:900');
 
 :root {
-    --bg: #050816;
-    --text: #f5f7ff;
-    --muted: #9aa4bf;
-    --accent: #6ea8ff;
+    --bg-value: 5, 8, 22;
+    --text-value: 245, 247, 255;
+    --muted-value: 154, 164, 191;
+    --accent-value: 110, 168, 255;
+
+    --bg: rgb(var(--bg-value));
+    --text: rgb(var(--text-value));
+    --muted: rgb(var(--muted-value));
+    --accent: rgb(var(--accent-value));
 }
 
 * {
@@ -33,22 +38,22 @@ body {
 }
 
 h1 {
-    font-size: clamp(4rem, 10vw, 8rem);
-    line-height: 0.9;
+    font-size: clamp(2.5rem, 8vw, 6rem);
+    line-height: 1.1;
     margin: 0;
     font-weight: 900;
 }
 
 h2 {
-    font-size: clamp(3rem, 7.5vw, 5rem);
-    line-height: 0.9;
+    font-size: clamp(2rem, 7.5vw, 5rem);
+    line-height: 1.1;
     margin: 0;
     font-weight: 900;
 }
 
 h3 {
-    font-size: clamp(2.5rem, 6vw, 4rem);
-    line-height: 0.9;
+    font-size: clamp(1.5rem, 6vw, 4rem);
+    line-height: 1.1;
     margin: 0;
     font-weight: 900;
 }
@@ -59,6 +64,7 @@ h3 {
     letter-spacing: 0.3rem;
     font-size: 0.8rem;
     margin-bottom: 1rem;
+    display: block;
 }
 
 .description {

@@ -3,7 +3,6 @@
     width: 100%;
     max-width: 950px;
     margin: 0 auto;
-    padding: 0 1rem 5rem 1rem;
 }
 
 #svg-stage {
@@ -81,6 +80,7 @@ text {
     text-align: center;
     margin: clamp(200px, 40vh, 400px) auto;
     width: 100%;
+    padding: 0 clamp(1.5rem, 5vw, 4rem);
 }
 
 /* Info Icon (next to company name) */
@@ -203,4 +203,10 @@ text {
 
 .info-popover-link:hover {
     color: var(--accent);
+}
+
+@media (max-width: 560px) {
+    .timeline-header {
+        text-align: left;
+    }
 }

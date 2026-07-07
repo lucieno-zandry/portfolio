@@ -8,7 +8,6 @@ $hero = $data['hero'];
 <?php View::endSection('head') ?>
 
 <section class="hero reveal">
-    <div class="hero-overlay"></div>
 
     <div class="hero-content">
         <p class="eyebrow"><?= htmlspecialchars($hero['eyebrow']) ?></p>
@@ -31,12 +30,4 @@ $hero = $data['hero'];
             <?php endforeach; ?>
         </div>
     </div>
-
-    <div class="background-text">
-        <span>SYSTEMS</span>
-    </div>
 </section>
-
-<?php View::startSection('script') ?>
-<script src="./components/sections/hero/hero.js" type="module"></script>
-<?php View::endSection('script') ?>

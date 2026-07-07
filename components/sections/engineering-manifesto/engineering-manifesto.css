@@ -24,7 +24,7 @@ html {
     z-index: 2;
 }
 
-.manifesto-header section {
+.manifesto-header > div {
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -113,7 +113,7 @@ html {
 
 /* ── Mobile Responsive Reflow ── */
 @media (max-width: 768px) {
-    .manifesto-header section {
+    .manifesto-header div {
         flex-direction: column;
         align-items: center;
         text-align: center;
