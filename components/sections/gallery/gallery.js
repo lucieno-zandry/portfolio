@@ -114,4 +114,27 @@
         }
     });
 
+    // --- Run-Once Animation Lock ---
+    const gallerySection = document.querySelector('.gallery-section');
+    
+    if (gallerySection) {
+        const lockAnimation = () => {
+            const rect = gallerySection.getBoundingClientRect();
+            
+            // When the bottom of the 250vh section hits the bottom of the screen,
+            // the sticky effect ends and the animation is at 100%.
+            if (rect.bottom <= window.innerHeight) {
+                wrapper.classList.add('is-locked');
+                
+                // Remove the event listener so it doesn't keep firing unnecessarily
+                window.removeEventListener('scroll', lockAnimation);
+            }
+        };
+
+        // Listen for scroll events to trigger the lock
+        window.addEventListener('scroll', lockAnimation, { passive: true });
+        
+        // Run once on load just in case the user refreshes the page while already at the bottom
+        lockAnimation();
+    }
 })();

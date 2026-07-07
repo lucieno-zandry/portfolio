@@ -352,3 +352,9 @@
     border-color: #fff;
     transform: translateY(-2px);
 }
+
+/* ── Lock state after first scroll ── */
+.wrapper.is-locked .grid-inner > div {
+    animation: none !important;
+    translate: 0 !important; /* Forces the tiles into their final grid position */
+}
